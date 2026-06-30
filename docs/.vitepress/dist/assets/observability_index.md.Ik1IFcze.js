@@ -1,0 +1,14 @@
+import{_ as s,o as n,c as e,a2 as t}from"./chunks/framework.BFVZdVmd.js";const b=JSON.parse('{"title":"可观测性","description":"","frontmatter":{},"headers":[],"relativePath":"observability/index.md","filePath":"observability/index.md","lastUpdated":null}'),p={name:"observability/index.md"};function i(l,a,r,d,o,c){return n(),e("div",null,[...a[0]||(a[0]=[t(`<h1 id="可观测性" tabindex="-1">可观测性 <a class="header-anchor" href="#可观测性" aria-label="Permalink to &quot;可观测性&quot;">​</a></h1><p>可观测性(Observability)是企业微服务项目的必备能力。服务一旦拆分成几十个进程，靠登录机器看日志已经无法定位问题，必须有统一的指标、链路和日志体系。</p><h2 id="三大支柱" tabindex="-1">三大支柱 <a class="header-anchor" href="#三大支柱" aria-label="Permalink to &quot;三大支柱&quot;">​</a></h2><table tabindex="0"><thead><tr><th>支柱</th><th>回答的问题</th><th>代表组件</th></tr></thead><tbody><tr><td>指标 Metrics</td><td>系统现在健康吗？</td><td>Actuator、Micrometer、Prometheus、Grafana</td></tr><tr><td>链路 Tracing</td><td>这个请求慢在哪一环？</td><td>SkyWalking、OpenTelemetry、Zipkin</td></tr><tr><td>日志 Logging</td><td>这次报错的具体堆栈是什么？</td><td>Logback、ELK、Loki</td></tr></tbody></table><h2 id="最低要求" tabindex="-1">最低要求 <a class="header-anchor" href="#最低要求" aria-label="Permalink to &quot;最低要求&quot;">​</a></h2><p>企业项目至少要具备：</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>Actuator</span></span>
+<span class="line"><span>Prometheus</span></span>
+<span class="line"><span>Grafana</span></span>
+<span class="line"><span>日志采集</span></span>
+<span class="line"><span>链路追踪</span></span></code></pre></div><h2 id="常见监控内容" tabindex="-1">常见监控内容 <a class="header-anchor" href="#常见监控内容" aria-label="Permalink to &quot;常见监控内容&quot;">​</a></h2><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>服务是否存活</span></span>
+<span class="line"><span>接口耗时</span></span>
+<span class="line"><span>QPS</span></span>
+<span class="line"><span>错误率</span></span>
+<span class="line"><span>JVM 内存</span></span>
+<span class="line"><span>线程数</span></span>
+<span class="line"><span>GC 情况</span></span>
+<span class="line"><span>慢 SQL</span></span>
+<span class="line"><span>接口异常</span></span>
+<span class="line"><span>服务调用链</span></span></code></pre></div><h2 id="本栏目内容" tabindex="-1">本栏目内容 <a class="header-anchor" href="#本栏目内容" aria-label="Permalink to &quot;本栏目内容&quot;">​</a></h2><ul><li><a href="./prometheus-grafana">指标监控（Prometheus + Grafana）</a></li><li><a href="./skywalking">链路追踪（SkyWalking / OpenTelemetry）</a></li><li><a href="./logging">日志体系</a></li></ul><p>新项目建议重点关注 <code>OpenTelemetry</code>，因为它是更通用的可观测性标准，能统一指标、链路、日志三类数据的采集口径。</p>`,12)])])}const u=s(p,[["render",i]]);export{b as __pageData,u as default};

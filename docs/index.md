@@ -2,22 +2,52 @@
 layout: home
 
 hero:
-  name: 我的知识库
-  text: 技术文档与学习笔记
-  tagline: 使用 VitePress + GitHub Pages 搭建
+  name: Java 后端技术文档库
+  text: 企业级 Spring Cloud 技术栈全景
+  tagline: 从核心框架到部署运维，按分层梳理企业 Java 微服务的完整技术选型
   actions:
     - theme: brand
       text: 开始阅读
-      link: /guide/
+      link: /overview/
+    - theme: alt
+      text: 技术栈总览
+      link: /overview/architecture
     - theme: alt
       text: GitHub
-      link: https://github.com/你的用户名/my-docs
+      link: https://github.com/ggluoly/my-docs
 
 features:
-  - title: Markdown 驱动
-    details: 直接使用 Markdown 编写文档，维护简单。
-  - title: 本地搜索
-    details: 使用 VitePress 内置 local search，不需要服务器。
-  - title: 自动部署
-    details: 推送到 GitHub 后自动构建并部署到 GitHub Pages。
+  - title: Java 基础
+    details: 语言核心、JVM 内存与 GC 调优、并发编程，后端开发绕不开的底层功底。
+    link: /java-core/
+  - title: Spring 核心
+    details: IoC/DI、AOP、Bean 生命周期与事务原理，理解 Spring 的运行机制而非只会用。
+    link: /spring-core/
+  - title: 核心框架
+    details: Spring Boot、Spring Cloud、Nacos、Gateway、OpenFeign、Sentinel，微服务治理的基础骨架。
+    link: /framework/
+  - title: 数据存储
+    details: MySQL、MyBatis-Plus、Redis、Elasticsearch、分库分表、分布式 ID 与数据同步。
+    link: /storage/
+  - title: 消息与事务
+    details: RocketMQ、Kafka、RabbitMQ 异步解耦，Seata 与最终一致性方案。
+    link: /messaging/
+  - title: 安全与认证
+    details: Spring Security、OAuth2、JWT、Sa-Token，以及密钥与配置安全。
+    link: /security/
+  - title: 工程实践
+    details: Maven 多模块、设计模式、SQL 优化、API 设计规范，把代码写好写规范。
+    link: /practice/
+  - title: 工程能力
+    details: 文件存储、定时任务、接口文档、测试、代码质量与开发辅助插件。
+    link: /engineering/
+  - title: 可观测性
+    details: Actuator、Prometheus、Grafana、SkyWalking、OpenTelemetry 与日志平台。
+    link: /observability/
+  - title: 部署运维
+    details: Docker、Kubernetes、Helm、CI/CD、服务网格、数据分析与 AI 能力。
+    link: /deploy/
+  - title: 按规模选型
+    details: 小型单体、中型微服务、大型企业项目的技术组合与演进路线。
+    link: /overview/selection
 ---

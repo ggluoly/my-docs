@@ -1,0 +1,105 @@
+# 语言核心
+
+> 本页为知识库新增内容，不属于《Spring 技术套件》原文档。
+
+企业 Java 开发每天都在用的语言基础。这里不展开语法教学，只梳理后端开发必须掌握、且在线上和面试中高频出现的要点。
+
+## 集合框架
+
+最常用的几类容器，选错会直接影响性能和正确性。
+
+| 接口 | 常用实现 | 特点 | 典型场景 |
+| --- | --- | --- | --- |
+| `List` | `ArrayList` | 数组结构，随机访问快，增删慢 | 大部分有序列表 |
+| `List` | `LinkedList` | 链表结构，头尾增删快 | 队列、双端队列 |
+| `Map` | `HashMap` | 哈希表，无序，非线程安全 | 绝大多数键值映射 |
+| `Map` | `LinkedHashMap` | 保留插入/访问顺序 | LRU 缓存 |
+| `Map` | `TreeMap` | 按 key 排序 | 需要有序遍历 |
+| `Map` | `ConcurrentHashMap` | 线程安全，分段/CAS | 并发读写 |
+| `Set` | `HashSet` | 去重，无序 | 去重集合 |
+
+要点：
+
+- `HashMap` 在 JDK 8 后采用「数组 + 链表 + 红黑树」，链表长度超过 8 且容量达 64 时转红黑树。
+- `HashMap` 非线程安全，多线程并发扩容历史上可能死循环（JDK 7），并发场景一律用 `ConcurrentHashMap`。
+- 重写 `equals()` 必须同时重写 `hashCode()`，否则在 `HashMap`/`HashSet` 中行为异常。
+
+## 泛型
+
+编译期类型检查，运行期类型擦除（type erasure）。
+
+```java
+List<String> list = new ArrayList<>();   // 编译期约束为 String
+// 运行期擦除为 List，泛型信息不保留
+```
+
+- 通配符：`? extends T`（上界，能读不能写，生产者）、`? super T`（下界，能写不能读，消费者）——即 PECS 原则。
+- 因为类型擦除，不能 `new T[]`、不能用泛型做 `instanceof`。
+
+## 异常体系
+
+```
+Throwable
+├── Error            // 系统级错误，不应捕获（OutOfMemoryError、StackOverflowError）
+└── Exception
+    ├── RuntimeException   // 非受检异常（NPE、IllegalArgument…）
+    └── 其他               // 受检异常（IOException、SQLException…）
+```
+
+后端实践：
+
+- 业务异常用自定义 `RuntimeException`，配合全局异常处理器（`@RestControllerAdvice`）统一返回。
+- 不要吞异常（`catch` 后空处理），至少要记日志并保留堆栈。
+- `finally` 中不要 `return`，会覆盖正常返回值并吞掉异常。
+
+## IO 与 NIO
+
+| 类型 | 模型 | 特点 |
+| --- | --- | --- |
+| BIO（`java.io`） | 同步阻塞，面向流 | 简单，连接数高时线程开销大 |
+| NIO（`java.nio`） | 同步非阻塞，面向缓冲区 + 通道 + 多路复用 | `Selector` 单线程管理多连接，高并发基础 |
+| AIO | 异步非阻塞 | 使用较少 |
+
+Netty、Tomcat NIO 连接器、Kafka 等高并发组件底层都依赖 NIO 的多路复用模型。
+
+## 注解与反射
+
+- **注解**：本质是元数据。Spring 的 `@Component`、`@Autowired`、`@Transactional` 都靠反射在运行期读取注解来工作。
+- **反射**：运行期动态获取类信息、创建对象、调用方法。是框架实现 IoC、AOP、ORM 映射的基础，但有性能开销，不应在热点路径滥用。
+
+```java
+Class<?> clazz = Class.forName("com.example.User");
+Object obj = clazz.getDeclaredConstructor().newInstance();
+Method m = clazz.getMethod("getName");
+Object name = m.invoke(obj);
+```
+
+## Java 8+ 关键特性
+
+后端代码里出现频率最高的现代特性：
+
+- **Lambda 与函数式接口**：`Runnable`、`Function`、`Predicate`、`Supplier`、`Consumer`。
+- **Stream**：声明式集合处理。
+
+  ```java
+  List<String> names = users.stream()
+      .filter(u -> u.getAge() > 18)
+      .map(User::getName)
+      .collect(Collectors.toList());
+  ```
+
+- **Optional**：显式表达「可能为空」，减少 NPE，但不要滥用于字段和参数。
+- **新日期时间 API**：`LocalDate`、`LocalDateTime`、`Duration`，线程安全，取代老旧的 `Date`/`SimpleDateFormat`。
+
+较新版本值得关注：
+
+- **`var`（10）**：局部变量类型推断。
+- **`Record`（16）**：不可变数据载体，适合 DTO/VO。
+- **`sealed`（17）**：密封类，限制继承范围。
+- **虚拟线程（21）**：轻量级线程，极大降低高并发 IO 场景的线程成本，是 Java 高并发的重要演进方向。
+
+## 选型与实践建议
+
+- 新项目基线选 **LTS 版本**（Java 17 或 21），Spring Boot 3.x 要求 Java 17 起步。
+- DTO/VO 优先用 `Record`，减少样板代码。
+- 集合默认 `ArrayList` / `HashMap`，并发场景换并发容器，不要用 `Vector`/`Hashtable` 这类过时同步容器。
