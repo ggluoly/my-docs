@@ -15,6 +15,7 @@ const SECTION_BY_PREFIX: Record<string, string> = {
   engineering: 'engineering',
   observability: 'observability',
   deploy: 'deploy',
+  interview: 'interview',
   overview: 'overview'
 }
 

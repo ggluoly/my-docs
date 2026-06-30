@@ -50,6 +50,9 @@ features:
   - title: 按规模选型
     details: 小型单体、中型微服务、大型企业项目的技术组合与演进路线。
     link: /overview/selection
+  - title: 面试题库
+    details: 按 Java、JVM、并发、Spring、MySQL、Redis、微服务、场景题和系统设计整理高频问题。
+    link: /interview/
 ---
 
 ## 推荐学习路径
@@ -59,6 +62,8 @@ Java 基础 -> Spring 核心 -> Spring Boot -> MySQL / Redis -> Spring Cloud -> 
 ```
 
 如果是从零搭建企业后端能力，建议先补齐语言、框架和数据库三块地基，再逐步引入缓存、消息、微服务治理和部署运维。不要一开始就追求组件完整，先把单个服务写对、跑稳、查得了问题。
+
+面试复习可以按另一条路径推进：Java 高频题 -> Spring 原理题 -> MySQL / Redis 场景题 -> 微服务治理 -> 场景题 -> 系统设计。
 
 ## 技术分层地图
 
@@ -70,6 +75,7 @@ Java 基础 -> Spring 核心 -> Spring Boot -> MySQL / Redis -> Spring Cloud -> 
 | 微服务治理 | 注册配置、网关、调用、限流熔断 | [核心框架](/framework/) |
 | 工程化 | Maven、API 规范、测试、代码质量 | [工程实践](/practice/) / [工程能力](/engineering/) |
 | 交付与稳定性 | 监控、日志、链路追踪、Docker、K8s | [可观测性](/observability/) / [部署运维](/deploy/) |
+| 面试复习 | 高频题、场景题、系统设计 | [面试库](/interview/) |
 
 ## 按规模选型
 

@@ -57,6 +57,7 @@
 :root[data-section="engineering"]  { --section-accent: #0891b2; --section-accent-2: #06b6d4; } /* 青·工具 */
 :root[data-section="observability"]{ --section-accent: #f97316; --section-accent-2: #fb923c; } /* 橙红·仪表盘 */
 :root[data-section="deploy"]       { --section-accent: #4f46e5; --section-accent-2: #6366f1; } /* 靛蓝·K8s */
+:root[data-section="interview"]    { --section-accent: #db2777; --section-accent-2: #8b5cf6; } /* 玫紫·面试冲刺 */
 
 /* ---------- 顶栏与下拉菜单 ---------- */
 .VPNavBarTitle .title {
@@ -94,6 +95,7 @@
 .VPNavBarMenu .VPNavBarMenuGroup:nth-child(5) { --nav-accent: #0d9488; --nav-accent-2: #14b8a6; }
 .VPNavBarMenu .VPNavBarMenuGroup:nth-child(6) { --nav-accent: #2563eb; --nav-accent-2: #7c3aed; }
 .VPNavBarMenu .VPNavBarMenuGroup:nth-child(7) { --nav-accent: #4f46e5; --nav-accent-2: #06b6d4; }
+.VPNavBarMenu .VPNavBarMenuGroup:nth-child(8) { --nav-accent: #db2777; --nav-accent-2: #8b5cf6; }
 
 .VPNavBarMenu .VPNavBarMenuGroup .menu {
   left: 50%;
@@ -366,6 +368,7 @@
 .VPFeatures .items .item:nth-child(9)  .VPFeature { --card-accent: #f97316; } /* 可观测性 */
 .VPFeatures .items .item:nth-child(10) .VPFeature { --card-accent: #4f46e5; } /* 部署运维 */
 .VPFeatures .items .item:nth-child(11) .VPFeature { --card-accent: #0ea5e9; } /* 按规模选型 */
+.VPFeatures .items .item:nth-child(12) .VPFeature { --card-accent: #db2777; } /* 面试题库 */
 /* 分区切换时品牌色平滑过渡 */
 .VPSidebarItem.is-active > .item,
 .vp-doc blockquote,
