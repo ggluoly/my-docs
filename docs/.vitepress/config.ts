@@ -4,7 +4,7 @@ export default defineConfig({
   title: 'Java 后端技术文档库',
   description: '企业 Java / Spring Cloud 后端开发全技术栈文档',
 
-  base: '/my-docs/',
+  base: '/',
 
   cleanUrls: true,
   lastUpdated: true,
