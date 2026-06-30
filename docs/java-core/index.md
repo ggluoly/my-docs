@@ -6,15 +6,23 @@ Spring Cloud 的每一个微服务，本质上都是一个跑在 JVM 上的 Java
 
 ## 本栏目内容
 
-- [语言核心](./language)：集合、泛型、异常、IO/NIO、注解与反射，以及 Java 8+ 的关键特性。
+- [语言核心](./language)：基础语法、基本数据类型、集合、泛型、异常、IO/NIO、注解与反射，以及 Java 8+ 的关键特性。
 - [JVM](./jvm)：内存结构、垃圾回收、类加载机制，以及线上内存与性能问题排查。
 - [并发编程](./concurrency)：线程、内存可见性、JUC 工具集、线程池与锁原理。
+
+## 能力入口
+
+| 能力 | 先看什么 | 重点问题 |
+| --- | --- | --- |
+| 语言基础 | [基础语法](./language#basic-syntax)、[集合框架](./language#collections)、[泛型](./language#generics) | 类型怎么选、集合怎么用、对象怎么设计 |
+| 运行时 | [运行时内存结构](./jvm#runtime-memory)、[垃圾回收](./jvm#garbage-collection)、[线上问题排查](./jvm#troubleshooting) | OOM、Full GC、CPU 飙高怎么定位 |
+| 并发能力 | [线程安全](./concurrency#thread-safety)、[线程池](./concurrency#thread-pool)、[AQS / CAS](./concurrency#aqs) | 高并发下如何保证正确性和稳定性 |
 
 ## 知识地图
 
 | 方向 | 关键点 | 为什么重要 |
 | --- | --- | --- |
-| 语言核心 | 集合框架、泛型、异常体系、Stream / Lambda、反射 | 日常写业务代码的基本功，也是框架底层原理的基础 |
+| 语言核心 | 基础语法、基本数据类型、集合框架、泛型、异常体系、Stream / Lambda、反射 | 日常写业务代码的基本功，也是框架底层原理的基础 |
 | JVM | 运行时内存、GC、类加载、调优 | 线上 OOM、Full GC、内存泄漏排查的根基 |
 | 并发 | 线程模型、`synchronized`/`volatile`、线程池、`JUC` | 高并发接口、异步任务、数据一致性的关键 |
 
@@ -27,3 +35,10 @@ Spring Cloud 的每一个微服务，本质上都是一个跑在 JVM 上的 Java
 ```
 
 新手优先打牢语言核心；有一定经验后，并发和 JVM 是从「会写」到「写好」的分水岭，也是面试和线上排障的高频区。
+
+## 高频问题
+
+- `HashMap` 为什么线程不安全？什么时候用 `ConcurrentHashMap`？
+- `volatile` 能保证原子性吗？和 `synchronized` 有什么区别？
+- 为什么生产环境不推荐直接用 `Executors` 创建线程池？
+- Full GC 频繁、CPU 飙高、线程死锁分别怎么排查？

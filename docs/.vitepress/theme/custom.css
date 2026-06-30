@@ -1,0 +1,393 @@
+/* ============================================================
+   分区配色系统
+   - 所有品牌色由单一变量 --section-accent 派生（color-mix）
+   - index.ts 根据当前路由在 <html data-section="..."> 上切换分区
+   - 默认（首页/未匹配）使用 Spring 绿
+   ============================================================ */
+:root {
+  --section-accent: #16a34a;        /* 默认：Spring 绿 */
+  --section-accent-2: #2563eb;      /* hero 渐变副色 */
+  --section-accent-3: color-mix(in srgb, var(--section-accent) 55%, var(--section-accent-2));
+
+  --vp-c-brand-1: var(--section-accent);
+  --vp-c-brand-2: color-mix(in srgb, var(--section-accent) 80%, white);
+  --vp-c-brand-3: color-mix(in srgb, var(--section-accent) 55%, white);
+  --vp-c-brand-soft: color-mix(in srgb, var(--section-accent) 14%, transparent);
+
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(
+    120deg,
+    var(--section-accent) 0%,
+    color-mix(in srgb, var(--section-accent) 50%, var(--section-accent-2)) 50%,
+    var(--section-accent-2) 100%
+  );
+  --vp-home-hero-image-background-image: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--section-accent) 24%, transparent),
+    color-mix(in srgb, var(--section-accent-2) 22%, transparent)
+  );
+  --vp-home-hero-image-filter: blur(72px);
+
+  --doc-soft-bg: color-mix(in srgb, var(--section-accent) 8%, transparent);
+  --doc-soft-border: color-mix(in srgb, var(--section-accent) 20%, transparent);
+  --doc-strong-bg: color-mix(in srgb, var(--section-accent) 14%, var(--vp-c-bg));
+  --doc-card-shadow: 0 18px 44px color-mix(in srgb, var(--section-accent) 14%, transparent);
+}
+
+.dark {
+  --vp-c-brand-1: color-mix(in srgb, var(--section-accent) 70%, white);
+  --vp-c-brand-2: var(--section-accent);
+  --vp-c-brand-3: color-mix(in srgb, var(--section-accent) 60%, black);
+  --vp-c-brand-soft: color-mix(in srgb, var(--section-accent) 18%, transparent);
+  --doc-soft-bg: color-mix(in srgb, var(--section-accent) 12%, transparent);
+  --doc-soft-border: color-mix(in srgb, var(--section-accent) 24%, transparent);
+  --doc-strong-bg: color-mix(in srgb, var(--section-accent) 16%, var(--vp-c-bg));
+  --doc-card-shadow: 0 18px 44px color-mix(in srgb, var(--section-accent) 24%, transparent);
+}
+
+/* 分区强调色：结合栏目内容语义 */
+:root[data-section="overview"]     { --section-accent: #0ea5e9; --section-accent-2: #6366f1; }
+:root[data-section="java-core"]    { --section-accent: #ea580c; --section-accent-2: #f59e0b; } /* Java 橙 */
+:root[data-section="spring-core"]  { --section-accent: #16a34a; --section-accent-2: #22c55e; } /* Spring 绿 */
+:root[data-section="framework"]    { --section-accent: #0d9488; --section-accent-2: #14b8a6; } /* 青绿·治理 */
+:root[data-section="storage"]      { --section-accent: #2563eb; --section-accent-2: #3b82f6; } /* 蓝·数据 */
+:root[data-section="messaging"]    { --section-accent: #7c3aed; --section-accent-2: #a855f7; } /* 紫·事件 */
+:root[data-section="security"]     { --section-accent: #e11d48; --section-accent-2: #f43f5e; } /* 玫红·安全 */
+:root[data-section="practice"]     { --section-accent: #d97706; --section-accent-2: #f59e0b; } /* 琥珀·手艺 */
+:root[data-section="engineering"]  { --section-accent: #0891b2; --section-accent-2: #06b6d4; } /* 青·工具 */
+:root[data-section="observability"]{ --section-accent: #f97316; --section-accent-2: #fb923c; } /* 橙红·仪表盘 */
+:root[data-section="deploy"]       { --section-accent: #4f46e5; --section-accent-2: #6366f1; } /* 靛蓝·K8s */
+
+/* ---------- 顶栏与下拉菜单 ---------- */
+.VPNavBarTitle .title {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.VPNavBarMenu .VPFlyout .button {
+  position: relative;
+  padding: 0 10px;
+}
+
+.VPNavBarMenu .VPFlyout .button::after {
+  position: absolute;
+  right: 10px;
+  bottom: 13px;
+  left: 10px;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--nav-accent, var(--vp-c-brand-1));
+  content: "";
+  opacity: 0;
+  transform: scaleX(0.6);
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.VPNavBarMenu .VPFlyout:hover .button::after,
+.VPNavBarMenu .VPFlyout.active .button::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.VPNavBarMenu .VPNavBarMenuGroup:nth-child(3) { --nav-accent: #ea580c; --nav-accent-2: #f59e0b; }
+.VPNavBarMenu .VPNavBarMenuGroup:nth-child(4) { --nav-accent: #16a34a; --nav-accent-2: #22c55e; }
+.VPNavBarMenu .VPNavBarMenuGroup:nth-child(5) { --nav-accent: #0d9488; --nav-accent-2: #14b8a6; }
+.VPNavBarMenu .VPNavBarMenuGroup:nth-child(6) { --nav-accent: #2563eb; --nav-accent-2: #7c3aed; }
+.VPNavBarMenu .VPNavBarMenuGroup:nth-child(7) { --nav-accent: #4f46e5; --nav-accent-2: #06b6d4; }
+
+.VPNavBarMenu .VPNavBarMenuGroup .menu {
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+.VPNavBarMenu .VPNavBarMenuGroup:hover .menu,
+.VPNavBarMenu .VPNavBarMenuGroup .button[aria-expanded="true"] + .menu,
+.VPNavBarMenu .VPNavBarMenuGroup .button[aria-expanded="false"] + .menu {
+  transform: translateX(-50%) translateY(0);
+}
+
+.VPNavBarMenu .VPMenu {
+  position: relative;
+  min-width: 220px;
+  max-width: min(360px, calc(100vw - 32px));
+  padding: 14px 10px 10px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 14px;
+  background:
+    radial-gradient(circle at top left, color-mix(in srgb, var(--nav-accent, var(--vp-c-brand-1)) 10%, transparent), transparent 42%),
+    color-mix(in srgb, var(--vp-c-bg-elv) 96%, var(--nav-accent, var(--vp-c-brand-1)));
+  box-shadow: 0 18px 48px color-mix(in srgb, var(--nav-accent, #0f172a) 18%, transparent);
+}
+
+.VPNavBarMenu .VPMenu::before {
+  position: absolute;
+  top: 0;
+  right: 12px;
+  left: 12px;
+  height: 3px;
+  border-radius: 0 0 999px 999px;
+  background: linear-gradient(90deg, var(--nav-accent, var(--vp-c-brand-1)), var(--nav-accent-2, var(--vp-c-brand-2)));
+  content: "";
+}
+
+.dark .VPNavBarMenu .VPMenu {
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.34);
+}
+.VPNavBarMenu .VPMenuGroup .title {
+  margin: 6px 0 6px;
+  padding: 7px 10px;
+  border: 1px solid var(--doc-soft-border);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--nav-accent, var(--vp-c-brand-1)) 10%, transparent);
+  color: var(--nav-accent, var(--vp-c-brand-1));
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.VPNavBarMenu .VPMenuGroup + .VPMenuGroup {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--vp-c-divider);
+}
+
+.VPNavBarMenu .VPMenuLink {
+  position: relative;
+  padding-left: 10px;
+  padding-right: 6px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.VPNavBarMenu .VPMenuLink::before {
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  left: 0;
+  width: 3px;
+  border-radius: 999px;
+  background: var(--nav-accent, var(--vp-c-brand-1));
+  content: "";
+  opacity: 0;
+  transform: scaleY(0.45);
+  transition: opacity 0.18s, transform 0.18s;
+}
+
+.VPNavBarMenu .VPMenuLink:hover {
+  color: var(--nav-accent, var(--vp-c-brand-1));
+  background: color-mix(in srgb, var(--nav-accent, var(--vp-c-brand-1)) 9%, transparent);
+}
+
+.VPNavBarMenu .VPMenuLink:hover::before {
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+.VPNavBarMenu .VPMenuLink .label {
+  line-height: 30px;
+}
+
+.VPNavScreenMenuGroupSection .title {
+  margin: 10px 0 6px;
+  padding: 7px 10px;
+  border: 1px solid var(--doc-soft-border);
+  border-radius: 8px;
+  background: var(--doc-soft-bg);
+  color: var(--vp-c-brand-1);
+  font-weight: 800;
+}
+
+/* ---------- 侧边栏 ---------- */
+.VPSidebarItem.level-0 > .item > .link > .text {
+  font-weight: 800;
+}
+
+.VPSidebarItem .item .link:hover .text,
+.VPSidebarItem.is-active > .item .link > .text {
+  color: var(--vp-c-brand-1);
+}
+
+.VPSidebarItem.is-active > .item {
+  border-radius: 8px;
+  background: var(--vp-c-brand-soft);
+}
+/* ---------- 文档正文 ---------- */
+.VPDoc .content-container {
+  max-width: 900px;
+}
+
+.vp-doc h2 {
+  position: relative;
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid var(--vp-c-divider);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.vp-doc h2::before {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  width: 34px;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--section-accent), var(--section-accent-2));
+  content: "";
+  transform: translateY(-16px);
+}
+
+.vp-doc h3 {
+  position: relative;
+  margin-top: 28px;
+  padding-left: 12px;
+  font-weight: 750;
+}
+
+.vp-doc h3::before {
+  position: absolute;
+  top: 0.35em;
+  left: 0;
+  width: 4px;
+  height: 1em;
+  border-radius: 999px;
+  background: var(--vp-c-brand-1);
+  content: "";
+}
+
+.vp-doc p,
+.vp-doc li {
+  line-height: 1.8;
+}
+
+.vp-doc a {
+  text-underline-offset: 3px;
+}
+
+.vp-doc blockquote {
+  border-left: 4px solid var(--vp-c-brand-1);
+  border-radius: 0 10px 10px 0;
+  background: var(--doc-soft-bg);
+}
+
+.vp-doc blockquote > p {
+  color: var(--vp-c-text-1);
+}
+.vp-doc table {
+  display: table;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 0 1px var(--vp-c-divider);
+}
+
+.vp-doc th {
+  background: var(--doc-strong-bg);
+  color: var(--vp-c-text-1);
+  font-weight: 800;
+}
+
+.vp-doc tr:nth-child(2n) {
+  background: color-mix(in srgb, var(--vp-c-bg-soft) 56%, transparent);
+}
+
+.vp-doc :not(pre) > code {
+  border: 1px solid var(--doc-soft-border);
+  border-radius: 5px;
+  background: var(--doc-soft-bg);
+  color: var(--vp-c-brand-1);
+  font-weight: 600;
+}
+
+.vp-doc div[class*="language-"] {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+  box-shadow: var(--doc-card-shadow);
+}
+
+.dark .vp-doc div[class*="language-"] {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.24);
+}
+
+.vp-doc .custom-block {
+  border-radius: 10px;
+}
+/* ---------- 首页 Hero 与特性卡 ---------- */
+.VPHomeHero .name,
+.VPHomeHero .text {
+  letter-spacing: -0.04em;
+}
+
+.VPHomeHero .tagline {
+  max-width: 720px;
+}
+
+.VPFeature {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--vp-c-divider);
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--card-accent, var(--vp-c-brand-1)) 7%, transparent), transparent 34%),
+    var(--vp-c-bg-soft);
+  transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s;
+}
+
+/* 每张卡片顶部一条强调色，对应栏目语义色 */
+.VPFeature::before {
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: var(--card-accent, var(--vp-c-brand-1));
+  content: "";
+  opacity: 0.85;
+}
+
+.VPFeature .icon {
+  background: color-mix(in srgb, var(--card-accent, var(--vp-c-brand-1)) 14%, transparent);
+  border-radius: 10px;
+}
+
+.VPFeature:hover {
+  border-color: color-mix(in srgb, var(--card-accent, var(--vp-c-brand-1)) 40%, transparent);
+  box-shadow: 0 16px 40px color-mix(in srgb, var(--card-accent, var(--vp-c-brand-1)) 20%, transparent);
+  transform: translateY(-3px);
+}
+
+/* 卡片顺序对应 index.md 中 features 的顺序 */
+.VPFeatures .items .item:nth-child(1)  .VPFeature { --card-accent: #ea580c; } /* Java 基础 */
+.VPFeatures .items .item:nth-child(2)  .VPFeature { --card-accent: #16a34a; } /* Spring 核心 */
+.VPFeatures .items .item:nth-child(3)  .VPFeature { --card-accent: #0d9488; } /* 核心框架 */
+.VPFeatures .items .item:nth-child(4)  .VPFeature { --card-accent: #2563eb; } /* 数据存储 */
+.VPFeatures .items .item:nth-child(5)  .VPFeature { --card-accent: #7c3aed; } /* 消息与事务 */
+.VPFeatures .items .item:nth-child(6)  .VPFeature { --card-accent: #e11d48; } /* 安全与认证 */
+.VPFeatures .items .item:nth-child(7)  .VPFeature { --card-accent: #d97706; } /* 工程实践 */
+.VPFeatures .items .item:nth-child(8)  .VPFeature { --card-accent: #0891b2; } /* 工程能力 */
+.VPFeatures .items .item:nth-child(9)  .VPFeature { --card-accent: #f97316; } /* 可观测性 */
+.VPFeatures .items .item:nth-child(10) .VPFeature { --card-accent: #4f46e5; } /* 部署运维 */
+.VPFeatures .items .item:nth-child(11) .VPFeature { --card-accent: #0ea5e9; } /* 按规模选型 */
+/* 分区切换时品牌色平滑过渡 */
+.VPSidebarItem.is-active > .item,
+.vp-doc blockquote,
+.vp-doc :not(pre) > code {
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.dark .VPFeature:hover {
+  box-shadow: 0 16px 40px color-mix(in srgb, var(--card-accent, var(--vp-c-brand-1)) 30%, transparent);
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width: 767px) {
+  .VPDoc .content-container {
+    max-width: 100%;
+  }
+
+  .vp-doc table {
+    display: block;
+  }
+
+  .vp-doc h2 {
+    margin-top: 32px;
+  }
+}

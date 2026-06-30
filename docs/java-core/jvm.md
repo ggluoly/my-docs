@@ -4,7 +4,7 @@
 
 JVM 是 Java 后端绕不开的底层。线上排查内存溢出、GC 停顿、CPU 飙高等问题，都要求理解 JVM 的内存结构和垃圾回收机制。
 
-## 运行时内存结构
+## 运行时内存结构 {#runtime-memory}
 
 ```
 JVM 内存
@@ -23,7 +23,7 @@ JVM 内存
 - **栈**是线程私有的，每次方法调用创建一个栈帧，存放局部变量、操作数栈。栈深度超限抛 `StackOverflowError`。
 - JDK 8 移除了永久代（PermGen），改用**元空间（Metaspace）**，使用本地内存，类加载过多时可能 `Metaspace OOM`。
 
-## 垃圾回收
+## 垃圾回收 {#garbage-collection}
 
 ### 对象存活判定
 
@@ -46,7 +46,7 @@ JVM 内存
 
 新项目大堆、低延迟场景可关注 **ZGC**；通用场景 **G1** 即可。
 
-## 类加载机制
+## 类加载机制 {#class-loading}
 
 类加载过程：**加载 → 验证 → 准备 → 解析 → 初始化**。
 
@@ -62,7 +62,7 @@ Application ClassLoader   （应用 classpath）
 
 作用：保证核心类（如 `java.lang.Object`）不被篡改，避免重复加载。Tomcat、热部署、SPI 等场景会打破双亲委派。
 
-## 线上问题排查
+## 线上问题排查 {#troubleshooting}
 
 企业开发最实用的部分——JVM 知识最终要落到排查问题上。
 
@@ -88,7 +88,7 @@ jmap -dump:format=b,file=heap.hprof <pid>   # 导出堆转储
 - **GC 日志**（`-Xlog:gc*`）分析停顿时间和频率。
 - 生产环境推荐接入 [可观测性](/observability/)体系，把 JVM 指标（堆、GC、线程）持续采集到 Prometheus + Grafana。
 
-## 关键启动参数
+## 关键启动参数 {#jvm-options}
 
 ```bash
 -Xms2g -Xmx2g                 # 初始/最大堆，生产建议设为相等避免动态扩容

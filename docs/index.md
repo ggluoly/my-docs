@@ -51,3 +51,26 @@ features:
     details: 小型单体、中型微服务、大型企业项目的技术组合与演进路线。
     link: /overview/selection
 ---
+
+## 推荐学习路径
+
+```text
+Java 基础 -> Spring 核心 -> Spring Boot -> MySQL / Redis -> Spring Cloud -> 工程化与部署
+```
+
+如果是从零搭建企业后端能力，建议先补齐语言、框架和数据库三块地基，再逐步引入缓存、消息、微服务治理和部署运维。不要一开始就追求组件完整，先把单个服务写对、跑稳、查得了问题。
+
+## 技术分层地图
+
+| 层级 | 重点 | 对应栏目 |
+| --- | --- | --- |
+| 语言与运行时 | Java 语法、集合、并发、JVM | [Java 基础](/java-core/) |
+| 框架原理 | IoC、AOP、事务、Spring Boot | [Spring 核心](/spring-core/) / [核心框架](/framework/) |
+| 数据与中间件 | MySQL、Redis、ES、MQ、Seata | [数据存储](/storage/) / [消息与事务](/messaging/) |
+| 微服务治理 | 注册配置、网关、调用、限流熔断 | [核心框架](/framework/) |
+| 工程化 | Maven、API 规范、测试、代码质量 | [工程实践](/practice/) / [工程能力](/engineering/) |
+| 交付与稳定性 | 监控、日志、链路追踪、Docker、K8s | [可观测性](/observability/) / [部署运维](/deploy/) |
+
+## 按规模选型
+
+小型项目优先保证业务交付，中型项目关注服务拆分和可观测性，大型项目再引入服务网格、复杂数据同步和高级治理。具体组合见 [按规模选型](/overview/selection)。

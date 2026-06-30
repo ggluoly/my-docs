@@ -4,26 +4,28 @@
 
 学习企业 Java Spring Cloud，不建议一开始学全部。推荐顺序：
 
-1. `Java 基础`
-2. `Spring Boot`
-3. `MyBatis-Plus + MySQL`
-4. `Redis`
-5. `Spring Security / JWT`
-6. `Spring Cloud 基础`
-7. `Nacos 注册中心和配置中心`
-8. `OpenFeign 服务调用`
-9. `Spring Cloud Gateway`
-10. `Sentinel 熔断限流`
-11. `Elasticsearch`
-12. `RocketMQ / Kafka`
-13. `XXL-Job`
-14. `MinIO / OSS`
-15. `Actuator + Prometheus + Grafana`
-16. `SkyWalking / OpenTelemetry`
-17. `Docker`
-18. `Kubernetes`
-19. `CI/CD`
-20. `Seata / ShardingSphere / Canal`
+1. [Java 基础](/java-core/)（语言核心 → 并发 → JVM）
+2. [Spring Boot](/framework/spring-boot) 与 [Spring 核心原理](/spring-core/)（IoC / AOP / 事务）
+3. [MyBatis-Plus + MySQL](/storage/mysql) 与 [SQL 优化](/practice/sql-optimization)
+4. [Redis](/storage/redis)
+5. [Spring Security / JWT](/security/spring-security)
+6. [Spring Cloud 基础](/framework/spring-cloud)
+7. [Nacos 注册中心和配置中心](/framework/nacos)
+8. [OpenFeign 服务调用](/framework/openfeign)
+9. [Spring Cloud Gateway](/framework/gateway)
+10. [Sentinel 熔断限流](/framework/sentinel)
+11. [Elasticsearch](/storage/elasticsearch)
+12. [RocketMQ / Kafka](/messaging/)
+13. [XXL-Job](/engineering/xxl-job)
+14. [MinIO / OSS](/engineering/minio)
+15. [Actuator + Prometheus + Grafana](/observability/prometheus-grafana)
+16. [SkyWalking / OpenTelemetry](/observability/skywalking)
+17. [Docker](/deploy/docker)
+18. [Kubernetes](/deploy/kubernetes)
+19. [CI/CD](/deploy/cicd)
+20. [Seata](/messaging/seata) / [ShardingSphere](/storage/sharding) / [Canal](/storage/data-sync)
+
+> 前两步的 [Java 基础](/java-core/) 与 [Spring 核心原理](/spring-core/) 是地基。很多人跳过它们直接堆框架，结果线上一遇到 OOM、死锁、事务失效就束手无策。打牢地基再往上走，性价比最高。工程层面的 [Maven](/practice/maven)、[设计模式](/practice/design-pattern)、[API 规范](/practice/api-design) 可在写项目的过程中随用随学。
 
 ## 重点记忆版
 

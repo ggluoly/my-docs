@@ -1,17 +1,22 @@
 {
   "name": "my-docs",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Java 后端开发全技术文档库，覆盖企业 Java / Spring Cloud 微服务完整技术栈，基于 VitePress 构建。",
+  "type": "module",
+  "license": "MIT",
+  "keywords": [
+    "java",
+    "spring-cloud",
+    "spring-boot",
+    "microservices",
+    "vitepress",
+    "documentation"
+  ],
   "scripts": {
-	"docs:dev": "vitepress dev docs",
+    "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "module",
   "devDependencies": {
     "vitepress": "^1.6.4"
   }

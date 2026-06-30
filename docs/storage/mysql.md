@@ -57,3 +57,9 @@ flyway-core
 - 新项目默认 `MySQL`，连接池用默认的 `HikariCP` 即可，需要监控能力时再换 `Druid`。
 - 多人协作项目从第一天就引入 `Flyway` 管理表结构变更。
 - 需要更强功能（如复杂类型、向量检索）时考虑 `PostgreSQL`。
+
+## 延伸阅读
+
+- 索引原理、执行计划分析、慢查询排查与锁机制，见 [SQL 优化与索引](/practice/sql-optimization)。
+- 单库内的事务控制见 [Spring 事务原理](/spring-core/transaction)；跨库跨服务的一致性见 [Seata 分布式事务](/messaging/seata)。
+- 单表数据量过大时的水平拆分见 [分库分表](./sharding)。
