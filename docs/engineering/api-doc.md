@@ -1,5 +1,6 @@
 ---
-title: Knife4j / 接口文档
+title: 'Knife4j / 接口文档'
+description: 'Knife4j 与 Springdoc 接口文档，介绍 OpenAPI、接口调试、前后端联调和 Java 后端 API 文档实践。'
 ---
 
 # Knife4j / Springdoc OpenAPI

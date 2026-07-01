@@ -231,18 +231,28 @@ const interviewSidebar = [
       { text: 'Java 高频题', link: '/interview/java' },
       { text: 'JVM 高频题', link: '/interview/jvm' },
       { text: '并发编程', link: '/interview/concurrency' },
+      { text: 'JavaWeb', link: '/interview/java-web' },
       { text: 'Spring 面试题', link: '/interview/spring' },
       { text: 'Spring Boot', link: '/interview/spring-boot' },
       { text: 'Spring Cloud', link: '/interview/spring-cloud' }
     ]
   },
   {
-    text: '数据与中间件',
+    text: '数据与 ORM',
     collapsed: false,
     items: [
       { text: 'MySQL 面试题', link: '/interview/mysql' },
-      { text: 'Redis 面试题', link: '/interview/redis' },
+      { text: 'MyBatis 面试题', link: '/interview/mybatis' },
+      { text: 'Hibernate 面试题', link: '/interview/hibernate' },
+      { text: 'Redis 面试题', link: '/interview/redis' }
+    ]
+  },
+  {
+    text: '数据与中间件',
+    collapsed: false,
+    items: [
       { text: '消息队列', link: '/interview/mq' },
+      { text: 'ZooKeeper', link: '/interview/zookeeper' },
       { text: '安全认证', link: '/interview/security' }
     ]
   },
@@ -265,6 +275,10 @@ export default defineConfig({
 
   cleanUrls: true,
   lastUpdated: true,
+
+  sitemap: {
+    hostname: 'https://docs.yidian601.top'
+  },
 
   themeConfig: {
     logo: '/logo.svg',
@@ -443,17 +457,26 @@ export default defineConfig({
               { text: 'Java 高频题', link: '/interview/java' },
               { text: 'JVM 高频题', link: '/interview/jvm' },
               { text: '并发编程', link: '/interview/concurrency' },
+              { text: 'JavaWeb', link: '/interview/java-web' },
               { text: 'Spring 面试题', link: '/interview/spring' },
               { text: 'Spring Boot', link: '/interview/spring-boot' },
               { text: 'Spring Cloud', link: '/interview/spring-cloud' }
             ]
           },
           {
-            text: '数据与中间件',
+            text: '数据与 ORM',
             items: [
               { text: 'MySQL 面试题', link: '/interview/mysql' },
-              { text: 'Redis 面试题', link: '/interview/redis' },
+              { text: 'MyBatis 面试题', link: '/interview/mybatis' },
+              { text: 'Hibernate 面试题', link: '/interview/hibernate' },
+              { text: 'Redis 面试题', link: '/interview/redis' }
+            ]
+          },
+          {
+            text: '数据与中间件',
+            items: [
               { text: '消息队列', link: '/interview/mq' },
+              { text: 'ZooKeeper', link: '/interview/zookeeper' },
               { text: '安全认证', link: '/interview/security' }
             ]
           },

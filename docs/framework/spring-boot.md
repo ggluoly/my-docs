@@ -1,3 +1,8 @@
+---
+title: 'Spring Boot'
+description: 'Spring Boot 技术文档，介绍应用启动、自动配置、Starter、配置管理和 Java 后端单服务开发实践。'
+---
+
 # Spring Boot
 
 ## 是什么

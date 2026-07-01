@@ -1,3 +1,8 @@
+---
+title: '指标监控（Prometheus + Grafana）'
+description: 'Prometheus 与 Grafana 指标监控文档，介绍指标采集、监控面板、告警规则和 Java 后端可观测性实践。'
+---
+
 # 指标监控（Prometheus + Grafana）
 
 ## 是什么

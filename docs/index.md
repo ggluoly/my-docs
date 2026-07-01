@@ -1,4 +1,6 @@
 ---
+title: 'Java 后端技术文档库'
+description: 'Java 后端开发技术文档与面试库，覆盖 Java、Spring、Spring Cloud、MySQL、Redis、消息队列、部署运维和系统设计。'
 layout: home
 
 hero:

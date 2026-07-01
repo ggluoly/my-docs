@@ -1,3 +1,8 @@
+---
+title: '可观测性'
+description: 'Java 后端可观测性文档，覆盖 Prometheus、Grafana、SkyWalking、日志体系和线上问题定位。'
+---
+
 # 可观测性
 
 可观测性(Observability)是企业微服务项目的必备能力。服务一旦拆分成几十个进程，靠登录机器看日志已经无法定位问题，必须有统一的指标、链路和日志体系。

@@ -1,3 +1,8 @@
+---
+title: '链路追踪（SkyWalking / OpenTelemetry）'
+description: 'SkyWalking 与 OpenTelemetry 链路追踪文档，介绍调用链、Trace、Span 和 Java 后端故障定位实践。'
+---
+
 # 链路追踪（SkyWalking / OpenTelemetry）
 
 ## 是什么

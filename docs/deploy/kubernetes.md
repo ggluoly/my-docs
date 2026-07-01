@@ -1,3 +1,8 @@
+---
+title: 'Kubernetes 容器编排'
+description: 'Kubernetes 容器编排文档，介绍 Pod、Deployment、Service、配置管理和 Java 后端云原生部署实践。'
+---
+
 # Kubernetes 容器编排
 
 Kubernetes（K8s）负责容器的部署、扩缩容、滚动发布和故障恢复，是大型微服务集群的运行底座。

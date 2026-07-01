@@ -1,5 +1,6 @@
 ---
-title: XXL-Job / 定时任务
+title: 'XXL-Job / 定时任务'
+description: 'XXL-Job 定时任务文档，介绍分布式任务调度、失败重试、任务分片和 Java 后端定时任务实践。'
 ---
 
 # XXL-Job / 定时任务

@@ -1,3 +1,8 @@
+---
+title: 'Sa-Token'
+description: 'Sa-Token 技术文档，介绍登录认证、权限校验、会话管理和 Java 后端轻量级安全框架实践。'
+---
+
 # Sa-Token
 
 > Sa-Token 是国内轻量级权限认证框架，API 简单，适合中小项目快速落地登录鉴权。

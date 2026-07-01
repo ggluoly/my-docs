@@ -1,3 +1,8 @@
+---
+title: 'MySQL'
+description: 'MySQL 技术文档，介绍 Java 后端数据存储中的核心概念、应用场景、性能优化和选型建议。'
+---
+
 # MySQL
 
 ## 是什么

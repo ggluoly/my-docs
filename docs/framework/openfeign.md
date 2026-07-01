@@ -1,3 +1,8 @@
+---
+title: 'OpenFeign'
+description: 'OpenFeign 技术文档，介绍声明式 HTTP 调用、服务间通信、超时重试和 Java 微服务调用实践。'
+---
+
 # OpenFeign
 
 ## 是什么

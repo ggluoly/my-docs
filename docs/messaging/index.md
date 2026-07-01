@@ -1,5 +1,6 @@
 ---
-title: 消息与事务
+title: '消息与事务'
+description: '消息队列与分布式事务技术文档，覆盖 RocketMQ、Kafka、Seata 以及异步解耦和最终一致性实践。'
 ---
 
 # 消息与事务

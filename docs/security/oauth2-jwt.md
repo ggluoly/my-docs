@@ -1,3 +1,8 @@
+---
+title: 'OAuth2 与 JWT'
+description: 'OAuth2 与 JWT 技术文档，介绍授权流程、Token 设计、无状态认证和 Java 后端登录鉴权实践。'
+---
+
 # OAuth2 与 JWT
 
 > OAuth2 是授权协议，JWT 是 Token 格式，二者常配合 Spring Security 构成标准认证方案。

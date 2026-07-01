@@ -1,3 +1,8 @@
+---
+title: 'Spring 核心'
+description: 'Spring 核心技术文档，讲解 IoC、AOP、事务、Bean 生命周期等 Java 后端框架原理和实践要点。'
+---
+
 # Spring 核心
 
 > 本栏目为知识库新增内容，不属于《Spring 技术套件》原文档。

@@ -1,3 +1,8 @@
+---
+title: 'Sentinel'
+description: 'Sentinel 技术文档，介绍微服务限流、熔断降级、热点参数保护和 Java 后端高可用治理实践。'
+---
+
 # Sentinel
 
 ## 是什么

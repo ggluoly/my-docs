@@ -1,3 +1,8 @@
+---
+title: 'Spring Security'
+description: 'Spring Security 技术文档，介绍认证授权、过滤器链、接口鉴权、Token 校验和 Java 后端安全实践。'
+---
+
 # Spring Security
 
 > Spring 官方安全框架，负责登录认证、接口鉴权、Token 校验和权限控制。

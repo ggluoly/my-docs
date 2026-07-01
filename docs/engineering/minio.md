@@ -1,5 +1,6 @@
 ---
-title: MinIO / 对象存储
+title: 'MinIO / 对象存储'
+description: 'MinIO 对象存储文档，介绍文件上传下载、对象存储、权限控制和 Java 后端文件服务实践。'
 ---
 
 # MinIO / 对象存储

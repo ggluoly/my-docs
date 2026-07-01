@@ -1,3 +1,8 @@
+---
+title: 'Docker 容器化'
+description: 'Docker 容器化文档，介绍镜像构建、容器运行、Dockerfile 优化和 Java 后端服务部署实践。'
+---
+
 # Docker 容器化
 
 Docker 把应用和它的运行环境（JDK、依赖、配置）一起打包成标准镜像，做到"一次构建，到处运行"，是微服务部署的基础。

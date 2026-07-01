@@ -1,3 +1,8 @@
+---
+title: 'Spring Cloud 面试题'
+description: 'Spring Cloud 面试题整理，覆盖注册发现、服务调用、网关、熔断限流、历史组件和微服务治理。'
+---
+
 # Spring Cloud 面试题
 
 ## 微服务为什么需要注册中心？

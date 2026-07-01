@@ -1,5 +1,6 @@
 ---
-title: Seata 分布式事务
+title: 'Seata 分布式事务'
+description: 'Seata 分布式事务技术文档，介绍 AT、TCC、Saga、XA 模式和 Java 微服务事务一致性实践。'
 ---
 
 # Seata 分布式事务

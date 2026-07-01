@@ -1,3 +1,8 @@
+---
+title: '学习路线与重点记忆'
+description: 'Java 后端学习路线文档，梳理 Java、Spring、MySQL、Redis、微服务、部署运维和面试复习重点。'
+---
+
 # 学习路线与重点记忆
 
 ## 最小学习路线

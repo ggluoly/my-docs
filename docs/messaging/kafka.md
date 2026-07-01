@@ -1,5 +1,6 @@
 ---
-title: Kafka
+title: 'Kafka'
+description: 'Kafka 技术文档，介绍高吞吐消息队列、事件流、异步解耦、日志传输和 Java 后端消息系统选型。'
 ---
 
 # Kafka

@@ -1,3 +1,8 @@
+---
+title: 'IoC 与依赖注入'
+description: 'Spring IoC 与依赖注入技术文档，介绍控制反转、Bean 管理、依赖装配和 Java 后端框架原理。'
+---
+
 # IoC 与依赖注入
 
 > 本栏目为知识库新增内容，不属于《Spring 技术套件》原文档。

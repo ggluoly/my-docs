@@ -1,5 +1,6 @@
 ---
-title: RocketMQ
+title: 'RocketMQ'
+description: 'RocketMQ 技术文档，介绍消息队列、异步解耦、事务消息、顺序消息和 Java 后端最终一致性实践。'
 ---
 
 # RocketMQ
