@@ -1,6 +1,6 @@
 ---
 title: '部署运维'
-description: 'Java 后端部署运维文档，覆盖 Docker、Kubernetes、CI/CD、服务网格、灰度发布和数据分析能力。'
+description: 'Java 后端部署运维文档，覆盖 Tomcat、WebLogic、Docker、Kubernetes、CI/CD、服务网格、灰度发布和数据分析能力。'
 ---
 
 # 部署运维
@@ -10,6 +10,8 @@ description: 'Java 后端部署运维文档，覆盖 Docker、Kubernetes、CI/CD
 ## 本栏目内容
 
 - [Docker 容器化](./docker)：把应用和运行环境打包成标准镜像。
+- [Tomcat](./tomcat)：Servlet 容器、连接器、类加载和 Java Web 应用部署。
+- [WebLogic](./weblogic)：企业级 Java EE 应用服务器、数据源、JNDI、JMS、事务和集群。
 - [Kubernetes 容器编排](./kubernetes)：服务部署、扩缩容、滚动发布、故障恢复。
 - [CI/CD 持续交付](./cicd)：从提交代码到自动发布的完整流水线。
 - [服务网格与灰度发布](./mesh)：Istio、灰度发布、流量治理。
@@ -20,6 +22,8 @@ description: 'Java 后端部署运维文档，覆盖 Docker、Kubernetes、CI/CD
 
 | 组件 | 类别 | 主要作用 |
 | --- | --- | --- |
+| Tomcat | Servlet 容器 | 运行 Spring MVC / Java Web 应用，Spring Boot 默认内嵌容器之一。 |
+| WebLogic | 企业级应用服务器 | 传统 Java EE / Jakarta EE 应用部署、数据源、JMS、事务和集群。 |
 | Docker | 容器化 | 把应用和运行环境打包成标准镜像，方便部署和迁移。 |
 | Docker Compose | 编排 | 本地或小规模编排。 |
 | Kubernetes | 容器编排 | 服务部署、扩缩容、滚动发布、故障恢复。 |

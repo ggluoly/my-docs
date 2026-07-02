@@ -151,6 +151,7 @@ const dataMiddlewareSidebar = [
       { text: '概览', link: '/messaging/' },
       { text: 'RocketMQ', link: '/messaging/rocketmq' },
       { text: 'Kafka', link: '/messaging/kafka' },
+      { text: 'Apache Pulsar', link: '/messaging/pulsar' },
       { text: 'Seata 分布式事务', link: '/messaging/seata' }
     ]
   },
@@ -206,6 +207,8 @@ const engineeringOpsSidebar = [
     collapsed: false,
     items: [
       { text: '概览', link: '/deploy/' },
+      { text: 'Tomcat', link: '/deploy/tomcat' },
+      { text: 'WebLogic', link: '/deploy/weblogic' },
       { text: 'Docker 容器化', link: '/deploy/docker' },
       { text: 'Kubernetes 编排', link: '/deploy/kubernetes' },
       { text: 'CI/CD', link: '/deploy/cicd' },
@@ -273,11 +276,19 @@ export default defineConfig({
 
   base: '/',
 
+  head: [
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }]
+  ],
+
   cleanUrls: true,
   lastUpdated: true,
 
   sitemap: {
     hostname: 'https://docs.yidian601.top'
+  },
+
+  markdown: {
+    breaks: true
   },
 
   themeConfig: {
@@ -389,6 +400,7 @@ export default defineConfig({
             items: [
               { text: 'RocketMQ', link: '/messaging/rocketmq' },
               { text: 'Kafka', link: '/messaging/kafka' },
+              { text: 'Apache Pulsar', link: '/messaging/pulsar' },
               { text: 'Seata 分布式事务', link: '/messaging/seata' }
             ]
           },
@@ -438,6 +450,8 @@ export default defineConfig({
             text: '部署运维',
             items: [
               { text: 'Docker 容器化', link: '/deploy/docker' },
+              { text: 'Tomcat', link: '/deploy/tomcat' },
+              { text: 'WebLogic', link: '/deploy/weblogic' },
               { text: 'Kubernetes 编排', link: '/deploy/kubernetes' },
               { text: 'CI/CD', link: '/deploy/cicd' },
               { text: '服务网格与灰度发布', link: '/deploy/mesh' },

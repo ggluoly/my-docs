@@ -1,6 +1,6 @@
 ---
 title: '消息与事务'
-description: '消息队列与分布式事务技术文档，覆盖 RocketMQ、Kafka、Seata 以及异步解耦和最终一致性实践。'
+description: '消息队列与分布式事务技术文档，覆盖 RocketMQ、Kafka、Apache Pulsar、Seata 以及异步解耦、流式数据和最终一致性实践。'
 ---
 
 # 消息与事务
@@ -15,6 +15,7 @@ description: '消息队列与分布式事务技术文档，覆盖 RocketMQ、Kaf
 | --- | --- |
 | [RocketMQ](./rocketmq) | 业务消息、事务消息、延迟消息，国内企业和电商常用 |
 | [Kafka](./kafka) | 高吞吐日志、埋点、流式数据，适合大数据和实时计算 |
+| [Apache Pulsar](./pulsar) | 云原生消息与流式数据平台，适合多租户、消息与流统一、分层存储场景 |
 | [Seata 分布式事务](./seata) | 跨服务、跨数据库的事务一致性方案 |
 
 ## 选型速记
@@ -22,6 +23,7 @@ description: '消息队列与分布式事务技术文档，覆盖 RocketMQ、Kaf
 ```
 业务系统：RocketMQ / RabbitMQ
 日志和大数据：Kafka
+云原生多租户和消息流统一：Pulsar
 ```
 
 ```

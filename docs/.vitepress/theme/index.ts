@@ -1,6 +1,6 @@
 import DefaultTheme from 'vitepress/theme'
-import { h, watch } from 'vue'
-import { useRoute } from 'vitepress'
+import { defineComponent, h, nextTick, watch } from 'vue'
+import { onContentUpdated, useRoute } from 'vitepress'
 import './custom.css'
 
 // 路径前缀 -> 分区标识，驱动 custom.css 中的分区配色（data-section）
@@ -31,18 +31,38 @@ function applySection(path: string) {
   document.documentElement.dataset.section = sectionFromPath(path)
 }
 
+const zoomSelector = '.VPDoc .content img:not(a img):not(.no-zoom)'
+
+let zoom: { attach: (selector: string) => void } | undefined
+
+async function setupImageZoom() {
+  if (typeof window === 'undefined') return
+
+  await nextTick()
+  const { default: mediumZoom } = await import('medium-zoom')
+
+  if (!zoom) {
+    zoom = mediumZoom({
+      background: 'var(--vp-c-bg)',
+      margin: 24,
+      scrollOffset: 40
+    })
+  }
+
+  zoom.attach(zoomSelector)
+}
+
 export default {
   extends: DefaultTheme,
-  Layout() {
-    const route = useRoute()
-    // 客户端首次渲染后根据当前路由设置分区，之后随路由变化更新
-    if (typeof document !== 'undefined') {
+  Layout: defineComponent({
+    setup() {
+      const route = useRoute()
+
       applySection(route.path)
-      watch(
-        () => route.path,
-        (p) => applySection(p)
-      )
+      watch(() => route.path, applySection)
+      onContentUpdated(setupImageZoom)
+
+      return () => h(DefaultTheme.Layout)
     }
-    return h(DefaultTheme.Layout)
-  }
+  })
 }

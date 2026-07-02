@@ -32,7 +32,7 @@ features:
     details: MySQL、MyBatis-Plus、Redis、Elasticsearch、分库分表、分布式 ID 与数据同步。
     link: /storage/
   - title: 消息与事务
-    details: RocketMQ、Kafka、RabbitMQ 异步解耦，Seata 与最终一致性方案。
+    details: RocketMQ、Kafka、Pulsar、RabbitMQ 异步解耦与流式数据，Seata 与最终一致性方案。
     link: /messaging/
   - title: 安全与认证
     details: Spring Security、OAuth2、JWT、Sa-Token，以及密钥与配置安全。
@@ -47,7 +47,7 @@ features:
     details: Actuator、Prometheus、Grafana、SkyWalking、OpenTelemetry 与日志平台。
     link: /observability/
   - title: 部署运维
-    details: Docker、Kubernetes、Helm、CI/CD、服务网格、数据分析与 AI 能力。
+    details: Tomcat、WebLogic、Docker、Kubernetes、CI/CD、服务网格、数据分析与 AI 能力。
     link: /deploy/
   - title: 按规模选型
     details: 小型单体、中型微服务、大型企业项目的技术组合与演进路线。

@@ -15,6 +15,13 @@ pnpm-debug.log*
 .env
 .env.*
 
+# Image temporary and source files
+docs/public/images/_tmp/*
+!docs/public/images/_tmp/.gitkeep
+*.psd
+*.ai
+*.sketch
+
 # OS / editor files
 .DS_Store
 Thumbs.db

@@ -315,6 +315,23 @@
 .vp-doc .custom-block {
   border-radius: 10px;
 }
+
+.VPDoc .content img:not(a img):not(.no-zoom) {
+  cursor: zoom-in;
+}
+
+.medium-zoom-image--opened {
+  cursor: zoom-out;
+}
+
+.medium-zoom-overlay,
+.medium-zoom-image {
+  z-index: 100;
+}
+
+.medium-zoom-overlay {
+  background: color-mix(in srgb, var(--vp-c-bg) 94%, transparent) !important;
+}
 /* ---------- 首页 Hero 与特性卡 ---------- */
 .VPHomeHero .name,
 .VPHomeHero .text {
