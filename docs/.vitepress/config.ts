@@ -503,8 +503,7 @@ export default defineConfig({
             ]
           }
         ]
-      },
-      { text: 'GitHub', link: 'https://github.com/ggluoly/my-docs' }
+      }
     ],
 
     sidebar: {
