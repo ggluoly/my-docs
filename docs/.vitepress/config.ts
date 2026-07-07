@@ -515,7 +515,8 @@ export default defineConfig({
             { text: '技术栈结论', link: '/overview/' },
             { text: '整体架构', link: '/overview/architecture' },
             { text: '按规模选型', link: '/overview/selection' },
-            { text: '学习路线与记忆', link: '/overview/roadmap' }
+            { text: '学习路线与记忆', link: '/overview/roadmap' },
+            { text: '友情链接', link: '/overview/links' }
           ]
         }
       ],

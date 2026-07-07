@@ -90,6 +90,16 @@ Java 线程状态包括 `NEW`、`RUNNABLE`、`BLOCKED`、`WAITING`、`TIMED_WAIT
 - 什么是虚假唤醒？
 - `Condition` 和 `wait/notify` 有什么区别？
 
+### wait、notify 和 notifyAll 为什么定义在 Object 中？
+
+`wait()`、`notify()` 和 `notifyAll()` 都依赖对象监视器锁，线程是在某个对象的等待队列上等待和唤醒的，因此它们定义在 `Object` 中，而不是 `Thread` 中。这样任意对象都可以作为同步锁和线程协作载体。
+
+#### 常见追问
+
+- 调用 `wait()` 前为什么必须先持有对象锁？
+- `notify()` 唤醒的是线程还是对象？
+- `Condition` 为什么可以支持多个等待队列？
+
 ## 线程池
 
 ### 线程池核心参数有哪些？
@@ -233,6 +243,7 @@ Java 线程状态包括 `NEW`、`RUNNABLE`、`BLOCKED`、`WAITING`、`TIMED_WAIT
 - 死锁的四个必要条件是什么？
 - 线上如何排查死锁？
 - 数据库死锁和 Java 死锁有什么区别？
+- 避免嵌套锁能不能完全解决死锁？
 
 ## ThreadLocal 与原子类
 
