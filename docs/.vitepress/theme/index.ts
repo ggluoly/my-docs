@@ -34,6 +34,7 @@ function applySection(path: string) {
 const zoomSelector = '.VPDoc .content img:not(a img):not(.no-zoom)'
 
 let zoom: { attach: (selector: string) => void } | undefined
+let outlineScrollRaf = 0
 
 async function setupImageZoom() {
   if (typeof window === 'undefined') return
@@ -52,6 +53,43 @@ async function setupImageZoom() {
   zoom.attach(zoomSelector)
 }
 
+function syncActiveOutlineScroll() {
+  if (typeof window === 'undefined') return
+  if (outlineScrollRaf) return
+
+  outlineScrollRaf = window.requestAnimationFrame(() => {
+    outlineScrollRaf = 0
+
+    const outline = document.querySelector<HTMLElement>('.VPDocAsideOutline')
+    const activeLink = outline?.querySelector<HTMLElement>('.outline-link.active')
+
+    if (!outline) return
+
+    if (!activeLink) {
+      if (window.scrollY < 1) outline.scrollTo({ top: 0 })
+      return
+    }
+
+    const outlineRect = outline.getBoundingClientRect()
+    const activeRect = activeLink.getBoundingClientRect()
+    const padding = 16
+    const isAbove = activeRect.top < outlineRect.top + padding
+    const isBelow = activeRect.bottom > outlineRect.bottom - padding
+
+    if (isAbove || isBelow) {
+      activeLink.scrollIntoView({ block: 'nearest' })
+    }
+  })
+}
+
+function setupOutlineAutoScroll() {
+  if (typeof window === 'undefined') return
+
+  syncActiveOutlineScroll()
+  window.removeEventListener('scroll', syncActiveOutlineScroll)
+  window.addEventListener('scroll', syncActiveOutlineScroll, { passive: true })
+}
+
 export default {
   extends: DefaultTheme,
   Layout: defineComponent({
@@ -59,8 +97,13 @@ export default {
       const route = useRoute()
 
       applySection(route.path)
-      watch(() => route.path, applySection)
+      setupOutlineAutoScroll()
+      watch(() => route.path, (path) => {
+        applySection(path)
+        setupOutlineAutoScroll()
+      })
       onContentUpdated(setupImageZoom)
+      onContentUpdated(setupOutlineAutoScroll)
 
       return () => h(DefaultTheme.Layout)
     }

@@ -163,7 +163,7 @@ Java 访问控制包括 `private`、默认访问、`protected` 和 `public`。`p
 
 ### String 为什么不可变？
 
-`String` 底层由字符数组封装，final修饰。不可变可以保证字符串常量池安全、Hash 值稳定、线程安全以及作为 Map key 时行为可靠。每次看似修改字符串，实际都会创建新对象或由编译器优化为 `StringBuilder` 拼接。
+`String` 在java 8 底层由主要是 char[]，Java 9+ 主要是 byte[] + coder，final修饰。不可变可以保证字符串常量池安全、Hash 值稳定、线程安全以及作为 Map key 时行为可靠。每次看似修改字符串，实际都会创建新对象或由编译器优化为 `StringBuilder` 拼接。
 
 #### 常见追问
 
@@ -258,7 +258,7 @@ Java 方法参数传递的是值。对于基本类型，传递的是变量值；
 #### 常见追问
 
 - 受检异常和非受检异常有什么区别？
-  区别在于编译器是否强制处理。受检异常是继承自 Exception，编译会检查，方法里如果可能抛出，要么 try-catch，要么在方法签名上 throws 声明，比如 IOException、SQLException。；
+  区别在于编译器是否强制处理。受检异常是除 RuntimeException 及其子类之外的 Exception 子类，编译会检查，方法里如果可能抛出，要么 try-catch，要么在方法签名上 throws 声明，比如 IOException、SQLException。；
   非受检异常一般指继承自 RuntimeException 的异常，编译器不强制处理，通常是程序逻辑问题导致的，比如 NullPointerException、IndexOutOfBoundsException、IllegalArgumentException。
   **受检异常一般表示调用方有机会恢复或必须感知的异常，比如文件不存在、数据库访问失败；非受检异常更多表示代码 bug 或参数不合法，通常应该通过修正代码或参数校验来避免。**
   Error 也属于非受检的，比如 OutOfMemoryError，但它一般表示 JVM 或系统级严重问题，应用程序通常不建议捕获。
@@ -386,8 +386,7 @@ Java 方法参数传递的是值。对于基本类型，传递的是变量值；
   CGLIB 是基于继承的代理，它会生成目标类的子类，通过重写父类方法来增强，所以目标类不需要实现接口。
   JDK 动态代理适合面向接口编程，CGLIB 适合没有接口的类代理。
 - Spring AOP 默认使用哪种代理？
-  Spring AOP 默认不是固定只用一种代理，它的默认策略是：目标类实现了接口，就优先使用 JDK 动态代理；目标类没有实现接口，就使用 CGLIB 代理。
-  配置了proxyTargetClass=true，比如 @EnableAspectJAutoProxy(proxyTargetClass = true)，就会强制使用 CGLIB。
+  Spring AOP 默认不是固定只用一种代理，它的默认策略是： Spring AOP 默认有接口用 JDK 动态代理、无接口用 CGLIB；Spring Boot 默认配置通常会启用 CGLIB 代理，可通过 spring.aop.proxy-target-class=false 改回 JDK 动态代理。
 - final 类能被 CGLIB 代理吗？
   不能。CGLIB 是通过生成目标类的子类来实现代理的，而 final 类不能被继承，final 方法也不能被 CGLIB 增强，因为子类无法重写它。
 
