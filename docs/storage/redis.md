@@ -1,6 +1,6 @@
 ---
 title: 'Redis'
-description: 'Redis 技术文档，介绍 Java 后端数据存储中的核心概念、应用场景、性能优化和选型建议。'
+description: 'Redis 技术文档，介绍热点缓存、Token、验证码、排行榜，以及 Redisson 分布式锁、限流和多级缓存选型。'
 ---
 
 # Redis

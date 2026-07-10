@@ -69,11 +69,15 @@ WebLogic 常见于：
 
 ## WebLogic 安装部署详解
 
-### Windows 安装部署
+> 本页保留两套彼此独立的版本示例：Windows 部分是 WebLogic 10.3.6 的遗留维护流程，Linux 部分是 WebLogic 12.2.1.4 示例，不能把截图、安装包、补丁或 JDK 结论混用于另一版本。WebLogic 与 JDK、操作系统、数据库驱动的组合必须以目标 WebLogic 版本对应的 Oracle Fusion Middleware Supported System Configurations / 认证矩阵为准。
+
+### Windows 遗留维护流程：WebLogic 10.3.6
+
+以下截图和步骤仅用于识别、接管或复现仍在运行的 WebLogic 10.3.6 遗留环境，不代表现代新部署建议。10.3.6 已是历史版本，实施前应先核对现有补丁集、操作系统和经 Oracle 认证的 JDK，不要直接套用其他 WebLogic 版本的 Java 要求。
 
 #### WebLogic 下载安装
 
-去 Oracle 官网下载 WebLogic 10.3.6，选择 Generic 版本。各版本选择下载地址：[http://www.oracle.com/technetwork/middleware/weblogic/downloads/wls-main-097127.html](http://www.oracle.com/technetwork/middleware/weblogic/downloads/wls-main-097127.html)。
+去 Oracle 官网或现有企业软件归档中查找 WebLogic 10.3.6 Generic 安装介质。Oracle 历史版本下载通常需要 Oracle 账号、登录并接受许可协议；旧链接可能失效，应以 Oracle 当前下载入口和企业已授权介质为准。各版本选择下载地址：[http://www.oracle.com/technetwork/middleware/weblogic/downloads/wls-main-097127.html](http://www.oracle.com/technetwork/middleware/weblogic/downloads/wls-main-097127.html)。
 
 WebLogic 10.3.6 下载地址：[http://download.oracle.com/otn/nt/middleware/11g/wls/1036/wls1036_generic.jar](http://download.oracle.com/otn/nt/middleware/11g/wls/1036/wls1036_generic.jar)。
 
@@ -173,7 +177,7 @@ java -D64 -jar wls1036_generic.jar
 
 #### 选择生产模式和 JDK
 
-选择“生产模式”，JDK 最好选择 WebLogic 自带 JDK，点击“下一步”。
+选择“生产模式”。JDK 必须使用与 WebLogic 10.3.6、当前补丁集和操作系统匹配的 Oracle 认证版本；即使安装介质附带 JDK，也要先核对认证矩阵，再点击“下一步”。
 
 ![选择生产模式和 JDK](/images/deploy/weblogic/windows-weblogic-17.png)
 
@@ -295,27 +299,27 @@ http://192.168.204.143:7001/console/
 
 ![访问应用 URL 验证部署结果](/images/deploy/weblogic/windows-weblogic-36.png)
 
-### Linux 安装部署
+### Linux 示例：WebLogic 12.2.1.4
 
 #### WebLogic 安装指南
 
-在进行 WebLogic 安装之前，必须确定服务器上已经安装了 Java JDK（Java SE 8 或以上版本）。WebLogic 支持在 Windows、Linux 和 UNIX 系统上运行，以下将以 Linux 环境为例，演示如何安装和配置 WebLogic。
+本节单独以 WebLogic 12.2.1.4 为例，不是前面 Windows 10.3.6 流程的 Linux 版本。在安装之前，必须先确定 WebLogic 12.2.1.4、补丁级别、Linux 发行版与 JDK 的组合位于 Oracle 认证矩阵中。不能用“某个 Java 版本或更高版本”概括兼容性：更高版本 JDK 不会自动兼容旧版 WebLogic，具体厂商构建和补丁要求也可能不同。
 
 #### 环境准备
 
 | 环境要求 | 配置项 |
 | --- | --- |
-| 操作系统 | Linux（CentOS 7 或更高版本） |
-| JDK 版本 | Java SE Development Kit 8 或以上 |
+| 操作系统 | 以 Oracle 对 WebLogic 12.2.1.4 的认证矩阵为准，不按“CentOS 7 或更高”泛化 |
+| JDK 版本 | 按 WebLogic 12.2.1.4、补丁级别和操作系统对应的 Oracle 认证矩阵选择 |
 | 硬件要求 | 至少 4GB RAM，20GB 硬盘空间 |
-| 数据库（可选） | Oracle Database 12c 或更高版本 |
+| 数据库（可选） | 按应用、驱动与 Oracle 认证组合选择，不按“12c 或更高”泛化 |
 
 #### 下载与安装
 
 步骤一：下载 WebLogic 安装包。
 
 1. 访问 Oracle 官网下载 WebLogic Server 的安装包。
-2. 选择适合的版本并下载到服务器指定目录。
+2. 选择 WebLogic 12.2.1.4 对应介质并下载到服务器指定目录。Oracle 下载通常需要账号登录并接受许可协议。
 
 步骤二：解压并安装 WebLogic。
 
@@ -337,7 +341,7 @@ java -jar fmw_12.2.1.4.0_wls_quick.jar
 WebLogic 的核心管理单元是域（Domain）。域中包含管理服务器和若干受控服务器。以下是创建 WebLogic 域的步骤：
 
 ```bash
-# 设置 JAVA_HOME 环境变量
+# 示例路径仅表示已按 Oracle 认证矩阵选定的 JDK，不构成版本推荐
 export JAVA_HOME=/usr/java/jdk1.8.0_281
 export PATH=$JAVA_HOME/bin:$PATH
 

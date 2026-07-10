@@ -32,7 +32,7 @@ features:
     details: MySQL、MyBatis-Plus、Redis、Elasticsearch、分库分表、分布式 ID 与数据同步。
     link: /storage/
   - title: 消息与事务
-    details: RocketMQ、Kafka、Pulsar、RabbitMQ 异步解耦与流式数据，Seata 与最终一致性方案。
+    details: RocketMQ、Kafka、Pulsar 负责异步解耦与流式数据，RabbitMQ 仅作选型参考与面试考点；Seata 处理分布式事务。
     link: /messaging/
   - title: 安全与认证
     details: Spring Security、OAuth2、JWT、Sa-Token，以及密钥与配置安全。
@@ -56,6 +56,17 @@ features:
     details: 按 Java、JVM、并发、Spring、MySQL、Redis、微服务、场景题和系统设计整理高频问题。
     link: /interview/
 ---
+
+## 版本基线
+
+本文档采用双基线，阅读示例时不要混用：
+
+| 场景 | Java 基线 |
+| --- | --- |
+| Java 基础原理、JVM / 并发机制、存量项目维护 | 以 JDK 8 为基础讲解，并补充后续版本差异 |
+| 现代 Spring Boot 3.x 新项目 | Java 17 是最低要求；在 Spring Boot 小版本、依赖、Agent 和部署环境均兼容时，推荐选择 Java 17 或 Java 21，优先评估 Java 21 LTS |
+
+JDK 8 是理解基础原理和维护存量系统的基线，不代表新项目仍应停留在 JDK 8。Spring Boot 3.x、Spring Cloud 及其配套组件必须按兼容矩阵选择版本，不能只看单个框架是否能启动。
 
 ## 推荐学习路径
 

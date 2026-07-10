@@ -1,6 +1,7 @@
 {
   "name": "my-docs",
   "version": "1.0.0",
+  "private": true,
   "description": "Java 后端开发全技术文档库，覆盖企业 Java / Spring Cloud 微服务完整技术栈，基于 VitePress 构建。",
   "type": "module",
   "license": "MIT",

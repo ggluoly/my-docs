@@ -136,7 +136,7 @@ Jedis 更像 Redis 命令客户端，直接执行 Redis 命令；Redisson 在 Re
 #### 关联文档
 
 - [Redis 缓存](/storage/redis)
-- [并发编程](/java-core/concurrency)
+- [线程安全](/java-core/thread-safety)
 
 ### Redis 分布式锁有什么缺陷？
 

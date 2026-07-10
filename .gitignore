@@ -3,6 +3,10 @@ node_modules/
 # VitePress generated files
 docs/.vitepress/cache/
 docs/.vitepress/dist/
+docs/.vitepress/config.js
+docs/.vitepress/config.js.map
+docs/.vitepress/theme/index.js
+docs/.vitepress/theme/index.js.map
 
 # Logs
 *.log

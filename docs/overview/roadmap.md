@@ -5,6 +5,8 @@ description: 'Java 后端学习路线文档，梳理 Java、Spring、MySQL、Red
 
 # 学习路线与重点记忆
 
+> Java 基础原理与存量项目维护以 JDK 8 为讲解基线；现代 Spring Boot 3.x 新项目至少使用 Java 17，并在框架、依赖、Agent 和部署环境兼容时选择 Java 17 / 21，优先评估 Java 21 LTS。
+
 ## 最小学习路线
 
 学习企业 Java Spring Cloud，不建议一开始学全部。推荐顺序：
@@ -20,7 +22,7 @@ description: 'Java 后端学习路线文档，梳理 Java、Spring、MySQL、Red
 9. [Spring Cloud Gateway](/framework/gateway)
 10. [Sentinel 熔断限流](/framework/sentinel)
 11. [Elasticsearch](/storage/elasticsearch)
-12. [RocketMQ / Kafka](/messaging/)
+12. [RocketMQ / Kafka / Apache Pulsar](/messaging/)（RabbitMQ 作为选型参考与面试考点）
 13. [XXL-Job](/engineering/xxl-job)
 14. [MinIO / OSS](/engineering/minio)
 15. [Actuator + Prometheus + Grafana](/observability/prometheus-grafana)
@@ -50,7 +52,7 @@ description: 'Java 后端学习路线文档，梳理 Java、Spring、MySQL、Red
 | 热点数据怎么加速 | `Redis` |
 | 分布式锁怎么做 | `Redisson` |
 | 搜索怎么做 | `Elasticsearch` |
-| 异步消息怎么做 | `RocketMQ / Kafka / RabbitMQ` |
+| 异步消息怎么做 | `RocketMQ / Kafka / Pulsar`；`RabbitMQ` 作为参考与面试考点 |
 | 分布式事务怎么做 | `Seata / 事务消息` |
 | 文件放哪里 | `MinIO / OSS / S3` |
 | 定时任务怎么做 | `XXL-Job / Quartz` |

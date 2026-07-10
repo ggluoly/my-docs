@@ -1,6 +1,6 @@
 ---
 title: '分库分表'
-description: '分库分表技术文档，介绍 Java 后端数据存储中的核心概念、应用场景、性能优化和选型建议。'
+description: '分库分表技术文档，介绍海量订单与流水表的水平拆分场景，并对比 ShardingSphere、MyCat 和 Vitess 的适用边界。'
 ---
 
 # 分库分表

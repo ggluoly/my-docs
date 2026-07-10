@@ -38,12 +38,35 @@ URL 用名词复数，不用动词
 所有接口返回统一包装，前端处理更一致：
 
 ```java
-public record Result<T>(int code, String message, T data) {
+public class Result<T> {
+    private final int code;
+    private final String message;
+    private final T data;
+
+    private Result(int code, String message, T data) {
+        this.code = code;
+        this.message = message;
+        this.data = data;
+    }
+
     public static <T> Result<T> success(T data) {
         return new Result<>(0, "ok", data);
     }
+
     public static <T> Result<T> error(int code, String message) {
         return new Result<>(code, message, null);
+    }
+
+    public int getCode() {
+        return code;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public T getData() {
+        return data;
     }
 }
 ```
@@ -76,17 +99,49 @@ public class GlobalExceptionHandler {
 用 `Spring Validation`（Bean Validation）做声明式校验：
 
 ```java
-public record CreateUserRequest(
-    @NotBlank(message = "用户名不能为空") String username,
-    @Email(message = "邮箱格式不正确") String email,
-    @Min(value = 18, message = "年龄必须大于 18") int age
-) {}
+public class CreateUserRequest {
+    @NotBlank(message = "用户名不能为空")
+    private String username;
+
+    @Email(message = "邮箱格式不正确")
+    private String email;
+
+    @Min(value = 18, message = "年龄不能小于 18")
+    private int age;
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+}
 
 @PostMapping("/users")
 public Result<Long> create(@Valid @RequestBody CreateUserRequest req) {
     // 校验不通过会抛 MethodArgumentNotValidException，由全局异常处理
+    return Result.success(1L); // 示例 ID；实际项目返回业务服务创建后的用户 ID
 }
 ```
+
+以上 DTO 和统一返回示例使用普通 Java 类，可在 JDK 8 项目中编译；现代 Java 项目可以按团队规范改用 `record`，但不应把它写进 JDK 8 基线示例。
 
 ## 接口幂等
 

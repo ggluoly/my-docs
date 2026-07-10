@@ -1,6 +1,6 @@
 ---
 title: 'MySQL'
-description: 'MySQL 技术文档，介绍 Java 后端数据存储中的核心概念、应用场景、性能优化和选型建议。'
+description: 'MySQL 技术文档，介绍关系型业务数据、连接池、数据库版本管理、Java 驱动和企业项目关系数据库选型。'
 ---
 
 # MySQL

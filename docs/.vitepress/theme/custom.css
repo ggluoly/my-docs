@@ -1,18 +1,33 @@
 /* ============================================================
    分区配色系统
-   - 所有品牌色由单一变量 --section-accent 派生（color-mix）
+   - 文字色、按钮底色与装饰色分别定义，避免装饰色直接承担可读性
    - index.ts 根据当前路由在 <html data-section="..."> 上切换分区
    - 默认（首页/未匹配）使用 Spring 绿
    ============================================================ */
 :root {
-  --section-accent: #16a34a;        /* 默认：Spring 绿 */
-  --section-accent-2: #2563eb;      /* hero 渐变副色 */
+  --section-accent: #16a34a;
+  --section-accent-2: #2563eb;
+  --section-text-light: #166534;
+  --section-text-dark: #86efac;
+  --section-text: var(--section-text-light);
+  --section-text-hover: color-mix(in srgb, var(--section-text) 82%, black);
+  --section-button-bg: #166534;
+  --section-button-hover-bg: color-mix(in srgb, var(--section-button-bg) 82%, black);
   --section-accent-3: color-mix(in srgb, var(--section-accent) 55%, var(--section-accent-2));
 
-  --vp-c-brand-1: var(--section-accent);
-  --vp-c-brand-2: color-mix(in srgb, var(--section-accent) 80%, white);
-  --vp-c-brand-3: color-mix(in srgb, var(--section-accent) 55%, white);
+  --vp-c-brand-1: var(--section-text);
+  --vp-c-brand-2: var(--section-text-hover);
+  --vp-c-brand-3: var(--section-button-bg);
   --vp-c-brand-soft: color-mix(in srgb, var(--section-accent) 14%, transparent);
+  --vp-button-brand-border: transparent;
+  --vp-button-brand-text: #ffffff;
+  --vp-button-brand-bg: var(--section-button-bg);
+  --vp-button-brand-hover-border: transparent;
+  --vp-button-brand-hover-text: #ffffff;
+  --vp-button-brand-hover-bg: var(--section-button-hover-bg);
+  --vp-button-brand-active-border: transparent;
+  --vp-button-brand-active-text: #ffffff;
+  --vp-button-brand-active-bg: var(--section-button-hover-bg);
 
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: linear-gradient(
@@ -35,9 +50,8 @@
 }
 
 .dark {
-  --vp-c-brand-1: color-mix(in srgb, var(--section-accent) 70%, white);
-  --vp-c-brand-2: var(--section-accent);
-  --vp-c-brand-3: color-mix(in srgb, var(--section-accent) 60%, black);
+  --section-text: var(--section-text-dark);
+  --section-text-hover: color-mix(in srgb, var(--section-text) 82%, white);
   --vp-c-brand-soft: color-mix(in srgb, var(--section-accent) 18%, transparent);
   --doc-soft-bg: color-mix(in srgb, var(--section-accent) 12%, transparent);
   --doc-soft-border: color-mix(in srgb, var(--section-accent) 24%, transparent);
@@ -46,18 +60,101 @@
 }
 
 /* 分区强调色：结合栏目内容语义 */
-:root[data-section="overview"]     { --section-accent: #0ea5e9; --section-accent-2: #6366f1; }
-:root[data-section="java-core"]    { --section-accent: #ea580c; --section-accent-2: #f59e0b; } /* Java 橙 */
-:root[data-section="spring-core"]  { --section-accent: #16a34a; --section-accent-2: #22c55e; } /* Spring 绿 */
-:root[data-section="framework"]    { --section-accent: #0d9488; --section-accent-2: #14b8a6; } /* 青绿·治理 */
-:root[data-section="storage"]      { --section-accent: #2563eb; --section-accent-2: #3b82f6; } /* 蓝·数据 */
-:root[data-section="messaging"]    { --section-accent: #7c3aed; --section-accent-2: #a855f7; } /* 紫·事件 */
-:root[data-section="security"]     { --section-accent: #e11d48; --section-accent-2: #f43f5e; } /* 玫红·安全 */
-:root[data-section="practice"]     { --section-accent: #d97706; --section-accent-2: #f59e0b; } /* 琥珀·手艺 */
-:root[data-section="engineering"]  { --section-accent: #0891b2; --section-accent-2: #06b6d4; } /* 青·工具 */
-:root[data-section="observability"]{ --section-accent: #f97316; --section-accent-2: #fb923c; } /* 橙红·仪表盘 */
-:root[data-section="deploy"]       { --section-accent: #4f46e5; --section-accent-2: #6366f1; } /* 靛蓝·K8s */
-:root[data-section="interview"]    { --section-accent: #db2777; --section-accent-2: #8b5cf6; } /* 玫紫·面试冲刺 */
+:root[data-section="overview"] {
+  --section-accent: #0ea5e9;
+  --section-accent-2: #6366f1;
+  --section-text-light: #0369a1;
+  --section-text-dark: #7dd3fc;
+  --section-button-bg: #0369a1;
+}
+
+:root[data-section="java-core"] {
+  --section-accent: #ea580c;
+  --section-accent-2: #f59e0b;
+  --section-text-light: #9a3412;
+  --section-text-dark: #fdba74;
+  --section-button-bg: #9a3412;
+}
+
+:root[data-section="spring-core"] {
+  --section-accent: #16a34a;
+  --section-accent-2: #22c55e;
+  --section-text-light: #166534;
+  --section-text-dark: #86efac;
+  --section-button-bg: #166534;
+}
+
+:root[data-section="framework"] {
+  --section-accent: #0d9488;
+  --section-accent-2: #14b8a6;
+  --section-text-light: #0f766e;
+  --section-text-dark: #5eead4;
+  --section-button-bg: #0f766e;
+}
+
+:root[data-section="storage"] {
+  --section-accent: #2563eb;
+  --section-accent-2: #3b82f6;
+  --section-text-light: #1d4ed8;
+  --section-text-dark: #93c5fd;
+  --section-button-bg: #1d4ed8;
+}
+
+:root[data-section="messaging"] {
+  --section-accent: #7c3aed;
+  --section-accent-2: #a855f7;
+  --section-text-light: #6d28d9;
+  --section-text-dark: #c4b5fd;
+  --section-button-bg: #6d28d9;
+}
+
+:root[data-section="security"] {
+  --section-accent: #e11d48;
+  --section-accent-2: #f43f5e;
+  --section-text-light: #be123c;
+  --section-text-dark: #fda4af;
+  --section-button-bg: #be123c;
+}
+
+:root[data-section="practice"] {
+  --section-accent: #d97706;
+  --section-accent-2: #f59e0b;
+  --section-text-light: #92400e;
+  --section-text-dark: #fcd34d;
+  --section-button-bg: #92400e;
+}
+
+:root[data-section="engineering"] {
+  --section-accent: #0891b2;
+  --section-accent-2: #06b6d4;
+  --section-text-light: #0e7490;
+  --section-text-dark: #67e8f9;
+  --section-button-bg: #0e7490;
+}
+
+:root[data-section="observability"] {
+  --section-accent: #f97316;
+  --section-accent-2: #fb923c;
+  --section-text-light: #9a3412;
+  --section-text-dark: #fdba74;
+  --section-button-bg: #9a3412;
+}
+
+:root[data-section="deploy"] {
+  --section-accent: #4f46e5;
+  --section-accent-2: #6366f1;
+  --section-text-light: #4338ca;
+  --section-text-dark: #a5b4fc;
+  --section-button-bg: #4338ca;
+}
+
+:root[data-section="interview"] {
+  --section-accent: #db2777;
+  --section-accent-2: #8b5cf6;
+  --section-text-light: #be185d;
+  --section-text-dark: #f9a8d4;
+  --section-button-bg: #be185d;
+}
 
 /* ---------- 顶栏与下拉菜单 ---------- */
 .VPNavBarTitle .title {
@@ -77,7 +174,7 @@
   left: 10px;
   height: 2px;
   border-radius: 999px;
-  background: var(--nav-accent, var(--vp-c-brand-1));
+  background: var(--nav-decor, var(--section-accent));
   content: "";
   opacity: 0;
   transform: scaleX(0.6);
@@ -90,12 +187,59 @@
   transform: scaleX(1);
 }
 
-.VPNavBarMenu .VPNavBarMenuGroup:nth-child(3) { --nav-accent: #ea580c; --nav-accent-2: #f59e0b; }
-.VPNavBarMenu .VPNavBarMenuGroup:nth-child(4) { --nav-accent: #16a34a; --nav-accent-2: #22c55e; }
-.VPNavBarMenu .VPNavBarMenuGroup:nth-child(5) { --nav-accent: #0d9488; --nav-accent-2: #14b8a6; }
-.VPNavBarMenu .VPNavBarMenuGroup:nth-child(6) { --nav-accent: #2563eb; --nav-accent-2: #7c3aed; }
-.VPNavBarMenu .VPNavBarMenuGroup:nth-child(7) { --nav-accent: #4f46e5; --nav-accent-2: #06b6d4; }
-.VPNavBarMenu .VPNavBarMenuGroup:nth-child(8) { --nav-accent: #db2777; --nav-accent-2: #8b5cf6; }
+.VPNavBarMenu .VPNavBarMenuGroup {
+  --nav-text: var(--nav-text-light, var(--vp-c-brand-1));
+}
+
+.dark .VPNavBarMenu .VPNavBarMenuGroup {
+  --nav-text: var(--nav-text-dark, var(--vp-c-brand-1));
+}
+
+.VPNavBarMenuGroup[data-nav-section="java"] {
+  --nav-decor: #ea580c;
+  --nav-decor-2: #f59e0b;
+  --nav-text-light: #9a3412;
+  --nav-text-dark: #fdba74;
+}
+
+.VPNavBarMenuGroup[data-nav-section="spring"] {
+  --nav-decor: #16a34a;
+  --nav-decor-2: #22c55e;
+  --nav-text-light: #166534;
+  --nav-text-dark: #86efac;
+}
+
+.VPNavBarMenuGroup[data-nav-section="microservice"] {
+  --nav-decor: #0d9488;
+  --nav-decor-2: #14b8a6;
+  --nav-text-light: #0f766e;
+  --nav-text-dark: #5eead4;
+}
+
+.VPNavBarMenuGroup[data-nav-section="data-middleware"] {
+  --nav-decor: #2563eb;
+  --nav-decor-2: #7c3aed;
+  --nav-text-light: #1d4ed8;
+  --nav-text-dark: #93c5fd;
+}
+
+.VPNavBarMenuGroup[data-nav-section="engineering-ops"] {
+  --nav-decor: #4f46e5;
+  --nav-decor-2: #06b6d4;
+  --nav-text-light: #4338ca;
+  --nav-text-dark: #a5b4fc;
+}
+
+.VPNavBarMenuGroup[data-nav-section="interview"] {
+  --nav-decor: #db2777;
+  --nav-decor-2: #8b5cf6;
+  --nav-text-light: #be185d;
+  --nav-text-dark: #f9a8d4;
+}
+
+.VPNavBarMenu .VPNavBarMenuGroup.active .button .text {
+  color: var(--nav-text) !important;
+}
 
 .VPNavBarMenu .VPNavBarMenuGroup .menu {
   left: 50%;
@@ -117,9 +261,9 @@
   border: 1px solid var(--vp-c-divider);
   border-radius: 14px;
   background:
-    radial-gradient(circle at top left, color-mix(in srgb, var(--nav-accent, var(--vp-c-brand-1)) 10%, transparent), transparent 42%),
-    color-mix(in srgb, var(--vp-c-bg-elv) 96%, var(--nav-accent, var(--vp-c-brand-1)));
-  box-shadow: 0 18px 48px color-mix(in srgb, var(--nav-accent, #0f172a) 18%, transparent);
+    radial-gradient(circle at top left, color-mix(in srgb, var(--nav-decor, var(--section-accent)) 10%, transparent), transparent 42%),
+    color-mix(in srgb, var(--vp-c-bg-elv) 96%, var(--nav-decor, var(--section-accent)));
+  box-shadow: 0 18px 48px color-mix(in srgb, var(--nav-decor, #0f172a) 18%, transparent);
 }
 
 .VPNavBarMenu .VPMenu::before {
@@ -129,7 +273,7 @@
   left: 12px;
   height: 3px;
   border-radius: 0 0 999px 999px;
-  background: linear-gradient(90deg, var(--nav-accent, var(--vp-c-brand-1)), var(--nav-accent-2, var(--vp-c-brand-2)));
+  background: linear-gradient(90deg, var(--nav-decor, var(--section-accent)), var(--nav-decor-2, var(--section-accent-2)));
   content: "";
 }
 
@@ -141,8 +285,8 @@
   padding: 7px 10px;
   border: 1px solid var(--doc-soft-border);
   border-radius: 8px;
-  background: color-mix(in srgb, var(--nav-accent, var(--vp-c-brand-1)) 10%, transparent);
-  color: var(--nav-accent, var(--vp-c-brand-1));
+  background: color-mix(in srgb, var(--nav-decor, var(--section-accent)) 10%, transparent);
+  color: var(--nav-text, var(--vp-c-brand-1));
   font-size: 12px;
   font-weight: 800;
   letter-spacing: 0.04em;
@@ -169,7 +313,7 @@
   left: 0;
   width: 3px;
   border-radius: 999px;
-  background: var(--nav-accent, var(--vp-c-brand-1));
+  background: var(--nav-decor, var(--section-accent));
   content: "";
   opacity: 0;
   transform: scaleY(0.45);
@@ -177,8 +321,8 @@
 }
 
 .VPNavBarMenu .VPMenuLink:hover {
-  color: var(--nav-accent, var(--vp-c-brand-1));
-  background: color-mix(in srgb, var(--nav-accent, var(--vp-c-brand-1)) 9%, transparent);
+  color: var(--nav-text, var(--vp-c-brand-1));
+  background: color-mix(in srgb, var(--nav-decor, var(--section-accent)) 9%, transparent);
 }
 
 .VPNavBarMenu .VPMenuLink:hover::before {
@@ -298,11 +442,15 @@
   color: var(--vp-c-text-1);
 }
 .vp-doc table {
-  display: table;
+  display: block;
   width: 100%;
-  overflow: hidden;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: visible;
+  overscroll-behavior-inline: contain;
   border-radius: 10px;
   box-shadow: 0 0 0 1px var(--vp-c-divider);
+  scrollbar-width: thin;
 }
 
 .vp-doc th {
@@ -341,6 +489,12 @@
   cursor: zoom-in;
 }
 
+.VPDoc .content img:not(a img):not(.no-zoom):focus-visible {
+  border-radius: 6px;
+  outline: 3px solid var(--vp-c-brand-1);
+  outline-offset: 4px;
+}
+
 .medium-zoom-image--opened {
   cursor: zoom-out;
 }
@@ -352,6 +506,10 @@
 
 .medium-zoom-overlay {
   background: color-mix(in srgb, var(--vp-c-bg) 94%, transparent) !important;
+}
+
+.medium-zoom-overlay:focus-visible {
+  outline: none;
 }
 /* ---------- 首页 Hero 与特性卡 ---------- */
 .VPHomeHero .name,
@@ -419,13 +577,23 @@
 }
 
 /* ---------- 响应式 ---------- */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .VPNavBarMenu {
+    display: none !important;
+  }
+
+  .VPNavBarHamburger {
+    display: flex !important;
+  }
+
+  .VPNavScreen {
+    display: block !important;
+  }
+}
+
 @media (max-width: 767px) {
   .VPDoc .content-container {
     max-width: 100%;
-  }
-
-  .vp-doc table {
-    display: block;
   }
 
   .vp-doc h2 {

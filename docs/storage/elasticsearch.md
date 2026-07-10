@@ -1,6 +1,6 @@
 ---
 title: 'Elasticsearch'
-description: 'Elasticsearch 技术文档，介绍 Java 后端数据存储中的核心概念、应用场景、性能优化和选型建议。'
+description: 'Elasticsearch 技术文档，介绍全文搜索、复杂检索、聚合分析、日志检索，以及 MySQL 到 ES 的异步数据同步。'
 ---
 
 # Elasticsearch
