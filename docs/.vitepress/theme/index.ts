@@ -6,6 +6,7 @@ import {
   nextTick,
   onBeforeUnmount,
   onMounted,
+  ref,
   watch
 } from 'vue'
 import { onContentUpdated, useRoute } from 'vitepress'
@@ -78,6 +79,7 @@ export default {
       let zoomTask: Promise<void> = Promise.resolve()
       let outlineScrollRaf = 0
       let disposed = false
+      const showBackToTop = ref(false)
       const imageAttributes = new Map<HTMLImageElement, ImageAttributes>()
 
       const handleZoomOpen: EventListener = (event) => {
@@ -247,8 +249,26 @@ export default {
         })
       }
 
+      function syncBackToTopVisibility() {
+        showBackToTop.value = window.scrollY > 320
+      }
+
+      function handleWindowScroll() {
+        syncBackToTopVisibility()
+        syncActiveOutlineScroll()
+      }
+
+      function scrollToTop() {
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+        window.scrollTo({
+          top: 0,
+          behavior: reduceMotion ? 'auto' : 'smooth'
+        })
+      }
+
       function syncPageChrome() {
         applyNavSections()
+        syncBackToTopVisibility()
         syncActiveOutlineScroll()
       }
 
@@ -264,14 +284,14 @@ export default {
       })
 
       onMounted(() => {
-        window.addEventListener('scroll', syncActiveOutlineScroll, { passive: true })
+        window.addEventListener('scroll', handleWindowScroll, { passive: true })
         syncPageChrome()
       })
 
       onBeforeUnmount(() => {
         disposed = true
         imageSyncId += 1
-        window.removeEventListener('scroll', syncActiveOutlineScroll)
+        window.removeEventListener('scroll', handleWindowScroll)
         if (outlineScrollRaf) window.cancelAnimationFrame(outlineScrollRaf)
         outlineScrollRaf = 0
 
@@ -285,7 +305,41 @@ export default {
         })
       })
 
-      return () => h(DefaultTheme.Layout)
+      return () => h(DefaultTheme.Layout, null, {
+        'layout-bottom': () => showBackToTop.value
+          ? h(
+              'button',
+              {
+                class: 'VPBackToTop',
+                type: 'button',
+                title: '返回页面顶部',
+                'aria-label': '返回页面顶部',
+                'data-tooltip': '回到顶部',
+                onClick: scrollToTop
+              },
+              [
+                h(
+                  'svg',
+                  {
+                    viewBox: '0 0 24 24',
+                    'aria-hidden': 'true',
+                    focusable: 'false'
+                  },
+                  [
+                    h('path', {
+                      d: 'M12 19V5m0 0-6 6m6-6 6 6',
+                      fill: 'none',
+                      stroke: 'currentColor',
+                      'stroke-linecap': 'round',
+                      'stroke-linejoin': 'round',
+                      'stroke-width': '2'
+                    })
+                  ]
+                )
+              ]
+            )
+          : null
+      })
     }
   })
 }

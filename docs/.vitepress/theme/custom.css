@@ -495,6 +495,11 @@
   outline-offset: 4px;
 }
 
+.VPDoc .content .java-8-overview-image {
+  width: min(100%, 360px);
+  height: auto;
+}
+
 .medium-zoom-image--opened {
   cursor: zoom-out;
 }
@@ -510,6 +515,88 @@
 
 .medium-zoom-overlay:focus-visible {
   outline: none;
+}
+
+.VPBackToTop {
+  position: fixed;
+  right: 12px;
+  bottom: 28px;
+  z-index: 90;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  border: 1px solid color-mix(in srgb, var(--vp-c-brand-1) 28%, var(--vp-c-divider));
+  border-radius: 15px;
+  background: color-mix(in srgb, var(--vp-c-bg) 88%, var(--vp-c-brand-1) 12%);
+  color: var(--vp-c-brand-1);
+  box-shadow:
+    0 10px 26px color-mix(in srgb, var(--vp-c-brand-1) 14%, transparent),
+    inset 0 1px 0 color-mix(in srgb, white 58%, transparent);
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s, color 0.2s, transform 0.2s;
+}
+
+.VPBackToTop:hover {
+  border-color: var(--vp-c-brand-1);
+  background: var(--vp-button-brand-bg);
+  color: var(--vp-button-brand-text);
+  box-shadow:
+    0 14px 30px color-mix(in srgb, var(--vp-c-brand-1) 32%, transparent),
+    inset 0 1px 0 color-mix(in srgb, white 28%, transparent);
+  transform: translateY(-3px) scale(1.03);
+}
+
+.VPBackToTop:focus-visible {
+  outline: 3px solid var(--vp-c-brand-1);
+  outline-offset: 3px;
+}
+
+.VPBackToTop svg {
+  width: 21px;
+  height: 21px;
+  filter: drop-shadow(0 1px 1px color-mix(in srgb, currentColor 18%, transparent));
+}
+
+@media (min-width: 768px) {
+  .VPBackToTop::after {
+    position: absolute;
+    right: calc(100% + 10px);
+    padding: 6px 9px;
+    border: 1px solid var(--vp-c-divider);
+    border-radius: 7px;
+    background: var(--vp-c-bg);
+    color: var(--vp-c-text-1);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    content: attr(data-tooltip);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(4px);
+    transition: opacity 0.18s, transform 0.18s;
+    white-space: nowrap;
+  }
+
+  .VPBackToTop:hover::after,
+  .VPBackToTop:focus-visible::after {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .VPBackToTop {
+    transition: none;
+  }
+
+  .VPBackToTop:hover {
+    transform: none;
+  }
 }
 /* ---------- 首页 Hero 与特性卡 ---------- */
 .VPHomeHero .name,
@@ -592,6 +679,13 @@
 }
 
 @media (max-width: 767px) {
+  .VPBackToTop {
+    right: 10px;
+    bottom: 20px;
+    width: 40px;
+    height: 40px;
+  }
+
   .VPDoc .content-container {
     max-width: 100%;
   }
