@@ -17,8 +17,18 @@ outline: [2, 3]
 #### 常见追问
 
 - `Runnable` 和 `Callable` 有什么区别？
+  Runnable 的 run() 方法没有返回值，Callable 的 call() 方法有返回值。
+  Runnable 的 run() 不能直接抛出受检异常，Callable 的 call() 可以抛出异常。
+  Runnable 通常配合 Thread 或线程池使用，Callable 一般配合线程池和 Future 使用。
+  Runnable 提交到线程池用 execute() 或 submit()，Callable 只能用 submit()。
 - 为什么生产环境不推荐直接 `new Thread()`？
+  频繁创建和销毁线程成本高，会消耗 CPU 和内存资源。
+  线程数量不可控，如果请求量一大，每个请求都 new Thread()，可能导致线程过多，甚至 OOM。
+  缺少统一管理，像线程命名、异常处理、监控、超时控制、拒绝策略都不好做。
+  任务执行结果也不好获取，不像线程池可以配合 Future。
+  线程复用能力差，执行完就销毁，资源利用率低。
 - 线程池如何复用线程？
+  线程池复用线程的核心是：线程执行完一个任务后不会立即销毁，而是继续从任务队列里取下一个任务执行。
 
 #### 关联文档
 
@@ -31,8 +41,28 @@ outline: [2, 3]
 #### 常见追问
 
 - `Future` 如何获取执行结果？
+  Future 获取执行结果主要是调用 get() 方法。
+  比如：
+    `Future<String> future = executorService.submit(callable)`;
+    `String result = future.get()`;
+  这里 get() 会阻塞当前线程，直到任务执行完成并返回结果。
+  如果不想一直阻塞，可以用带超时时间的：
+    `future.get(3, TimeUnit.SECONDS)`;
+  如果任务执行过程中抛异常，调用 get() 时会抛出 `ExecutionException`，真正的异常在 `getCause()` 里。
+  如果任务被取消了，`get()` 会抛 `CancellationException`。
+  一般配合 `isDone()` 判断是否完成，或者用超时 `get()`，避免主线程无限等待。
 - `FutureTask` 的作用是什么？
+  主要是把 Callable 或 Runnable 包装成一个既可以执行、又可以获取结果的任务。同时实现了 Runnable 和 Future 接口，所以有两个能力：
+  可以作为 Runnable 被线程执行，比如 new Thread(futureTask).start()。
+  可以作为 Future 获取执行结果，比如调用 futureTask.get()。
+  **FutureTask 的作用就是：把异步任务和结果获取能力封装在一起。**
 - 异步任务异常怎么处理？
+  异步任务的异常不能只依赖日志，因为异常可能被线程池吞掉，关键是按提交方式处理。
+  如果用 submit() 提交任务，通过 future.get() 获取，捕获 ExecutionException，再通过 getCause() 拿到真实异常：
+  如果用 execute() 提交 Runnable，通过自定义线程工厂统一设置异常处理器。
+  如果是 CompletableFuture，使用 exceptionally() 做兜底，或者用 handle() 同时处理正常结果和异常。
+  在 Spring 的 @Async 中，返回 Future 或 CompletableFuture 时同样通过结果对象处理；如果返回 void，需要配置 AsyncUncaughtExceptionHandler。
+  实际项目里会统一记录任务参数、链路标识和完整异常；对于可重试任务再结合重试机制或消息队列补偿，避免异常只被记录但业务没有恢复。
 
 ### run 和 start 有什么区别？
 
@@ -41,8 +71,13 @@ outline: [2, 3]
 #### 常见追问
 
 - 为什么线程启动只能调用一次？
+  因为一个 Thread 对象只能对应一次完整的线程生命周期。
+  第一次调用 start() 后，线程状态会从 NEW 变为 RUNNABLE，JVM 会创建并调度对应的底层原生线程；线程执行结束后状态变为 TERMINATED。再次调用时，线程已经不处于 NEW 状态，JDK 会直接抛出 IllegalThreadStateException。
+  再次执行相同逻辑，应该创建新的 Thread 对象，或者更推荐提交任务到线程池。直接调用 run() 可以调用多次，但它只是普通方法调用，不会创建新线程。
 - 线程启动后什么时候执行由谁决定？
-- 线程执行完还能再次启动吗？
+  调用 start() 后，线程只是进入 RUNNABLE 状态，不代表会立刻执行。
+  具体什么时候真正拿到 CPU 执行，由操作系统的线程调度器决定，JVM 不能精确控制。
+  开发中不能依赖线程的启动顺序或执行先后；如果有顺序要求，使用 join()、CountDownLatch、Semaphore、CyclicBarrier 或锁等同步工具来保证。
 
 ### Java 线程有哪些状态？
 
@@ -51,8 +86,16 @@ Java 线程状态包括 `NEW`、`RUNNABLE`、`BLOCKED`、`WAITING`、`TIMED_WAIT
 #### 常见追问
 
 - `BLOCKED` 和 `WAITING` 有什么区别？
+  BLOCKED 是线程在等待获取 synchronized 的监视器锁，比如其他线程还没有释放锁；拿到锁后才会继续执行。此时调用 interrupt() 不会让它立即退出锁竞争。
+  WAITING 是线程主动进入无限期等待，通常由 Object.wait()、Thread.join()、LockSupport.park() 触发；需要其他线程通过 notify()、unpark()、目标线程结束，或中断来唤醒。
+  简单说，**BLOCKED 是“等锁”，WAITING 是“等通知或条件成立”**。
 - `sleep()` 后线程进入什么状态？
+  会进入 TIMED_WAITING 状态。等待时间结束后，线程回到 RUNNABLE 状态，等待操作系统再次调度执行。sleep() 不会释放已经持有的 synchronized 监视器锁；如果需要释放锁等待条件，应使用 wait()。
 - 如何查看线程状态？
+  代码中调用 `thread.getState()`，可以得到 Java 线程状态，例如 RUNNABLE、BLOCKED、WAITING、TIMED_WAITING。
+  线上排查常用 `jstack <pid> `导出线程快照，查看每个线程的状态、调用栈以及是否在等锁。
+  使用 `jcmd <pid> Thread.print`，效果和 jstack 类似。
+  图形化工具可以用 JConsole、VisualVM 或 Arthas 的 thread 命令。 需要注意，jstack 里显示的 RUNNABLE 不一定代表线程正在占用 CPU，也可能处于可运行但等待系统调度的状态。
 
 ### 守护线程是什么？
 
@@ -61,8 +104,23 @@ Java 线程状态包括 `NEW`、`RUNNABLE`、`BLOCKED`、`WAITING`、`TIMED_WAIT
 #### 常见追问
 
 - 如何设置守护线程？
+  通过 Thread#setDaemon(true) 设置，并且必须在线程启动前调用：
+  ```
+  Thread thread = new Thread(task);
+  thread.setDaemon(true);
+  thread.start();
+  ```
+  守护线程会随所有用户线程结束而自动退出，常用于垃圾回收、监控或后台任务。
+  如果线程已经调用 start()，再设置会抛出 IllegalThreadStateException。
 - 守护线程适合做什么？
+  适合执行不需要保证完成的后台辅助任务，例如：
+    日志刷新、监控采集、定时清理缓存。
+    心跳检测、连接保活等后台维护任务。
+    JVM 的垃圾回收线程也是守护线程。 核心原则是：任务可以随 JVM 退出直接终止，不能用于订单落库、文件写入、消息消费等必须可靠完成的业务。
 - 为什么不能把业务落库任务放到守护线程？
+  因为当所有非守护线程结束后，JVM 会直接退出，守护线程不会等待任务执行完成。
+  如果把落库放在守护线程，可能出现数据还没提交、事务没完成、连接没释放，进程就退出了，导致数据丢失或状态不一致。
+  所以核心业务任务要使用用户线程或线程池，并配合事务、重试和优雅停机保证执行完成。
 
 ## 线程通信
 
@@ -73,8 +131,12 @@ Java 线程状态包括 `NEW`、`RUNNABLE`、`BLOCKED`、`WAITING`、`TIMED_WAIT
 #### 常见追问
 
 - 为什么 `wait()` 必须在同步代码块里调用？
+  因为 wait() 会释放当前对象的监视器锁，并让线程进入该对象的等待队列，必须先持有这个对象的锁才能保证操作正确。
 - `wait()` 被唤醒后会立刻执行吗？
+  不会立刻执行。notify() 或 notifyAll() 只是让等待线程从 WAITING 状态进入锁竞争状态，它还需要重新获取对应对象的监视器锁。只有拿到锁后，wait() 才会返回并继续执行同步代码；如果锁仍被其他线程持有，就会继续阻塞。
 - `sleep()` 会释放锁吗？
+  不会。Thread.sleep() 只是让当前线程进入 TIMED_WAITING 状态，线程仍然持有已经获取的 synchronized 锁。
+  因此其他线程无法进入同一个对象的同步代码块，直到该线程睡眠结束并退出同步块释放锁。
 
 #### 关联文档
 
