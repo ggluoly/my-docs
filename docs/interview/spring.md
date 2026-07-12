@@ -18,7 +18,6 @@ IoC 是控制反转，对象的创建、依赖管理和生命周期交给 Spring
 
 - BeanFactory 和 ApplicationContext 有什么区别？
 - Spring 如何完成依赖注入？
-- 循环依赖怎么解决？
 
 #### 关联文档
 
@@ -52,7 +51,6 @@ Spring 常见模块包括 Core Container、Context、AOP、Beans、Expression、
 
 - `@Autowired` 默认按什么规则注入？
 - 多个同类型 Bean 怎么处理？
-- `@Autowired` 和 `@Resource` 有什么区别？
 
 ### Bean 生命周期是什么？
 
@@ -222,7 +220,6 @@ Spring 事务隔离级别包括 `DEFAULT`、`READ_UNCOMMITTED`、`READ_COMMITTED
 
 - `@GetMapping` 和 `@RequestMapping` 有什么关系？
 - 路径变量和请求参数怎么接收？
-- Controller 方法参数是怎么解析的？
 
 ### Spring MVC 和 Struts 有什么区别？
 
