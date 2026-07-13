@@ -282,7 +282,7 @@ Java 线程状态包括 `NEW`、`RUNNABLE`、`BLOCKED`、`WAITING`、`TIMED_WAIT
   `shutdown()` 会发起有序关闭并立即返回，不会阻塞等待线程池终止。它不再接收新任务，但正在运行的任务和已进入队列的任务会继续执行；调用方需要等待结束时，应调用 `awaitTermination()`。
   `shutdownNow()` 会尝试立即关闭并立即返回：不再接收新任务，尝试通过中断停止正在执行的任务，返回队列中尚未开始执行的任务列表。正在执行的任务是否结束取决于其是否正确响应中断；调用方同样可通过 `awaitTermination()` 等待线程池终止。
 - 线程池如何优雅关闭？
-  我通常按“两阶段关闭”处理：
+  通常按“两阶段关闭”处理：
   1. 先调用 `shutdown()`，拒绝新任务，但让正在执行和队列中的任务正常完成。
   2. 调用 `awaitTermination(timeout, unit)` 等待线程池结束。
   3. 如果超时，调用 `shutdownNow()`，中断运行中的任务，并获取队列里未执行的任务做记录或补偿。
@@ -485,7 +485,7 @@ JVM 会针对同步做优化，但具体实现随 JDK 和 JVM 版本变化。偏
   因为 `ThreadLocalMap` 属于线程，线程通常生命周期较长；如果 key 是强引用，即使业务不再持有 `ThreadLocal`，它也会被 `ThreadLocalMap` 一直引用，无法回收。
   key 使用弱引用后，`ThreadLocal` 对象可以被 GC 回收，避免 key 本身长期泄漏。
   但 value 仍是强引用，key 被回收后会形成 `key=null` 的 Entry，在线程存活期间 value 仍可能泄漏。
-  所以我会在使用完后主动调用 `ThreadLocal.remove()`，尤其在线程池场景。
+  在使用完后主动调用 `ThreadLocal.remove()`，尤其在线程池场景。
 - 为什么线程池中使用后要 `remove()`？
   线程池会复用工作线程，`ThreadLocalMap` 会跟随线程长期存在。
   如果不调用 `remove()`，当前请求存入的对象可能一直被该线程持有，导致内存泄漏。

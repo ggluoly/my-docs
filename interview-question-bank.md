@@ -7,9 +7,9 @@
 ## 统计
 
 - 正式题：262
-- 常见追问：662
-- 总问题数：924
-- 标准化唯一问题数：917
+- 常见追问：661
+- 总问题数：923
+- 标准化唯一问题数：916
 - 当前重复问题组：7
 
 ## 使用规则
@@ -150,8 +150,6 @@
   来源：`docs/interview/concurrency.md:361`
 - [正式题] synchronized 锁升级过程是什么？
   来源：`docs/interview/concurrency.md:370`
-- [常见追问] 什么是无锁、偏向锁、轻量级锁、重量级锁？
-  来源：`docs/interview/concurrency.md:372`
 - [常见追问] 锁能降级吗？
   来源：`docs/interview/concurrency.md:380`
 - [常见追问] 自旋锁解决什么问题？
@@ -340,136 +338,136 @@
 - [常见追问] JSP 为什么会被编译成 Servlet？
   来源：`docs/interview/java-web.md:19`
 - [常见追问] MVC 中 Servlet 和 JSP 分别承担什么角色？
-  来源：`docs/interview/java-web.md:20`
-- [常见追问] 为什么现在项目很少直接使用 JSP？
   来源：`docs/interview/java-web.md:21`
+- [常见追问] 为什么现在项目很少直接使用 JSP？
+  来源：`docs/interview/java-web.md:24`
 - [正式题] JSP 有哪些内置对象？
-  来源：`docs/interview/java-web.md:23`
+  来源：`docs/interview/java-web.md:27`
 - [常见追问] `request` 和 `session` 有什么区别？
-  来源：`docs/interview/java-web.md:29`
-- [常见追问] `application` 对应什么作用域？
-  来源：`docs/interview/java-web.md:30`
-- [常见追问] `exception` 对象什么时候可用？
-  来源：`docs/interview/java-web.md:31`
-- [正式题] JSP 四种作用域是什么？
   来源：`docs/interview/java-web.md:33`
+- [常见追问] `application` 对应什么作用域？
+  来源：`docs/interview/java-web.md:37`
+- [常见追问] `exception` 对象什么时候可用？
+  来源：`docs/interview/java-web.md:42`
+- [正式题] JSP 四种作用域是什么？
+  来源：`docs/interview/java-web.md:47`
 - [常见追问] request 转发和重定向对作用域有什么影响？
-  来源：`docs/interview/java-web.md:39`
+  来源：`docs/interview/java-web.md:53`
 - [常见追问] session 什么时候失效？
-  来源：`docs/interview/java-web.md:40`
+  来源：`docs/interview/java-web.md:57`
 - [常见追问] application 作用域为什么要谨慎使用？
-  来源：`docs/interview/java-web.md:41`
+  来源：`docs/interview/java-web.md:63`
 
 #### Session 与 Cookie
 
 - [正式题] Session 和 Cookie 有什么区别？
-  来源：`docs/interview/java-web.md:45`
-- [常见追问] Cookie 安全属性有哪些？
-  来源：`docs/interview/java-web.md:51`
-- [常见追问] Session 为什么会有分布式共享问题？
-  来源：`docs/interview/java-web.md:52`
-- [常见追问] JWT 和 Session 有什么区别？
-  来源：`docs/interview/java-web.md:53`
-- [正式题] Session 工作原理是什么？
-  来源：`docs/interview/java-web.md:60`
-- [常见追问] sessionId 泄漏有什么风险？
-  来源：`docs/interview/java-web.md:66`
-- [常见追问] Session 过期时间在哪里配置？
-  来源：`docs/interview/java-web.md:67`
-- [常见追问] 分布式 Session 如何实现？
-  来源：`docs/interview/java-web.md:68`
-- [正式题] 禁用 Cookie 后 Session 还能用吗？
   来源：`docs/interview/java-web.md:70`
-- [常见追问] URL 重写有什么安全风险？
+- [常见追问] Cookie 安全属性有哪些？
   来源：`docs/interview/java-web.md:76`
+- [常见追问] Session 为什么会有分布式共享问题？
+  来源：`docs/interview/java-web.md:87`
+- [常见追问] JWT 和 Session 有什么区别？
+  来源：`docs/interview/java-web.md:94`
+- [正式题] Session 工作原理是什么？
+  来源：`docs/interview/java-web.md:107`
+- [常见追问] sessionId 泄漏有什么风险？
+  来源：`docs/interview/java-web.md:113`
+- [常见追问] Session 过期时间在哪里配置？
+  来源：`docs/interview/java-web.md:117`
+- [常见追问] 分布式 Session 如何实现？
+  来源：`docs/interview/java-web.md:133`
+- [正式题] 禁用 Cookie 后 Session 还能用吗？
+  来源：`docs/interview/java-web.md:140`
+- [常见追问] URL 重写有什么安全风险？
+  来源：`docs/interview/java-web.md:146`
 - [常见追问] 移动端通常怎么维持登录态？
-  来源：`docs/interview/java-web.md:77`
+  来源：`docs/interview/java-web.md:150`
 - [常见追问] Token 方案如何替代 Session？
-  来源：`docs/interview/java-web.md:78`
+  来源：`docs/interview/java-web.md:155`
 
 #### 传统 MVC 与安全基础
 
 - [正式题] Spring MVC 和 Struts 有什么区别？
-  来源：`docs/interview/java-web.md:82`
+  来源：`docs/interview/java-web.md:163`
 - [常见追问] Struts2 的 Action 是线程安全的吗？
-  来源：`docs/interview/java-web.md:88`
+  来源：`docs/interview/java-web.md:169`
 - [常见追问] Spring MVC 为什么更适合现代项目？
-  来源：`docs/interview/java-web.md:89`
+  来源：`docs/interview/java-web.md:172`
 - [常见追问] 过滤器、拦截器和 AOP 有什么区别？
-  来源：`docs/interview/java-web.md:90`
+  来源：`docs/interview/java-web.md:177`
 - [正式题] 如何避免 SQL 注入？
-  来源：`docs/interview/java-web.md:96`
+  来源：`docs/interview/java-web.md:188`
 - [常见追问] `PreparedStatement` 为什么能防 SQL 注入？
-  来源：`docs/interview/java-web.md:102`
+  来源：`docs/interview/java-web.md:194`
 - [常见追问] MyBatis 的 `#{}` 和 `${}` 有什么区别？
-  来源：`docs/interview/java-web.md:103`
+  来源：`docs/interview/java-web.md:198`
 - [常见追问] 排序字段必须动态拼接时怎么处理？
-  来源：`docs/interview/java-web.md:104`
+  来源：`docs/interview/java-web.md:201`
 
 #### Tomcat 与 WebLogic
 
 - [正式题] Tomcat 是什么？
-  来源：`docs/interview/java-web.md:113`
+  来源：`docs/interview/java-web.md:212`
 - [常见追问] Tomcat 是 Web 服务器还是应用服务器？
-  来源：`docs/interview/java-web.md:119`
-- [常见追问] Tomcat 和 Nginx 有什么区别？
-  来源：`docs/interview/java-web.md:120`
-- [常见追问] Spring Boot 为什么能直接启动 Web 服务？
-  来源：`docs/interview/java-web.md:121`
-- [正式题] Tomcat 的核心组件有哪些？
-  来源：`docs/interview/java-web.md:127`
-- [常见追问] Connector 和 Container 有什么区别？
-  来源：`docs/interview/java-web.md:137`
-- [常见追问] `Context` 对应什么？
-  来源：`docs/interview/java-web.md:138`
-- [正式题] Tomcat 的请求处理流程是什么？
-  来源：`docs/interview/java-web.md:144`
-- [常见追问] Filter 在请求流程中什么时候执行？
-  来源：`docs/interview/java-web.md:150`
-- [常见追问] DispatcherServlet 在 Tomcat 中是什么角色？
-  来源：`docs/interview/java-web.md:151`
-- [常见追问] Tomcat 线程池满了会怎样？
-  来源：`docs/interview/java-web.md:152`
-- [正式题] Tomcat 为什么要自定义类加载器？
-  来源：`docs/interview/java-web.md:159`
-- [常见追问] 双亲委派是什么？
-  来源：`docs/interview/java-web.md:169`
-- [常见追问] Tomcat 类加载器和普通 JVM 类加载器有什么区别？
-  来源：`docs/interview/java-web.md:170`
-- [常见追问] 为什么热部署容易导致类加载器泄漏？
-  来源：`docs/interview/java-web.md:171`
-- [正式题] Spring Boot 内嵌 Tomcat 和外部 Tomcat 有什么区别？
-  来源：`docs/interview/java-web.md:178`
-- [常见追问] Spring Boot jar 和 war 部署有什么区别？
-  来源：`docs/interview/java-web.md:184`
-- [常见追问] 内嵌 Tomcat 如何配置端口和线程池？
-  来源：`docs/interview/java-web.md:185`
-- [常见追问] 为什么微服务更常用内嵌容器？
-  来源：`docs/interview/java-web.md:186`
-- [正式题] WebLogic 是什么？
-  来源：`docs/interview/java-web.md:193`
-- [常见追问] WebLogic 为什么叫企业级应用服务器？
-  来源：`docs/interview/java-web.md:199`
-- [常见追问] WebLogic 常见于哪些项目？
-  来源：`docs/interview/java-web.md:200`
-- [常见追问] WebLogic 和 Spring Boot 是同一类东西吗？
-  来源：`docs/interview/java-web.md:201`
-- [正式题] Tomcat 和 WebLogic 有什么区别？
-  来源：`docs/interview/java-web.md:207`
-- [常见追问] 为什么 WebLogic 运维复杂度更高？
-  来源：`docs/interview/java-web.md:213`
-- [常见追问] 什么场景还会使用 WebLogic？
-  来源：`docs/interview/java-web.md:214`
-- [常见追问] 从 WebLogic 迁移到 Spring Boot 要注意什么？
-  来源：`docs/interview/java-web.md:215`
-- [正式题] 传统项目为什么会使用 WebLogic？
+  来源：`docs/interview/java-web.md:218`
+- [常见追问] web服务器和应用服务器的区别？
   来源：`docs/interview/java-web.md:222`
+- [常见追问] Tomcat 和 Nginx 有什么区别？
+  来源：`docs/interview/java-web.md:227`
+- [常见追问] Spring Boot 为什么能直接启动 Web 服务？
+  来源：`docs/interview/java-web.md:233`
+- [正式题] Tomcat 的核心组件有哪些？
+  来源：`docs/interview/java-web.md:243`
+- [常见追问] Connector 和 Container 有什么区别？
+  来源：`docs/interview/java-web.md:253`
+- [常见追问] `Context` 对应什么？
+  来源：`docs/interview/java-web.md:259`
+- [正式题] Tomcat 的请求处理流程是什么？
+  来源：`docs/interview/java-web.md:269`
+- [常见追问] Filter 在请求流程中什么时候执行？
+  来源：`docs/interview/java-web.md:275`
+- [常见追问] DispatcherServlet 在 Tomcat 中是什么角色？
+  来源：`docs/interview/java-web.md:287`
+- [常见追问] Tomcat 线程池满了会怎样？
+  来源：`docs/interview/java-web.md:294`
+- [正式题] Tomcat 为什么要自定义类加载器？
+  来源：`docs/interview/java-web.md:304`
+- [常见追问] 双亲委派是什么？
+  来源：`docs/interview/java-web.md:314`
+- [常见追问] Tomcat 类加载器和普通 JVM 类加载器有什么区别？
+  来源：`docs/interview/java-web.md:318`
+- [常见追问] 为什么热部署容易导致类加载器泄漏？
+  来源：`docs/interview/java-web.md:331`
+- [正式题] Spring Boot 内嵌 Tomcat 和外部 Tomcat 有什么区别？
+  来源：`docs/interview/java-web.md:340`
+- [常见追问] Spring Boot jar 和 war 部署有什么区别？
+  来源：`docs/interview/java-web.md:347`
+- [常见追问] 内嵌 Tomcat 如何配置端口和线程池？
+  来源：`docs/interview/java-web.md:352`
+- [常见追问] 为什么微服务更常用内嵌容器？
+  来源：`docs/interview/java-web.md:386`
+- [正式题] WebLogic 是什么？
+  来源：`docs/interview/java-web.md:401`
+- [常见追问] WebLogic 为什么叫企业级应用服务器？
+  来源：`docs/interview/java-web.md:408`
+- [常见追问] WebLogic 常见于哪些项目？
+  来源：`docs/interview/java-web.md:419`
+- [正式题] Tomcat 和 WebLogic 有什么区别？
+  来源：`docs/interview/java-web.md:433`
+- [常见追问] 为什么 WebLogic 运维复杂度更高？
+  来源：`docs/interview/java-web.md:439`
+- [常见追问] 什么场景还会使用 WebLogic？
+  来源：`docs/interview/java-web.md:448`
+- [常见追问] 从 WebLogic 迁移到 Spring Boot 要注意什么？
+  来源：`docs/interview/java-web.md:457`
+- [正式题] 传统项目为什么会使用 WebLogic？
+  来源：`docs/interview/java-web.md:476`
 - [常见追问] 新项目为什么不一定选 WebLogic？
-  来源：`docs/interview/java-web.md:228`
+  来源：`docs/interview/java-web.md:482`
 - [常见追问] WebLogic 迁移到 Kubernetes 有哪些难点？
-  来源：`docs/interview/java-web.md:229`
+  来源：`docs/interview/java-web.md:491`
 - [常见追问] JNDI 数据源迁移到 Spring Boot 怎么处理？
-  来源：`docs/interview/java-web.md:230`
+  来源：`docs/interview/java-web.md:505`
 
 ### docs/interview/java.md
 
@@ -796,40 +794,40 @@
 - [正式题] Serializable 接口有什么作用？
   来源：`docs/interview/java.md:877`
 - [常见追问] 为什么建议显式声明 `serialVersionUID`？
-  来源：`docs/interview/java.md:883`
+  来源：`docs/interview/java.md:884`
 - [常见追问] `transient` 字段会不会被序列化？
-  来源：`docs/interview/java.md:886`
+  来源：`docs/interview/java.md:887`
 - [常见追问] Java 原生序列化有什么安全风险？
-  来源：`docs/interview/java.md:888`
+  来源：`docs/interview/java.md:889`
 - [正式题] 怎么把一个对象从一个 JVM 转移到另一个 JVM？
-  来源：`docs/interview/java.md:895`
+  来源：`docs/interview/java.md:896`
 - [常见追问] RPC 框架为什么需要序列化协议？
-  来源：`docs/interview/java.md:901`
+  来源：`docs/interview/java.md:902`
 - [常见追问] JSON、Protobuf、Java 原生序列化有什么区别？
-  来源：`docs/interview/java.md:903`
+  来源：`docs/interview/java.md:904`
 - [常见追问] 分布式系统中传对象和传 ID 有什么取舍？
-  来源：`docs/interview/java.md:908`
+  来源：`docs/interview/java.md:909`
 - [正式题] 深拷贝和浅拷贝怎么实现？
-  来源：`docs/interview/java.md:918`
+  来源：`docs/interview/java.md:919`
 - [常见追问] 为什么不推荐滥用 `clone()`？
-  来源：`docs/interview/java.md:926`
+  来源：`docs/interview/java.md:927`
 
 #### 设计模式
 
 - [正式题] 设计模式有哪些常见原则？
-  来源：`docs/interview/java.md:941`
+  来源：`docs/interview/java.md:942`
 - [常见追问] 开闭原则怎么落地？
-  来源：`docs/interview/java.md:953`
+  来源：`docs/interview/java.md:954`
 - [常见追问] 设计原则是不是越多越好？
-  来源：`docs/interview/java.md:958`
+  来源：`docs/interview/java.md:959`
 - [正式题] 常见设计模式有哪些？
-  来源：`docs/interview/java.md:961`
+  来源：`docs/interview/java.md:962`
 - [常见追问] 简单工厂、工厂方法、抽象工厂有什么区别？
-  来源：`docs/interview/java.md:970`
+  来源：`docs/interview/java.md:971`
 - [常见追问] 静态代理和动态代理有什么区别？
-  来源：`docs/interview/java.md:974`
+  来源：`docs/interview/java.md:975`
 - [常见追问] 策略模式和模板方法模式有什么区别？
-  来源：`docs/interview/java.md:977`
+  来源：`docs/interview/java.md:978`
 
 ### docs/interview/jvm.md
 
@@ -2099,17 +2097,17 @@
 
 ### Spring MVC 和 Struts 有什么区别？
 
-- [正式题] `docs/interview/java-web.md:82` Spring MVC 和 Struts 有什么区别？
+- [正式题] `docs/interview/java-web.md:163` Spring MVC 和 Struts 有什么区别？
 - [正式题] `docs/interview/spring.md:224` Spring MVC 和 Struts 有什么区别？
 
 ### Struts2 的 Action 是线程安全的吗？
 
-- [常见追问] `docs/interview/java-web.md:88` Struts2 的 Action 是线程安全的吗？
+- [常见追问] `docs/interview/java-web.md:169` Struts2 的 Action 是线程安全的吗？
 - [常见追问] `docs/interview/spring.md:231` Struts2 的 Action 是线程安全的吗？
 
 ### Tomcat 为什么要自定义类加载器？
 
-- [正式题] `docs/interview/java-web.md:159` Tomcat 为什么要自定义类加载器？
+- [正式题] `docs/interview/java-web.md:304` Tomcat 为什么要自定义类加载器？
 - [常见追问] `docs/interview/jvm.md:158` Tomcat 为什么要自定义类加载器？
 
 ### JDK 动态代理和 CGLIB 有什么区别？
