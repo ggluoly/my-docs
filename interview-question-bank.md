@@ -1842,156 +1842,156 @@
 - [常见追问] BeanFactory 和 ApplicationContext 有什么区别？
   来源：`docs/interview/spring.md:19`
 - [常见追问] Spring 如何完成依赖注入？
-  来源：`docs/interview/spring.md:20`
-- [正式题] Spring 主要模块有哪些？
   来源：`docs/interview/spring.md:26`
+- [正式题] Spring 主要模块有哪些？
+  来源：`docs/interview/spring.md:41`
 - [常见追问] Spring Core 解决什么问题？
-  来源：`docs/interview/spring.md:32`
+  来源：`docs/interview/spring.md:48`
 - [常见追问] Spring AOP 用在哪些场景？
-  来源：`docs/interview/spring.md:33`
-- [常见追问] Spring MVC 属于哪个层面的能力？
-  来源：`docs/interview/spring.md:34`
-- [正式题] Spring 常用注入方式有哪些？
-  来源：`docs/interview/spring.md:36`
-- [常见追问] 为什么不推荐字段注入？
-  来源：`docs/interview/spring.md:42`
-- [常见追问] 构造器注入如何解决必需依赖？
-  来源：`docs/interview/spring.md:43`
-- [常见追问] `@Resource` 和 `@Autowired` 有什么区别？
-  来源：`docs/interview/spring.md:44`
-- [正式题] @Autowired 有什么作用？
-  来源：`docs/interview/spring.md:46`
-- [常见追问] `@Autowired` 默认按什么规则注入？
-  来源：`docs/interview/spring.md:52`
-- [常见追问] 多个同类型 Bean 怎么处理？
-  来源：`docs/interview/spring.md:53`
-- [正式题] Bean 生命周期是什么？
   来源：`docs/interview/spring.md:55`
-- [常见追问] BeanPostProcessor 有什么作用？
-  来源：`docs/interview/spring.md:61`
-- [常见追问] AOP 代理对象在哪个阶段生成？
-  来源：`docs/interview/spring.md:62`
-- [常见追问] 初始化方法有哪些配置方式？
-  来源：`docs/interview/spring.md:63`
-- [正式题] Spring Bean 是否线程安全？
-  来源：`docs/interview/spring.md:69`
-- [常见追问] Controller 单例为什么通常没问题？
-  来源：`docs/interview/spring.md:75`
-- [常见追问] 有状态 Bean 怎么处理？
-  来源：`docs/interview/spring.md:76`
-- [常见追问] prototype Bean 一定线程安全吗？
-  来源：`docs/interview/spring.md:77`
-- [正式题] Spring Bean 作用域有哪些？
+- [常见追问] Spring MVC 属于哪个层面的能力？
+  来源：`docs/interview/spring.md:65`
+- [正式题] Spring 常用注入方式有哪些？
+  来源：`docs/interview/spring.md:72`
+- [常见追问] 为什么不推荐字段注入？
   来源：`docs/interview/spring.md:79`
-- [常见追问] singleton 和 prototype 生命周期有什么区别？
-  来源：`docs/interview/spring.md:85`
-- [常见追问] request scope 在非 Web 环境可用吗？
-  来源：`docs/interview/spring.md:86`
-- [常见追问] 单例 Bean 引用 prototype Bean 有什么问题？
+- [常见追问] 构造器注入如何解决必需依赖？
   来源：`docs/interview/spring.md:87`
+- [常见追问] `@Resource` 和 `@Autowired` 有什么区别？
+  来源：`docs/interview/spring.md:103`
+- [正式题] @Autowired 有什么作用？
+  来源：`docs/interview/spring.md:111`
+- [常见追问] `@Autowired` 默认按什么规则注入？
+  来源：`docs/interview/spring.md:117`
+- [常见追问] 多个同类型 Bean 怎么处理？
+  来源：`docs/interview/spring.md:129`
+- [正式题] Bean 生命周期是什么？
+  来源：`docs/interview/spring.md:138`
+- [常见追问] BeanPostProcessor 有什么作用？
+  来源：`docs/interview/spring.md:144`
+- [常见追问] AOP 代理对象在哪个阶段生成？
+  来源：`docs/interview/spring.md:158`
+- [常见追问] 初始化方法有哪些配置方式？
+  来源：`docs/interview/spring.md:167`
+- [正式题] Spring Bean 是否线程安全？
+  来源：`docs/interview/spring.md:180`
+- [常见追问] Controller 单例为什么通常没问题？
+  来源：`docs/interview/spring.md:186`
+- [常见追问] 有状态 Bean 怎么处理？
+  来源：`docs/interview/spring.md:188`
+- [常见追问] prototype Bean 一定线程安全吗？
+  来源：`docs/interview/spring.md:196`
+- [正式题] Spring Bean 作用域有哪些？
+  来源：`docs/interview/spring.md:199`
+- [常见追问] singleton 和 prototype 生命周期有什么区别？
+  来源：`docs/interview/spring.md:206`
+- [常见追问] request scope 在非 Web 环境可用吗？
+  来源：`docs/interview/spring.md:215`
+- [常见追问] 单例 Bean 引用 prototype Bean 有什么问题？
+  来源：`docs/interview/spring.md:222`
 - [正式题] Spring 如何解决循环依赖？
-  来源：`docs/interview/spring.md:89`
+  来源：`docs/interview/spring.md:225`
 - [常见追问] 为什么构造器循环依赖无法解决？
-  来源：`docs/interview/spring.md:95`
+  来源：`docs/interview/spring.md:232`
 - [常见追问] 三级缓存分别存什么？
-  来源：`docs/interview/spring.md:96`
+  来源：`docs/interview/spring.md:235`
 - [常见追问] AOP 代理和循环依赖有什么关系？
-  来源：`docs/interview/spring.md:97`
+  来源：`docs/interview/spring.md:242`
 
 #### XML 与自动装配
 
 - [正式题] Spring XML 装载 Bean 的过程是什么？
-  来源：`docs/interview/spring.md:105`
+  来源：`docs/interview/spring.md:251`
 - [常见追问] BeanDefinition 是什么？
-  来源：`docs/interview/spring.md:111`
+  来源：`docs/interview/spring.md:257`
 - [常见追问] XML 配置和注解配置最终都会变成什么？
-  来源：`docs/interview/spring.md:112`
+  来源：`docs/interview/spring.md:259`
 - [常见追问] BeanFactoryPostProcessor 在哪个阶段执行？
-  来源：`docs/interview/spring.md:113`
+  来源：`docs/interview/spring.md:261`
 - [正式题] Spring 自动装配方式有哪些？
-  来源：`docs/interview/spring.md:115`
+  来源：`docs/interview/spring.md:264`
 - [常见追问] `byName` 和 `byType` 有什么区别？
-  来源：`docs/interview/spring.md:121`
+  来源：`docs/interview/spring.md:270`
 - [常见追问] 多个同类型 Bean 时 byType 会怎样？
-  来源：`docs/interview/spring.md:122`
+  来源：`docs/interview/spring.md:272`
 - [常见追问] 注解注入和 XML 自动装配有什么关系？
-  来源：`docs/interview/spring.md:123`
+  来源：`docs/interview/spring.md:274`
 
 #### AOP 与事务
 
 - [正式题] AOP 是什么？
-  来源：`docs/interview/spring.md:127`
+  来源：`docs/interview/spring.md:279`
 - [常见追问] 切点、通知、切面分别是什么？
-  来源：`docs/interview/spring.md:133`
+  来源：`docs/interview/spring.md:285`
 - [常见追问] Spring AOP 和 AspectJ 有什么区别？
-  来源：`docs/interview/spring.md:134`
+  来源：`docs/interview/spring.md:290`
 - [常见追问] AOP 为什么会有自调用失效问题？
-  来源：`docs/interview/spring.md:135`
+  来源：`docs/interview/spring.md:295`
 - [正式题] AOP 底层怎么实现？
-  来源：`docs/interview/spring.md:141`
+  来源：`docs/interview/spring.md:302`
 - [常见追问] JDK 动态代理和 CGLIB 有什么区别？
-  来源：`docs/interview/spring.md:147`
+  来源：`docs/interview/spring.md:308`
 - [常见追问] final 方法能被代理增强吗？
-  来源：`docs/interview/spring.md:148`
+  来源：`docs/interview/spring.md:313`
 - [常见追问] Spring Boot 默认使用哪种代理？
-  来源：`docs/interview/spring.md:149`
+  来源：`docs/interview/spring.md:319`
 - [正式题] Spring 事务实现方式有哪些？
-  来源：`docs/interview/spring.md:155`
+  来源：`docs/interview/spring.md:326`
 - [常见追问] 声明式事务为什么依赖代理？
-  来源：`docs/interview/spring.md:161`
+  来源：`docs/interview/spring.md:335`
 - [常见追问] 编程式事务适合什么场景？
-  来源：`docs/interview/spring.md:162`
+  来源：`docs/interview/spring.md:339`
 - [常见追问] 多数据源事务怎么处理？
-  来源：`docs/interview/spring.md:163`
+  来源：`docs/interview/spring.md:341`
 - [正式题] Spring 事务隔离级别有哪些？
-  来源：`docs/interview/spring.md:169`
+  来源：`docs/interview/spring.md:349`
 - [常见追问] 不同隔离级别解决什么问题？
-  来源：`docs/interview/spring.md:175`
+  来源：`docs/interview/spring.md:356`
 - [常见追问] Spring 隔离级别和数据库隔离级别是什么关系？
-  来源：`docs/interview/spring.md:176`
+  来源：`docs/interview/spring.md:365`
 - [常见追问] 可重复读如何避免幻读？
-  来源：`docs/interview/spring.md:177`
+  来源：`docs/interview/spring.md:368`
 - [正式题] @Transactional 为什么会失效？
-  来源：`docs/interview/spring.md:179`
+  来源：`docs/interview/spring.md:373`
 - [常见追问] Spring 事务传播行为有哪些？
-  来源：`docs/interview/spring.md:185`
+  来源：`docs/interview/spring.md:380`
 - [常见追问] 默认回滚哪些异常？
-  来源：`docs/interview/spring.md:186`
+  来源：`docs/interview/spring.md:390`
 - [常见追问] 本地事务和分布式事务有什么区别？
-  来源：`docs/interview/spring.md:187`
+  来源：`docs/interview/spring.md:395`
 
 #### Spring MVC
 
 - [正式题] Spring MVC 运行流程是什么？
-  来源：`docs/interview/spring.md:195`
+  来源：`docs/interview/spring.md:407`
 - [常见追问] `DispatcherServlet` 的作用是什么？
-  来源：`docs/interview/spring.md:201`
+  来源：`docs/interview/spring.md:418`
 - [常见追问] HandlerMapping 和 HandlerAdapter 有什么区别？
-  来源：`docs/interview/spring.md:202`
+  来源：`docs/interview/spring.md:421`
 - [常见追问] `@ResponseBody` 是怎么返回 JSON 的？
-  来源：`docs/interview/spring.md:203`
+  来源：`docs/interview/spring.md:426`
 - [正式题] Spring MVC 核心组件有哪些？
-  来源：`docs/interview/spring.md:205`
+  来源：`docs/interview/spring.md:433`
 - [常见追问] 拦截器和过滤器有什么区别？
-  来源：`docs/interview/spring.md:211`
+  来源：`docs/interview/spring.md:439`
 - [常见追问] 参数绑定是谁做的？
-  来源：`docs/interview/spring.md:212`
+  来源：`docs/interview/spring.md:445`
 - [常见追问] JSON 序列化由哪个组件完成？
-  来源：`docs/interview/spring.md:213`
+  来源：`docs/interview/spring.md:451`
 - [正式题] @RequestMapping 有什么作用？
-  来源：`docs/interview/spring.md:215`
+  来源：`docs/interview/spring.md:457`
 - [常见追问] `@GetMapping` 和 `@RequestMapping` 有什么关系？
-  来源：`docs/interview/spring.md:221`
+  来源：`docs/interview/spring.md:463`
 - [常见追问] 路径变量和请求参数怎么接收？
-  来源：`docs/interview/spring.md:222`
+  来源：`docs/interview/spring.md:469`
 - [正式题] Spring MVC 和 Struts 有什么区别？
-  来源：`docs/interview/spring.md:224`
+  来源：`docs/interview/spring.md:472`
 - [常见追问] 为什么现在更常用 Spring MVC？
-  来源：`docs/interview/spring.md:230`
+  来源：`docs/interview/spring.md:480`
 - [常见追问] Struts2 的 Action 是线程安全的吗？
-  来源：`docs/interview/spring.md:231`
+  来源：`docs/interview/spring.md:483`
 - [常见追问] Spring MVC 如何支持前后端分离？
-  来源：`docs/interview/spring.md:232`
+  来源：`docs/interview/spring.md:488`
 
 ### docs/interview/system-design.md
 
@@ -2098,12 +2098,12 @@
 ### Spring MVC 和 Struts 有什么区别？
 
 - [正式题] `docs/interview/java-web.md:163` Spring MVC 和 Struts 有什么区别？
-- [正式题] `docs/interview/spring.md:224` Spring MVC 和 Struts 有什么区别？
+- [正式题] `docs/interview/spring.md:472` Spring MVC 和 Struts 有什么区别？
 
 ### Struts2 的 Action 是线程安全的吗？
 
 - [常见追问] `docs/interview/java-web.md:169` Struts2 的 Action 是线程安全的吗？
-- [常见追问] `docs/interview/spring.md:231` Struts2 的 Action 是线程安全的吗？
+- [常见追问] `docs/interview/spring.md:483` Struts2 的 Action 是线程安全的吗？
 
 ### Tomcat 为什么要自定义类加载器？
 
@@ -2113,7 +2113,7 @@
 ### JDK 动态代理和 CGLIB 有什么区别？
 
 - [常见追问] `docs/interview/java.md:447` JDK 动态代理和 CGLIB 有什么区别？
-- [常见追问] `docs/interview/spring.md:147` JDK 动态代理和 CGLIB 有什么区别？
+- [常见追问] `docs/interview/spring.md:308` JDK 动态代理和 CGLIB 有什么区别？
 
 ### 哪些对象可以作为 GC Roots？
 
