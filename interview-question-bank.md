@@ -236,98 +236,98 @@
 - [常见追问] ORM 有什么优缺点？
   来源：`docs/interview/hibernate.md:19`
 - [常见追问] JPA 和 Hibernate 有什么关系？
-  来源：`docs/interview/hibernate.md:20`
+  来源：`docs/interview/hibernate.md:25`
 - [常见追问] MyBatis 算不算 ORM？
-  来源：`docs/interview/hibernate.md:21`
+  来源：`docs/interview/hibernate.md:31`
 - [正式题] Hibernate 如何打印 SQL？
-  来源：`docs/interview/hibernate.md:28`
+  来源：`docs/interview/hibernate.md:42`
 - [常见追问] 如何打印 SQL 参数？
-  来源：`docs/interview/hibernate.md:34`
+  来源：`docs/interview/hibernate.md:48`
 - [常见追问] 生产环境如何排查慢 SQL？
-  来源：`docs/interview/hibernate.md:35`
+  来源：`docs/interview/hibernate.md:60`
 - [常见追问] Hibernate 生成的 SQL 为什么可能很复杂？
-  来源：`docs/interview/hibernate.md:36`
+  来源：`docs/interview/hibernate.md:69`
 - [正式题] Hibernate 查询方式有哪些？
-  来源：`docs/interview/hibernate.md:38`
+  来源：`docs/interview/hibernate.md:77`
 - [常见追问] HQL 和 SQL 有什么区别？
-  来源：`docs/interview/hibernate.md:44`
+  来源：`docs/interview/hibernate.md:83`
 - [常见追问] Criteria 为什么类型安全？
-  来源：`docs/interview/hibernate.md:45`
+  来源：`docs/interview/hibernate.md:90`
 - [常见追问] 什么时候需要原生 SQL？
-  来源：`docs/interview/hibernate.md:46`
+  来源：`docs/interview/hibernate.md:96`
 
 #### 实体与映射
 
 - [正式题] Hibernate 实体类可以定义为 final 吗？
-  来源：`docs/interview/hibernate.md:50`
+  来源：`docs/interview/hibernate.md:105`
 - [常见追问] Hibernate 为什么需要代理？
-  来源：`docs/interview/hibernate.md:56`
+  来源：`docs/interview/hibernate.md:111`
 - [常见追问] final 方法会影响懒加载吗？
-  来源：`docs/interview/hibernate.md:57`
+  来源：`docs/interview/hibernate.md:118`
 - [常见追问] 实体类设计有哪些注意点？
-  来源：`docs/interview/hibernate.md:58`
+  来源：`docs/interview/hibernate.md:125`
 - [正式题] Hibernate 中 Integer 和 int 映射有什么区别？
-  来源：`docs/interview/hibernate.md:60`
+  来源：`docs/interview/hibernate.md:137`
 - [常见追问] 为什么实体类字段推荐使用包装类型？
-  来源：`docs/interview/hibernate.md:66`
+  来源：`docs/interview/hibernate.md:143`
 - [常见追问] Boolean 和 boolean 映射有什么区别？
-  来源：`docs/interview/hibernate.md:67`
+  来源：`docs/interview/hibernate.md:148`
 - [常见追问] 数据库 null 如何映射到 Java？
-  来源：`docs/interview/hibernate.md:68`
+  来源：`docs/interview/hibernate.md:154`
 - [正式题] Hibernate 实体类为什么需要无参构造？
-  来源：`docs/interview/hibernate.md:70`
+  来源：`docs/interview/hibernate.md:160`
 - [常见追问] 反射创建对象有什么要求？
-  来源：`docs/interview/hibernate.md:76`
+  来源：`docs/interview/hibernate.md:166`
 - [常见追问] protected 无参构造可以吗？
-  来源：`docs/interview/hibernate.md:77`
+  来源：`docs/interview/hibernate.md:172`
 - [常见追问] Lombok 会不会影响实体类？
-  来源：`docs/interview/hibernate.md:78`
+  来源：`docs/interview/hibernate.md:177`
 
 #### Session 与查询
 
 - [正式题] Hibernate 工作流程是什么？
-  来源：`docs/interview/hibernate.md:82`
+  来源：`docs/interview/hibernate.md:185`
 - [常见追问] SessionFactory 为什么要复用？
-  来源：`docs/interview/hibernate.md:88`
+  来源：`docs/interview/hibernate.md:191`
 - [常见追问] Session 是线程安全的吗？
-  来源：`docs/interview/hibernate.md:89`
+  来源：`docs/interview/hibernate.md:197`
 - [常见追问] Hibernate 事务如何和 Spring 集成？
-  来源：`docs/interview/hibernate.md:90`
+  来源：`docs/interview/hibernate.md:202`
 - [正式题] get 和 load 有什么区别？
-  来源：`docs/interview/hibernate.md:92`
+  来源：`docs/interview/hibernate.md:209`
 - [常见追问] `load()` 为什么能懒加载？
-  来源：`docs/interview/hibernate.md:98`
+  来源：`docs/interview/hibernate.md:215`
 - [常见追问] 代理对象什么时候初始化？
-  来源：`docs/interview/hibernate.md:99`
+  来源：`docs/interview/hibernate.md:222`
 - [常见追问] 查不到数据时分别会怎样？
-  来源：`docs/interview/hibernate.md:100`
+  来源：`docs/interview/hibernate.md:232`
 - [正式题] getCurrentSession 和 openSession 有什么区别？
-  来源：`docs/interview/hibernate.md:102`
+  来源：`docs/interview/hibernate.md:236`
 - [常见追问] Session 不关闭有什么问题？
-  来源：`docs/interview/hibernate.md:108`
+  来源：`docs/interview/hibernate.md:242`
 - [常见追问] Session 和数据库连接是什么关系？
-  来源：`docs/interview/hibernate.md:109`
+  来源：`docs/interview/hibernate.md:250`
 - [常见追问] Spring 如何管理 Hibernate Session？
-  来源：`docs/interview/hibernate.md:110`
+  来源：`docs/interview/hibernate.md:256`
 
 #### 缓存与对象状态
 
 - [正式题] Hibernate 缓存机制是什么？
-  来源：`docs/interview/hibernate.md:114`
+  来源：`docs/interview/hibernate.md:264`
 - [常见追问] 一级缓存什么时候失效？
-  来源：`docs/interview/hibernate.md:120`
+  来源：`docs/interview/hibernate.md:270`
 - [常见追问] 二级缓存适合缓存什么数据？
-  来源：`docs/interview/hibernate.md:121`
+  来源：`docs/interview/hibernate.md:278`
 - [常见追问] 查询缓存和二级缓存有什么区别？
-  来源：`docs/interview/hibernate.md:122`
+  来源：`docs/interview/hibernate.md:286`
 - [正式题] Hibernate 对象状态有哪些？
-  来源：`docs/interview/hibernate.md:124`
+  来源：`docs/interview/hibernate.md:293`
 - [常见追问] 持久态对象为什么修改后不用显式 update？
-  来源：`docs/interview/hibernate.md:130`
+  来源：`docs/interview/hibernate.md:300`
 - [常见追问] 游离态对象如何重新持久化？
-  来源：`docs/interview/hibernate.md:131`
+  来源：`docs/interview/hibernate.md:306`
 - [常见追问] 脏检查机制是什么？
-  来源：`docs/interview/hibernate.md:132`
+  来源：`docs/interview/hibernate.md:312`
 
 ### docs/interview/java-web.md
 
@@ -1267,166 +1267,166 @@
 - [常见追问] MyBatis 和 JDBC 有什么区别？
   来源：`docs/interview/mybatis.md:19`
 - [常见追问] Mapper 接口为什么不用写实现类？
-  来源：`docs/interview/mybatis.md:20`
+  来源：`docs/interview/mybatis.md:25`
 - [正式题] MyBatis 的优点和缺点是什么？
-  来源：`docs/interview/mybatis.md:22`
+  来源：`docs/interview/mybatis.md:31`
 - [常见追问] MyBatis 为什么适合复杂报表？
-  来源：`docs/interview/mybatis.md:28`
+  来源：`docs/interview/mybatis.md:38`
 - [常见追问] MyBatis 会不会增加 SQL 维护成本？
-  来源：`docs/interview/mybatis.md:29`
+  来源：`docs/interview/mybatis.md:44`
 - [常见追问] MyBatis-Plus 解决了哪些重复 CRUD 问题？
-  来源：`docs/interview/mybatis.md:30`
+  来源：`docs/interview/mybatis.md:50`
 
 #### 参数绑定
 
 - [正式题] MyBatis 中 #{} 和 ${} 有什么区别？
-  来源：`docs/interview/mybatis.md:34`
+  来源：`docs/interview/mybatis.md:59`
 - [常见追问] 为什么表名不能用 `#{}` 参数化？
-  来源：`docs/interview/mybatis.md:40`
+  来源：`docs/interview/mybatis.md:67`
 - [常见追问] 排序字段动态传入怎么防注入？
-  来源：`docs/interview/mybatis.md:41`
+  来源：`docs/interview/mybatis.md:72`
 - [常见追问] MyBatis 如何处理参数类型？
-  来源：`docs/interview/mybatis.md:42`
+  来源：`docs/interview/mybatis.md:78`
 - [正式题] resultMap 和 resultType 有什么区别？
-  来源：`docs/interview/mybatis.md:49`
+  来源：`docs/interview/mybatis.md:91`
 - [常见追问] 字段名和属性名不一致怎么处理？
-  来源：`docs/interview/mybatis.md:55`
+  来源：`docs/interview/mybatis.md:97`
 - [常见追问] 一对多映射用什么标签？
-  来源：`docs/interview/mybatis.md:56`
+  来源：`docs/interview/mybatis.md:103`
 - [常见追问] `association` 和 `collection` 有什么区别？
-  来源：`docs/interview/mybatis.md:57`
+  来源：`docs/interview/mybatis.md:109`
 
 #### 分页
 
 - [正式题] MyBatis 逻辑分页和物理分页有什么区别？
-  来源：`docs/interview/mybatis.md:61`
+  来源：`docs/interview/mybatis.md:118`
 - [常见追问] 深分页为什么慢？
-  来源：`docs/interview/mybatis.md:67`
+  来源：`docs/interview/mybatis.md:125`
 - [常见追问] 如何优化 `limit offset` 深分页？
-  来源：`docs/interview/mybatis.md:68`
+  来源：`docs/interview/mybatis.md:130`
 - [常见追问] 分页插件如何识别数据库方言？
-  来源：`docs/interview/mybatis.md:69`
+  来源：`docs/interview/mybatis.md:138`
 - [正式题] RowBounds 会一次性查询全部结果吗？
-  来源：`docs/interview/mybatis.md:71`
+  来源：`docs/interview/mybatis.md:145`
 - [常见追问] RowBounds 适合什么场景？
-  来源：`docs/interview/mybatis.md:77`
+  来源：`docs/interview/mybatis.md:151`
 - [常见追问] 为什么逻辑分页不适合大数据量？
-  来源：`docs/interview/mybatis.md:78`
+  来源：`docs/interview/mybatis.md:156`
 - [常见追问] MyBatis-Plus 分页属于哪种？
-  来源：`docs/interview/mybatis.md:79`
+  来源：`docs/interview/mybatis.md:163`
 - [正式题] MyBatis 分页插件原理是什么？
-  来源：`docs/interview/mybatis.md:81`
+  来源：`docs/interview/mybatis.md:169`
 - [常见追问] 为什么分页插件要识别数据库方言？
-  来源：`docs/interview/mybatis.md:87`
+  来源：`docs/interview/mybatis.md:175`
 - [常见追问] count 查询如何优化？
-  来源：`docs/interview/mybatis.md:88`
+  来源：`docs/interview/mybatis.md:179`
 - [常见追问] 分页插件和手写 limit 有什么区别？
-  来源：`docs/interview/mybatis.md:89`
+  来源：`docs/interview/mybatis.md:186`
 
 #### 延迟加载与缓存
 
 - [正式题] MyBatis 是否支持延迟加载？
-  来源：`docs/interview/mybatis.md:93`
+  来源：`docs/interview/mybatis.md:195`
 - [常见追问] 什么是 N+1 查询？
-  来源：`docs/interview/mybatis.md:99`
+  来源：`docs/interview/mybatis.md:201`
 - [常见追问] 延迟加载底层怎么触发？
-  来源：`docs/interview/mybatis.md:100`
+  来源：`docs/interview/mybatis.md:206`
 - [常见追问] MyBatis 和 Hibernate 的延迟加载有什么区别？
-  来源：`docs/interview/mybatis.md:101`
+  来源：`docs/interview/mybatis.md:213`
 - [正式题] MyBatis 一级缓存和二级缓存有什么区别？
-  来源：`docs/interview/mybatis.md:103`
+  来源：`docs/interview/mybatis.md:220`
 - [常见追问] 为什么一级缓存可能导致脏读误解？
-  来源：`docs/interview/mybatis.md:109`
-- [常见追问] 二级缓存为什么默认关闭？
-  来源：`docs/interview/mybatis.md:110`
+  来源：`docs/interview/mybatis.md:227`
+- [常见追问] 为什么项目中通常不启用二级缓存？
+  来源：`docs/interview/mybatis.md:232`
 - [常见追问] 分布式环境下 MyBatis 二级缓存有什么风险？
-  来源：`docs/interview/mybatis.md:111`
+  来源：`docs/interview/mybatis.md:237`
 
 #### MyBatis 与 Hibernate
 
 - [正式题] MyBatis 和 Hibernate 有什么区别？
-  来源：`docs/interview/mybatis.md:115`
+  来源：`docs/interview/mybatis.md:246`
 - [常见追问] MyBatis 算不算 ORM？
-  来源：`docs/interview/mybatis.md:121`
+  来源：`docs/interview/mybatis.md:254`
 - [常见追问] Hibernate 为什么调优难？
-  来源：`docs/interview/mybatis.md:122`
+  来源：`docs/interview/mybatis.md:259`
 - [常见追问] JPA、Hibernate、MyBatis 怎么选？
-  来源：`docs/interview/mybatis.md:123`
+  来源：`docs/interview/mybatis.md:264`
 
 #### 执行器与插件
 
 - [正式题] MyBatis 动态 SQL 是什么？常见标签有哪些？
-  来源：`docs/interview/mybatis.md:132`
+  来源：`docs/interview/mybatis.md:278`
 - [常见追问] `where` 标签解决什么问题？
-  来源：`docs/interview/mybatis.md:138`
+  来源：`docs/interview/mybatis.md:284`
 - [常见追问] `foreach` 常用于哪些场景？
-  来源：`docs/interview/mybatis.md:139`
+  来源：`docs/interview/mybatis.md:289`
 - [常见追问] 动态 SQL 如何避免 SQL 注入？
-  来源：`docs/interview/mybatis.md:140`
+  来源：`docs/interview/mybatis.md:294`
 - [正式题] MyBatis 如何进行事务管理？
-  来源：`docs/interview/mybatis.md:142`
+  来源：`docs/interview/mybatis.md:301`
 - [常见追问] Spring 事务和 MyBatis 事务是什么关系？
-  来源：`docs/interview/mybatis.md:148`
+  来源：`docs/interview/mybatis.md:307`
 - [常见追问] 为什么同一个事务要复用同一个数据库连接？
-  来源：`docs/interview/mybatis.md:149`
+  来源：`docs/interview/mybatis.md:313`
 - [常见追问] Mapper 方法里能不能手动提交事务？
-  来源：`docs/interview/mybatis.md:150`
+  来源：`docs/interview/mybatis.md:319`
 - [正式题] MyBatis Executor 有哪些类型？
-  来源：`docs/interview/mybatis.md:152`
+  来源：`docs/interview/mybatis.md:324`
 - [常见追问] 批量插入为什么更快？
-  来源：`docs/interview/mybatis.md:158`
+  来源：`docs/interview/mybatis.md:331`
 - [常见追问] BatchExecutor 使用时要注意什么？
-  来源：`docs/interview/mybatis.md:159`
+  来源：`docs/interview/mybatis.md:337`
 - [常见追问] Statement 复用有什么收益？
-  来源：`docs/interview/mybatis.md:160`
+  来源：`docs/interview/mybatis.md:345`
 - [正式题] MyBatis 自定义插件怎么实现？
-  来源：`docs/interview/mybatis.md:162`
+  来源：`docs/interview/mybatis.md:350`
 - [常见追问] MyBatis 插件能拦截哪些对象？
-  来源：`docs/interview/mybatis.md:168`
+  来源：`docs/interview/mybatis.md:356`
 - [常见追问] 分页插件为什么常拦截 StatementHandler？
-  来源：`docs/interview/mybatis.md:169`
+  来源：`docs/interview/mybatis.md:363`
 - [常见追问] 插件链顺序会影响结果吗？
-  来源：`docs/interview/mybatis.md:170`
+  来源：`docs/interview/mybatis.md:367`
 - [正式题] MyBatis 批处理如何实现？
-  来源：`docs/interview/mybatis.md:176`
+  来源：`docs/interview/mybatis.md:377`
 - [常见追问] `BatchExecutor` 什么时候真正执行 SQL？
-  来源：`docs/interview/mybatis.md:182`
+  来源：`docs/interview/mybatis.md:383`
 - [常见追问] 批量插入为什么要分批提交？
-  来源：`docs/interview/mybatis.md:183`
+  来源：`docs/interview/mybatis.md:388`
 - [常见追问] 批处理失败如何定位具体数据？
-  来源：`docs/interview/mybatis.md:184`
+  来源：`docs/interview/mybatis.md:394`
 - [正式题] 什么是 MyBatis 的 SqlSource？
-  来源：`docs/interview/mybatis.md:186`
+  来源：`docs/interview/mybatis.md:401`
 - [常见追问] 静态 SQL 和动态 SQL 的 SqlSource 有什么区别？
-  来源：`docs/interview/mybatis.md:192`
+  来源：`docs/interview/mybatis.md:407`
 - [常见追问] `MappedStatement` 和 `SqlSource` 是什么关系？
-  来源：`docs/interview/mybatis.md:193`
+  来源：`docs/interview/mybatis.md:413`
 - [常见追问] 为什么动态 SQL 要运行时生成？
-  来源：`docs/interview/mybatis.md:194`
+  来源：`docs/interview/mybatis.md:419`
 - [正式题] 什么是 MyBatis 的 SqlNode？
-  来源：`docs/interview/mybatis.md:196`
+  来源：`docs/interview/mybatis.md:426`
 - [常见追问] `if` 标签底层如何判断条件？
-  来源：`docs/interview/mybatis.md:202`
+  来源：`docs/interview/mybatis.md:432`
 - [常见追问] `foreach` 为什么能生成批量参数？
-  来源：`docs/interview/mybatis.md:203`
+  来源：`docs/interview/mybatis.md:438`
 - [常见追问] 动态 SQL 解析发生在启动时还是运行时？
-  来源：`docs/interview/mybatis.md:204`
+  来源：`docs/interview/mybatis.md:444`
 - [正式题] 什么是 MyBatis 的 ParameterMapping？
-  来源：`docs/interview/mybatis.md:206`
+  来源：`docs/interview/mybatis.md:450`
 - [常见追问] `TypeHandler` 在参数处理中做什么？
-  来源：`docs/interview/mybatis.md:212`
+  来源：`docs/interview/mybatis.md:456`
 - [常见追问] `#{}` 为什么能防止 SQL 注入？
-  来源：`docs/interview/mybatis.md:213`
+  来源：`docs/interview/mybatis.md:462`
 - [常见追问] 参数为对象时 MyBatis 如何取属性？
-  来源：`docs/interview/mybatis.md:214`
+  来源：`docs/interview/mybatis.md:468`
 - [正式题] 什么是 MyBatis 的 BoundSql？
-  来源：`docs/interview/mybatis.md:216`
+  来源：`docs/interview/mybatis.md:475`
 - [常见追问] `BoundSql` 中的 SQL 是最终发给数据库的吗？
-  来源：`docs/interview/mybatis.md:222`
+  来源：`docs/interview/mybatis.md:481`
 - [常见追问] 分页插件为什么常修改 `BoundSql`？
-  来源：`docs/interview/mybatis.md:223`
+  来源：`docs/interview/mybatis.md:488`
 - [常见追问] 如何打印完整 SQL 和参数？
-  来源：`docs/interview/mybatis.md:224`
+  来源：`docs/interview/mybatis.md:494`
 
 ### docs/interview/mysql.md
 
@@ -1435,138 +1435,138 @@
 - [正式题] 数据库三范式是什么？
   来源：`docs/interview/mysql.md:13`
 - [常见追问] 为什么实际项目会反范式设计？
-  来源：`docs/interview/mysql.md:19`
+  来源：`docs/interview/mysql.md:22`
 - [常见追问] 订单表为什么会冗余商品名称？
-  来源：`docs/interview/mysql.md:20`
+  来源：`docs/interview/mysql.md:26`
 - [常见追问] 范式越高越好吗？
-  来源：`docs/interview/mysql.md:21`
-- [正式题] 如何获取 MySQL 版本？
-  来源：`docs/interview/mysql.md:23`
-- [常见追问] MySQL 5.7 和 8.0 有哪些差异？
   来源：`docs/interview/mysql.md:29`
-- [常见追问] 为什么线上排查要先确认版本？
-  来源：`docs/interview/mysql.md:30`
-- [常见追问] 如何查看存储引擎？
-  来源：`docs/interview/mysql.md:31`
-- [正式题] char 和 varchar 有什么区别？
+- [正式题] 如何获取 MySQL 版本？
   来源：`docs/interview/mysql.md:33`
-- [常见追问] 手机号应该用 char 还是 varchar？
+- [常见追问] MySQL 5.7 和 8.0 有哪些差异？
   来源：`docs/interview/mysql.md:39`
-- [常见追问] varchar 长度是不是越大越好？
-  来源：`docs/interview/mysql.md:40`
-- [常见追问] 字符集会影响存储空间吗？
-  来源：`docs/interview/mysql.md:41`
-- [正式题] 自增 ID 删除后重启再插入会怎样？
-  来源：`docs/interview/mysql.md:43`
-- [常见追问] 自增 ID 为什么可能不连续？
+- [常见追问] 为什么线上排查要先确认版本？
   来源：`docs/interview/mysql.md:49`
+- [常见追问] 如何查看存储引擎？
+  来源：`docs/interview/mysql.md:55`
+- [正式题] char 和 varchar 有什么区别？
+  来源：`docs/interview/mysql.md:76`
+- [常见追问] 手机号应该用 char 还是 varchar？
+  来源：`docs/interview/mysql.md:83`
+- [常见追问] varchar 长度是不是越大越好？
+  来源：`docs/interview/mysql.md:88`
+- [常见追问] 字符集会影响存储空间吗？
+  来源：`docs/interview/mysql.md:93`
+- [正式题] 自增 ID 删除后重启再插入会怎样？
+  来源：`docs/interview/mysql.md:97`
+- [常见追问] 自增 ID 为什么可能不连续？
+  来源：`docs/interview/mysql.md:105`
 - [常见追问] 分布式系统为什么不一定用数据库自增 ID？
-  来源：`docs/interview/mysql.md:50`
+  来源：`docs/interview/mysql.md:113`
 - [常见追问] InnoDB 自增锁是什么？
-  来源：`docs/interview/mysql.md:51`
+  来源：`docs/interview/mysql.md:119`
 
 #### 事务与锁
 
 - [正式题] ACID 是什么？
-  来源：`docs/interview/mysql.md:59`
+  来源：`docs/interview/mysql.md:134`
 - [常见追问] 原子性靠什么实现？
-  来源：`docs/interview/mysql.md:65`
+  来源：`docs/interview/mysql.md:141`
 - [常见追问] 持久性和 redo log 有什么关系？
-  来源：`docs/interview/mysql.md:66`
+  来源：`docs/interview/mysql.md:145`
 - [常见追问] 隔离性和锁 / MVCC 有什么关系？
-  来源：`docs/interview/mysql.md:67`
+  来源：`docs/interview/mysql.md:149`
 - [正式题] 事务隔离级别有哪些？
-  来源：`docs/interview/mysql.md:69`
+  来源：`docs/interview/mysql.md:159`
 - [常见追问] 脏读、不可重复读、幻读分别是什么？
-  来源：`docs/interview/mysql.md:75`
+  来源：`docs/interview/mysql.md:165`
 - [常见追问] MySQL 可重复读如何处理幻读？
-  来源：`docs/interview/mysql.md:76`
+  来源：`docs/interview/mysql.md:170`
 - [常见追问] 隔离级别越高越好吗？
-  来源：`docs/interview/mysql.md:77`
+  来源：`docs/interview/mysql.md:175`
 - [正式题] MVCC 是什么？
-  来源：`docs/interview/mysql.md:84`
+  来源：`docs/interview/mysql.md:189`
 - [常见追问] Read View 包含哪些信息？
-  来源：`docs/interview/mysql.md:90`
+  来源：`docs/interview/mysql.md:195`
 - [常见追问] 当前读和快照读有什么区别？
-  来源：`docs/interview/mysql.md:91`
+  来源：`docs/interview/mysql.md:202`
 - [常见追问] MVCC 是否完全不需要锁？
-  来源：`docs/interview/mysql.md:92`
+  来源：`docs/interview/mysql.md:206`
 - [正式题] 行锁和表锁有什么区别？
-  来源：`docs/interview/mysql.md:98`
+  来源：`docs/interview/mysql.md:217`
 - [常见追问] 行锁一定只锁一行吗？
-  来源：`docs/interview/mysql.md:104`
+  来源：`docs/interview/mysql.md:225`
 - [常见追问] 什么是间隙锁？
-  来源：`docs/interview/mysql.md:105`
+  来源：`docs/interview/mysql.md:231`
 - [常见追问] 为什么索引失效可能导致锁范围变大？
-  来源：`docs/interview/mysql.md:106`
+  来源：`docs/interview/mysql.md:236`
 - [正式题] 乐观锁和悲观锁有什么区别？
-  来源：`docs/interview/mysql.md:108`
+  来源：`docs/interview/mysql.md:243`
 - [常见追问] 乐观锁更新失败怎么办？
-  来源：`docs/interview/mysql.md:114`
+  来源：`docs/interview/mysql.md:250`
 - [常见追问] 悲观锁会带来什么问题？
-  来源：`docs/interview/mysql.md:115`
+  来源：`docs/interview/mysql.md:254`
 - [常见追问] 数据库锁和 Java 锁有什么区别？
-  来源：`docs/interview/mysql.md:116`
+  来源：`docs/interview/mysql.md:257`
 
 #### 索引与存储引擎
 
 - [正式题] 为什么数据库索引常用 B+ 树？
-  来源：`docs/interview/mysql.md:120`
+  来源：`docs/interview/mysql.md:267`
 - [常见追问] B 树和 B+ 树有什么区别？
-  来源：`docs/interview/mysql.md:126`
+  来源：`docs/interview/mysql.md:273`
 - [常见追问] 为什么不用红黑树？
-  来源：`docs/interview/mysql.md:127`
+  来源：`docs/interview/mysql.md:280`
 - [常见追问] 聚簇索引和非聚簇索引有什么区别？
-  来源：`docs/interview/mysql.md:128`
+  来源：`docs/interview/mysql.md:286`
 - [正式题] 什么情况下索引会失效？
-  来源：`docs/interview/mysql.md:135`
+  来源：`docs/interview/mysql.md:298`
 - [常见追问] `like '%abc'` 为什么难走索引？
-  来源：`docs/interview/mysql.md:141`
+  来源：`docs/interview/mysql.md:304`
 - [常见追问] 联合索引最左前缀是什么？
-  来源：`docs/interview/mysql.md:142`
+  来源：`docs/interview/mysql.md:309`
 - [常见追问] 隐式转换为什么危险？
-  来源：`docs/interview/mysql.md:143`
+  来源：`docs/interview/mysql.md:315`
 - [正式题] 如何验证索引是否满足需求？
-  来源：`docs/interview/mysql.md:149`
+  来源：`docs/interview/mysql.md:325`
 - [常见追问] `type` 中哪些值比较好？
-  来源：`docs/interview/mysql.md:155`
+  来源：`docs/interview/mysql.md:331`
 - [常见追问] `Using filesort` 一定很差吗？
-  来源：`docs/interview/mysql.md:156`
+  来源：`docs/interview/mysql.md:341`
 - [常见追问] `rows` 不准怎么办？
-  来源：`docs/interview/mysql.md:157`
+  来源：`docs/interview/mysql.md:347`
 - [正式题] MySQL 常用存储引擎有哪些？
-  来源：`docs/interview/mysql.md:159`
+  来源：`docs/interview/mysql.md:354`
 - [常见追问] InnoDB 为什么是默认选择？
-  来源：`docs/interview/mysql.md:165`
+  来源：`docs/interview/mysql.md:361`
 - [常见追问] MyISAM 为什么不支持事务？
-  来源：`docs/interview/mysql.md:166`
+  来源：`docs/interview/mysql.md:366`
 
 #### 排查与优化
 
 - [正式题] 慢 SQL 怎么排查？
-  来源：`docs/interview/mysql.md:170`
+  来源：`docs/interview/mysql.md:374`
 - [常见追问] 慢查询阈值怎么设置？
-  来源：`docs/interview/mysql.md:176`
+  来源：`docs/interview/mysql.md:380`
 - [常见追问] 如何排查偶发慢 SQL？
-  来源：`docs/interview/mysql.md:177`
+  来源：`docs/interview/mysql.md:394`
 - [常见追问] SQL 优化一定是加索引吗？
-  来源：`docs/interview/mysql.md:178`
+  来源：`docs/interview/mysql.md:401`
 - [正式题] MySQL 问题排查常用手段有哪些？
-  来源：`docs/interview/mysql.md:184`
+  来源：`docs/interview/mysql.md:412`
 - [常见追问] `show processlist` 中 Sleep 很多怎么办？
-  来源：`docs/interview/mysql.md:190`
+  来源：`docs/interview/mysql.md:421`
 - [常见追问] 如何排查锁等待？
-  来源：`docs/interview/mysql.md:191`
+  来源：`docs/interview/mysql.md:428`
 - [常见追问] Buffer Pool 命中率低说明什么？
-  来源：`docs/interview/mysql.md:192`
+  来源：`docs/interview/mysql.md:434`
 - [正式题] MySQL 性能优化有哪些方向？
-  来源：`docs/interview/mysql.md:194`
+  来源：`docs/interview/mysql.md:440`
 - [常见追问] 为什么不推荐 `select *`？
-  来源：`docs/interview/mysql.md:200`
+  来源：`docs/interview/mysql.md:449`
 - [常见追问] 大表分页怎么优化？
-  来源：`docs/interview/mysql.md:201`
+  来源：`docs/interview/mysql.md:455`
 - [常见追问] 什么时候考虑分库分表？
-  来源：`docs/interview/mysql.md:202`
+  来源：`docs/interview/mysql.md:461`
 
 ### docs/interview/redis.md
 
@@ -1736,69 +1736,69 @@
 - [常见追问] 条件注解有哪些？
   来源：`docs/interview/spring-boot.md:19`
 - [常见追问] 自动配置为什么有时不生效？
-  来源：`docs/interview/spring-boot.md:20`
-- [正式题] @SpringBootApplication 包含哪些注解？
-  来源：`docs/interview/spring-boot.md:26`
-- [常见追问] 为什么启动类建议放在根包？
-  来源：`docs/interview/spring-boot.md:32`
-- [常见追问] `@EnableAutoConfiguration` 做了什么？
-  来源：`docs/interview/spring-boot.md:33`
-- [常见追问] 如何排除某个自动配置？
   来源：`docs/interview/spring-boot.md:34`
+- [正式题] @SpringBootApplication 包含哪些注解？
+  来源：`docs/interview/spring-boot.md:41`
+- [常见追问] 为什么启动类建议放在根包？
+  来源：`docs/interview/spring-boot.md:47`
+- [常见追问] `@EnableAutoConfiguration` 做了什么？
+  来源：`docs/interview/spring-boot.md:49`
+- [常见追问] 如何排除某个自动配置？
+  来源：`docs/interview/spring-boot.md:52`
 - [正式题] Starter 机制解决什么问题？
-  来源：`docs/interview/spring-boot.md:36`
+  来源：`docs/interview/spring-boot.md:59`
 - [常见追问] 自定义 starter 怎么做？
-  来源：`docs/interview/spring-boot.md:42`
+  来源：`docs/interview/spring-boot.md:65`
 - [常见追问] starter 和自动配置是什么关系？
-  来源：`docs/interview/spring-boot.md:43`
+  来源：`docs/interview/spring-boot.md:70`
 - [常见追问] 为什么 starter 通常不写业务代码？
-  来源：`docs/interview/spring-boot.md:44`
+  来源：`docs/interview/spring-boot.md:75`
 
 #### 配置文件
 
 - [正式题] 配置文件加载顺序为什么重要？
-  来源：`docs/interview/spring-boot.md:52`
-- [常见追问] 命令行参数和配置文件谁优先？
-  来源：`docs/interview/spring-boot.md:58`
-- [常见追问] profile 怎么激活？
-  来源：`docs/interview/spring-boot.md:59`
-- [常见追问] 为什么线上配置不要打死在 jar 包里？
-  来源：`docs/interview/spring-boot.md:60`
-- [正式题] bootstrap.yml 和 application.yml 有什么区别？
-  来源：`docs/interview/spring-boot.md:66`
-- [常见追问] 为什么配置中心配置要更早加载？
-  来源：`docs/interview/spring-boot.md:72`
-- [常见追问] 新版 Spring Cloud 如何导入 Nacos 配置？
-  来源：`docs/interview/spring-boot.md:73`
-- [常见追问] bootstrap 配置不生效怎么排查？
-  来源：`docs/interview/spring-boot.md:74`
-- [正式题] properties 和 yml 有什么区别？
-  来源：`docs/interview/spring-boot.md:76`
-- [常见追问] yml 缩进错误会导致什么问题？
-  来源：`docs/interview/spring-boot.md:82`
-- [常见追问] 多环境 profile 怎么写？
-  来源：`docs/interview/spring-boot.md:83`
-- [常见追问] 配置绑定到对象用什么注解？
   来源：`docs/interview/spring-boot.md:84`
+- [常见追问] 命令行参数和配置文件谁优先？
+  来源：`docs/interview/spring-boot.md:90`
+- [常见追问] profile 怎么激活？
+  来源：`docs/interview/spring-boot.md:93`
+- [常见追问] 为什么线上配置不要打死在 jar 包里？
+  来源：`docs/interview/spring-boot.md:106`
+- [正式题] bootstrap.yml 和 application.yml 有什么区别？
+  来源：`docs/interview/spring-boot.md:116`
+- [常见追问] 为什么配置中心配置要更早加载？
+  来源：`docs/interview/spring-boot.md:123`
+- [常见追问] 新版 Spring Cloud 如何导入 Nacos 配置？
+  来源：`docs/interview/spring-boot.md:125`
+- [常见追问] bootstrap 配置不生效怎么排查？
+  来源：`docs/interview/spring-boot.md:147`
+- [正式题] properties 和 yml 有什么区别？
+  来源：`docs/interview/spring-boot.md:158`
+- [常见追问] yml 缩进错误会导致什么问题？
+  来源：`docs/interview/spring-boot.md:164`
+- [常见追问] 多环境 profile 怎么写？
+  来源：`docs/interview/spring-boot.md:167`
+- [常见追问] 配置绑定到对象用什么注解？
+  来源：`docs/interview/spring-boot.md:207`
 
 #### 工程实践
 
 - [正式题] Spring Boot 热部署方式有哪些？
-  来源：`docs/interview/spring-boot.md:88`
+  来源：`docs/interview/spring-boot.md:230`
 - [常见追问] DevTools 是热替换还是重启？
-  来源：`docs/interview/spring-boot.md:94`
+  来源：`docs/interview/spring-boot.md:236`
 - [常见追问] 为什么生产不能使用 DevTools？
-  来源：`docs/interview/spring-boot.md:95`
+  来源：`docs/interview/spring-boot.md:241`
 - [常见追问] JRebel 和 DevTools 有什么区别？
-  来源：`docs/interview/spring-boot.md:96`
+  来源：`docs/interview/spring-boot.md:248`
 - [正式题] JPA 和 Hibernate 有什么区别？
-  来源：`docs/interview/spring-boot.md:98`
+  来源：`docs/interview/spring-boot.md:255`
 - [常见追问] JPA 和 MyBatis 怎么选？
-  来源：`docs/interview/spring-boot.md:104`
+  来源：`docs/interview/spring-boot.md:263`
 - [常见追问] Hibernate 为什么需要无参构造？
-  来源：`docs/interview/spring-boot.md:105`
+  来源：`docs/interview/spring-boot.md:269`
 - [常见追问] ORM 框架有什么优缺点？
-  来源：`docs/interview/spring-boot.md:106`
+  来源：`docs/interview/spring-boot.md:274`
 
 ### docs/interview/spring-cloud.md
 
@@ -1807,31 +1807,31 @@
 - [正式题] Spring Boot 和 Spring Cloud 有什么区别？
   来源：`docs/interview/spring-cloud.md:8`
 - [正式题] Spring Cloud 是什么？有哪些常见组件？
-  来源：`docs/interview/spring-cloud.md:17`
+  来源：`docs/interview/spring-cloud.md:19`
 - [正式题] 微服务为什么需要注册中心？
-  来源：`docs/interview/spring-cloud.md:29`
+  来源：`docs/interview/spring-cloud.md:31`
 - [正式题] OpenFeign 的作用是什么？
-  来源：`docs/interview/spring-cloud.md:38`
+  来源：`docs/interview/spring-cloud.md:40`
 - [正式题] Ribbon 的作用是什么？有哪些负载均衡策略？
-  来源：`docs/interview/spring-cloud.md:46`
+  来源：`docs/interview/spring-cloud.md:48`
 - [正式题] Gateway 在微服务中做什么？
-  来源：`docs/interview/spring-cloud.md:54`
+  来源：`docs/interview/spring-cloud.md:57`
 - [正式题] Zuul 和 Spring Cloud Gateway 有什么区别？
-  来源：`docs/interview/spring-cloud.md:62`
+  来源：`docs/interview/spring-cloud.md:66`
 - [正式题] Sentinel 解决什么问题？
-  来源：`docs/interview/spring-cloud.md:70`
+  来源：`docs/interview/spring-cloud.md:76`
 - [正式题] Hystrix 和 Sentinel 有什么区别？
-  来源：`docs/interview/spring-cloud.md:78`
+  来源：`docs/interview/spring-cloud.md:84`
 - [正式题] Spring Cloud Config 和 Nacos 配置中心有什么区别？
-  来源：`docs/interview/spring-cloud.md:86`
-- [正式题] 如何实现微服务监控和日志管理？
   来源：`docs/interview/spring-cloud.md:94`
+- [正式题] 如何实现微服务监控和日志管理？
+  来源：`docs/interview/spring-cloud.md:103`
 - [正式题] 如何实现微服务部署和扩展？
-  来源：`docs/interview/spring-cloud.md:102`
+  来源：`docs/interview/spring-cloud.md:115`
 - [正式题] 分布式事务有哪些常见方案？
-  来源：`docs/interview/spring-cloud.md:112`
+  来源：`docs/interview/spring-cloud.md:126`
 - [正式题] 微服务常见设计模式有哪些？
-  来源：`docs/interview/spring-cloud.md:120`
+  来源：`docs/interview/spring-cloud.md:134`
 
 ### docs/interview/spring.md
 
@@ -2092,8 +2092,8 @@
 
 ### MyBatis 算不算 ORM？
 
-- [常见追问] `docs/interview/hibernate.md:21` MyBatis 算不算 ORM？
-- [常见追问] `docs/interview/mybatis.md:121` MyBatis 算不算 ORM？
+- [常见追问] `docs/interview/hibernate.md:31` MyBatis 算不算 ORM？
+- [常见追问] `docs/interview/mybatis.md:254` MyBatis 算不算 ORM？
 
 ### Spring MVC 和 Struts 有什么区别？
 
