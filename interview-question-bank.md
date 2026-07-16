@@ -1033,230 +1033,230 @@
 - [常见追问] 哪些场景不适合引入 MQ？
   来源：`docs/interview/mq.md:19`
 - [常见追问] MQ 如何削峰？
-  来源：`docs/interview/mq.md:20`
-- [常见追问] 引入 MQ 后系统复杂度体现在哪？
-  来源：`docs/interview/mq.md:21`
-- [正式题] 消息重复消费怎么办？
   来源：`docs/interview/mq.md:28`
-- [常见追问] 为什么 MQ 会重复投递？
+- [常见追问] 引入 MQ 后系统复杂度体现在哪？
   来源：`docs/interview/mq.md:34`
+- [正式题] 消息重复消费怎么办？
+  来源：`docs/interview/mq.md:54`
+- [常见追问] 为什么 MQ 会重复投递？
+  来源：`docs/interview/mq.md:60`
 - [常见追问] 消费端幂等放在哪里做？
-  来源：`docs/interview/mq.md:35`
-- [常见追问] 去重表如何设计？
-  来源：`docs/interview/mq.md:36`
-- [正式题] 如何保证消息不丢失？
-  来源：`docs/interview/mq.md:42`
-- [常见追问] 生产者发送失败怎么处理？
-  来源：`docs/interview/mq.md:48`
-- [常见追问] Broker 宕机如何保证消息不丢？
-  来源：`docs/interview/mq.md:49`
-- [常见追问] 消费者先提交 offset 再处理会怎样？
-  来源：`docs/interview/mq.md:50`
-- [正式题] 顺序消息怎么实现？
-  来源：`docs/interview/mq.md:57`
-- [常见追问] 全局顺序为什么代价高？
-  来源：`docs/interview/mq.md:63`
-- [常见追问] Kafka 如何保证分区内有序？
-  来源：`docs/interview/mq.md:64`
-- [常见追问] 消费失败会不会阻塞后续消息？
   来源：`docs/interview/mq.md:65`
+- [常见追问] 去重表如何设计？
+  来源：`docs/interview/mq.md:71`
+- [正式题] 如何保证消息不丢失？
+  来源：`docs/interview/mq.md:84`
+- [常见追问] 生产者发送失败怎么处理？
+  来源：`docs/interview/mq.md:90`
+- [常见追问] Broker 宕机如何保证消息不丢？
+  来源：`docs/interview/mq.md:97`
+- [常见追问] 消费者先提交 offset 再处理会怎样？
+  来源：`docs/interview/mq.md:103`
+- [正式题] 顺序消息怎么实现？
+  来源：`docs/interview/mq.md:115`
+- [常见追问] 全局顺序为什么代价高？
+  来源：`docs/interview/mq.md:121`
+- [常见追问] Kafka 如何保证分区内有序？
+  来源：`docs/interview/mq.md:129`
+- [常见追问] 消费失败会不会阻塞后续消息？
+  来源：`docs/interview/mq.md:137`
 - [正式题] 最终一致性怎么做？
-  来源：`docs/interview/mq.md:72`
+  来源：`docs/interview/mq.md:150`
 - [常见追问] 本地消息表怎么设计？
-  来源：`docs/interview/mq.md:78`
+  来源：`docs/interview/mq.md:156`
 - [常见追问] 事务消息解决什么问题？
-  来源：`docs/interview/mq.md:79`
+  来源：`docs/interview/mq.md:163`
 - [常见追问] 补偿任务如何避免重复执行？
-  来源：`docs/interview/mq.md:80`
+  来源：`docs/interview/mq.md:170`
 
 #### RabbitMQ
 
 - [正式题] RabbitMQ 中有哪些重要角色？
-  来源：`docs/interview/mq.md:88`
-- [常见追问] Broker 和 Queue 有什么区别？
-  来源：`docs/interview/mq.md:94`
-- [常见追问] 生产者是否直接把消息发到队列？
-  来源：`docs/interview/mq.md:95`
-- [常见追问] 消费者如何确认消息？
-  来源：`docs/interview/mq.md:96`
-- [正式题] RabbitMQ 有哪些重要组件？
-  来源：`docs/interview/mq.md:98`
-- [常见追问] 为什么需要 Channel？
-  来源：`docs/interview/mq.md:104`
-- [常见追问] Exchange 和 Queue 是什么关系？
-  来源：`docs/interview/mq.md:105`
-- [常见追问] RoutingKey 和 BindingKey 有什么区别？
-  来源：`docs/interview/mq.md:106`
-- [正式题] RabbitMQ vhost 有什么作用？
-  来源：`docs/interview/mq.md:108`
-- [常见追问] vhost 和数据库 schema 类似吗？
-  来源：`docs/interview/mq.md:114`
-- [常见追问] 用户权限如何绑定 vhost？
-  来源：`docs/interview/mq.md:115`
-- [常见追问] 多租户场景如何隔离？
-  来源：`docs/interview/mq.md:116`
-- [正式题] RabbitMQ 消息是怎么发送的？
-  来源：`docs/interview/mq.md:118`
-- [常见追问] 为什么不每次发送都新建连接？
-  来源：`docs/interview/mq.md:124`
-- [常见追问] Channel 是线程安全的吗？
-  来源：`docs/interview/mq.md:125`
-- [常见追问] 消息没有路由到队列会怎样？
-  来源：`docs/interview/mq.md:126`
-- [正式题] RabbitMQ 如何保证发送稳定性？
-  来源：`docs/interview/mq.md:128`
-- [常见追问] confirm 和 return callback 有什么区别？
-  来源：`docs/interview/mq.md:134`
-- [常见追问] 事务模式为什么性能差？
-  来源：`docs/interview/mq.md:135`
-- [常见追问] 生产者重试如何避免重复消息？
-  来源：`docs/interview/mq.md:136`
-- [正式题] RabbitMQ 如何避免消息丢失？
-  来源：`docs/interview/mq.md:138`
-- [常见追问] durable 队列是否能保证消息不丢？
-  来源：`docs/interview/mq.md:144`
-- [常见追问] 消费者自动 ack 有什么风险？
-  来源：`docs/interview/mq.md:145`
-- [常见追问] RabbitMQ 镜像队列或 quorum queue 解决什么问题？
-  来源：`docs/interview/mq.md:146`
-- [正式题] RabbitMQ 持久化有什么缺点？
-  来源：`docs/interview/mq.md:148`
-- [常见追问] 所有消息都需要持久化吗？
-  来源：`docs/interview/mq.md:154`
-- [常见追问] 持久化和高可用是一回事吗？
-  来源：`docs/interview/mq.md:155`
-- [常见追问] 磁盘满了会发生什么？
-  来源：`docs/interview/mq.md:156`
-- [正式题] RabbitMQ 交换器类型有哪些？
-  来源：`docs/interview/mq.md:158`
-- [常见追问] 日志广播适合哪种交换器？
-  来源：`docs/interview/mq.md:164`
-- [常见追问] topic 中 `*` 和 `#` 有什么区别？
-  来源：`docs/interview/mq.md:165`
-- [常见追问] direct 和 topic 如何选择？
-  来源：`docs/interview/mq.md:166`
-- [正式题] RabbitMQ 延迟队列怎么实现？
-  来源：`docs/interview/mq.md:168`
-- [常见追问] TTL 设置在队列和消息上有什么区别？
-  来源：`docs/interview/mq.md:174`
-- [常见追问] 死信队列还能处理哪些场景？
-  来源：`docs/interview/mq.md:175`
-- [常见追问] 延迟消息适合订单超时关闭吗？
-  来源：`docs/interview/mq.md:176`
-- [正式题] RabbitMQ 集群有什么作用？
-  来源：`docs/interview/mq.md:178`
-- [常见追问] RabbitMQ 集群节点会完整复制所有消息吗？
   来源：`docs/interview/mq.md:184`
-- [常见追问] 镜像队列有什么问题？
-  来源：`docs/interview/mq.md:185`
-- [正式题] RabbitMQ 节点类型有哪些？
-  来源：`docs/interview/mq.md:187`
-- [常见追问] 唯一磁盘节点宕机会怎样？
-  来源：`docs/interview/mq.md:193`
-- [常见追问] 为什么生产不建议只有一个磁盘节点？
-  来源：`docs/interview/mq.md:194`
-- [常见追问] 节点类型和消息持久化是什么关系？
-  来源：`docs/interview/mq.md:195`
-- [正式题] RabbitMQ 集群搭建要注意什么？
+- [常见追问] Broker 和 Queue 有什么区别？
+  来源：`docs/interview/mq.md:191`
+- [常见追问] 生产者是否直接把消息发到队列？
   来源：`docs/interview/mq.md:197`
+- [常见追问] 消费者如何确认消息？
+  来源：`docs/interview/mq.md:202`
+- [正式题] RabbitMQ 有哪些重要组件？
+  来源：`docs/interview/mq.md:209`
+- [常见追问] 为什么需要 Channel？
+  来源：`docs/interview/mq.md:215`
+- [常见追问] Exchange 和 Queue 是什么关系？
+  来源：`docs/interview/mq.md:221`
+- [常见追问] RoutingKey 和 BindingKey 有什么区别？
+  来源：`docs/interview/mq.md:226`
+- [正式题] RabbitMQ vhost 有什么作用？
+  来源：`docs/interview/mq.md:233`
+- [常见追问] vhost 和数据库 schema 类似吗？
+  来源：`docs/interview/mq.md:239`
+- [常见追问] 用户权限如何绑定 vhost？
+  来源：`docs/interview/mq.md:245`
+- [常见追问] 多租户场景如何隔离？
+  来源：`docs/interview/mq.md:252`
+- [正式题] RabbitMQ 消息是怎么发送的？
+  来源：`docs/interview/mq.md:260`
+- [常见追问] 为什么不每次发送都新建连接？
+  来源：`docs/interview/mq.md:266`
+- [常见追问] Channel 是线程安全的吗？
+  来源：`docs/interview/mq.md:272`
+- [常见追问] 消息没有路由到队列会怎样？
+  来源：`docs/interview/mq.md:278`
+- [正式题] RabbitMQ 如何保证发送稳定性？
+  来源：`docs/interview/mq.md:286`
+- [常见追问] confirm 和 return callback 有什么区别？
+  来源：`docs/interview/mq.md:292`
+- [常见追问] 事务模式为什么性能差？
+  来源：`docs/interview/mq.md:297`
+- [常见追问] 生产者重试如何避免重复消息？
+  来源：`docs/interview/mq.md:303`
+- [正式题] RabbitMQ 如何避免消息丢失？
+  来源：`docs/interview/mq.md:310`
+- [常见追问] durable 队列是否能保证消息不丢？
+  来源：`docs/interview/mq.md:316`
+- [常见追问] 消费者自动 ack 有什么风险？
+  来源：`docs/interview/mq.md:321`
+- [常见追问] RabbitMQ quorum queue 解决什么问题？
+  来源：`docs/interview/mq.md:327`
+- [正式题] RabbitMQ 持久化有什么缺点？
+  来源：`docs/interview/mq.md:334`
+- [常见追问] 所有消息都需要持久化吗？
+  来源：`docs/interview/mq.md:340`
+- [常见追问] 持久化和高可用是一回事吗？
+  来源：`docs/interview/mq.md:346`
+- [常见追问] 磁盘满了会发生什么？
+  来源：`docs/interview/mq.md:353`
+- [正式题] RabbitMQ 交换器类型有哪些？
+  来源：`docs/interview/mq.md:360`
+- [常见追问] 日志广播适合哪种交换器？
+  来源：`docs/interview/mq.md:367`
+- [常见追问] topic 中 `*` 和 `#` 有什么区别？
+  来源：`docs/interview/mq.md:372`
+- [常见追问] direct 和 topic 如何选择？
+  来源：`docs/interview/mq.md:379`
+- [正式题] RabbitMQ 延迟队列怎么实现？
+  来源：`docs/interview/mq.md:385`
+- [常见追问] TTL 设置在队列和消息上有什么区别？
+  来源：`docs/interview/mq.md:391`
+- [常见追问] 死信队列还能处理哪些场景？
+  来源：`docs/interview/mq.md:397`
+- [常见追问] 延迟消息适合订单超时关闭吗？
+  来源：`docs/interview/mq.md:404`
+- [正式题] RabbitMQ 集群有什么作用？
+  来源：`docs/interview/mq.md:411`
+- [常见追问] RabbitMQ 集群节点会完整复制所有消息吗？
+  来源：`docs/interview/mq.md:417`
+- [常见追问] 镜像队列有什么问题？
+  来源：`docs/interview/mq.md:423`
+- [正式题] RabbitMQ 节点类型有哪些？
+  来源：`docs/interview/mq.md:428`
+- [常见追问] 唯一磁盘节点宕机会怎样？
+  来源：`docs/interview/mq.md:435`
+- [常见追问] 为什么生产不建议只有一个磁盘节点？
+  来源：`docs/interview/mq.md:438`
+- [常见追问] 节点类型和消息持久化是什么关系？
+  来源：`docs/interview/mq.md:441`
+- [正式题] RabbitMQ 集群搭建要注意什么？
+  来源：`docs/interview/mq.md:445`
 - [常见追问] Erlang cookie 不一致会怎样？
-  来源：`docs/interview/mq.md:203`
+  来源：`docs/interview/mq.md:451`
 - [常见追问] 为什么节点名解析很重要？
-  来源：`docs/interview/mq.md:204`
+  来源：`docs/interview/mq.md:455`
 - [常见追问] 集群扩容如何迁移队列？
-  来源：`docs/interview/mq.md:205`
+  来源：`docs/interview/mq.md:460`
 
 #### Kafka
 
 - [正式题] Kafka 是什么？
-  来源：`docs/interview/mq.md:209`
+  来源：`docs/interview/mq.md:469`
 - [常见追问] Kafka 为什么吞吐高？
-  来源：`docs/interview/mq.md:215`
+  来源：`docs/interview/mq.md:475`
 - [常见追问] Topic 和 Partition 有什么关系？
-  来源：`docs/interview/mq.md:216`
+  来源：`docs/interview/mq.md:482`
 - [常见追问] Consumer Group 解决什么问题？
-  来源：`docs/interview/mq.md:217`
+  来源：`docs/interview/mq.md:489`
 - [正式题] Kafka 可以脱离 ZooKeeper 吗？
-  来源：`docs/interview/mq.md:223`
+  来源：`docs/interview/mq.md:500`
 - [常见追问] KRaft 解决什么问题？
-  来源：`docs/interview/mq.md:229`
+  来源：`docs/interview/mq.md:506`
 - [常见追问] ZooKeeper 在旧 Kafka 中负责什么？
-  来源：`docs/interview/mq.md:230`
+  来源：`docs/interview/mq.md:513`
 - [常见追问] Kafka 为什么要去 ZooKeeper？
-  来源：`docs/interview/mq.md:231`
+  来源：`docs/interview/mq.md:520`
 - [正式题] Kafka 数据保留策略有哪些？
-  来源：`docs/interview/mq.md:237`
+  来源：`docs/interview/mq.md:532`
 - [常见追问] 同时设置 7 天和 10G 怎么清理？
-  来源：`docs/interview/mq.md:243`
+  来源：`docs/interview/mq.md:538`
 - [常见追问] Kafka 删除消息是立刻删除吗？
-  来源：`docs/interview/mq.md:244`
+  来源：`docs/interview/mq.md:544`
 - [常见追问] compaction 和 delete 有什么区别？
-  来源：`docs/interview/mq.md:245`
+  来源：`docs/interview/mq.md:549`
 - [正式题] Kafka 变慢可能是什么原因？
-  来源：`docs/interview/mq.md:247`
+  来源：`docs/interview/mq.md:555`
 - [常见追问] Consumer Lag 变大怎么排查？
-  来源：`docs/interview/mq.md:253`
+  来源：`docs/interview/mq.md:561`
 - [常见追问] 分区越多越好吗？
-  来源：`docs/interview/mq.md:254`
+  来源：`docs/interview/mq.md:572`
 - [常见追问] Kafka 为什么依赖顺序写磁盘？
-  来源：`docs/interview/mq.md:255`
+  来源：`docs/interview/mq.md:579`
 - [正式题] Kafka 集群节点数量怎么考虑？
-  来源：`docs/interview/mq.md:257`
+  来源：`docs/interview/mq.md:587`
 - [常见追问] 副本因子通常设置多少？
-  来源：`docs/interview/mq.md:263`
+  来源：`docs/interview/mq.md:593`
 - [常见追问] 分区数如何规划？
-  来源：`docs/interview/mq.md:264`
+  来源：`docs/interview/mq.md:599`
 - [常见追问] Broker 扩容后数据会自动均衡吗？
-  来源：`docs/interview/mq.md:265`
+  来源：`docs/interview/mq.md:606`
 
 #### Apache Pulsar
 
 - [正式题] Pulsar 是什么？
-  来源：`docs/interview/mq.md:269`
+  来源：`docs/interview/mq.md:615`
 - [常见追问] Pulsar 适合什么场景？
-  来源：`docs/interview/mq.md:275`
+  来源：`docs/interview/mq.md:621`
 - [常见追问] Pulsar 和传统 MQ 有什么区别？
-  来源：`docs/interview/mq.md:276`
+  来源：`docs/interview/mq.md:627`
 - [常见追问] Pulsar 的 Topic 格式是什么？
-  来源：`docs/interview/mq.md:277`
+  来源：`docs/interview/mq.md:634`
 - [正式题] Pulsar 和 Kafka 有什么区别？
-  来源：`docs/interview/mq.md:283`
+  来源：`docs/interview/mq.md:645`
 - [常见追问] Kafka 的优势是什么？
-  来源：`docs/interview/mq.md:289`
+  来源：`docs/interview/mq.md:652`
 - [常见追问] 什么场景优先选 Pulsar？
-  来源：`docs/interview/mq.md:290`
+  来源：`docs/interview/mq.md:659`
 - [正式题] Pulsar 的订阅模式有哪些？
-  来源：`docs/interview/mq.md:297`
+  来源：`docs/interview/mq.md:673`
 - [常见追问] `Shared` 为什么不保证全局顺序？
-  来源：`docs/interview/mq.md:303`
+  来源：`docs/interview/mq.md:680`
 - [常见追问] `Failover` 和 `Exclusive` 有什么区别？
-  来源：`docs/interview/mq.md:304`
+  来源：`docs/interview/mq.md:686`
 - [常见追问] `Key_Shared` 适合哪些业务？
-  来源：`docs/interview/mq.md:305`
+  来源：`docs/interview/mq.md:692`
 - [正式题] Pulsar 为什么适合多租户？
-  来源：`docs/interview/mq.md:307`
+  来源：`docs/interview/mq.md:701`
 - [常见追问] Tenant 和 Namespace 分别解决什么问题？
-  来源：`docs/interview/mq.md:313`
+  来源：`docs/interview/mq.md:707`
 - [常见追问] 多租户和普通 Topic 命名规范有什么区别？
-  来源：`docs/interview/mq.md:314`
+  来源：`docs/interview/mq.md:711`
 - [常见追问] 多业务共用集群要注意什么？
-  来源：`docs/interview/mq.md:315`
+  来源：`docs/interview/mq.md:717`
 - [正式题] Pulsar 的 Broker 和存储分离有什么好处？
-  来源：`docs/interview/mq.md:317`
+  来源：`docs/interview/mq.md:727`
 - [常见追问] BookKeeper 在 Pulsar 中负责什么？
-  来源：`docs/interview/mq.md:323`
+  来源：`docs/interview/mq.md:734`
 - [常见追问] 存储分离会带来哪些复杂度？
-  来源：`docs/interview/mq.md:324`
+  来源：`docs/interview/mq.md:740`
 - [常见追问] Kafka 和 Pulsar 的架构差异体现在哪里？
-  来源：`docs/interview/mq.md:325`
+  来源：`docs/interview/mq.md:748`
 - [正式题] Pulsar 的 Key_Shared 订阅解决什么问题？
-  来源：`docs/interview/mq.md:327`
+  来源：`docs/interview/mq.md:757`
 - [常见追问] 局部有序和全局有序有什么区别？
-  来源：`docs/interview/mq.md:333`
+  来源：`docs/interview/mq.md:763`
 - [常见追问] key 设计不合理会有什么问题？
-  来源：`docs/interview/mq.md:334`
+  来源：`docs/interview/mq.md:769`
 - [常见追问] `Key_Shared` 和 Kafka 分区有序有什么区别？
-  来源：`docs/interview/mq.md:335`
+  来源：`docs/interview/mq.md:776`
 
 ### docs/interview/mybatis.md
 
@@ -1577,127 +1577,127 @@
 - [常见追问] Redis 为什么适合做缓存？
   来源：`docs/interview/redis.md:19`
 - [常见追问] 哪些数据不适合放 Redis？
-  来源：`docs/interview/redis.md:20`
+  来源：`docs/interview/redis.md:26`
 - [常见追问] Redis 能不能替代数据库？
-  来源：`docs/interview/redis.md:21`
-- [正式题] Redis 为什么快？
-  来源：`docs/interview/redis.md:27`
-- [常见追问] Redis 单线程为什么还能高并发？
-  来源：`docs/interview/redis.md:33`
-- [常见追问] IO 多路复用是什么？
   来源：`docs/interview/redis.md:34`
-- [常见追问] Redis 6 多线程解决什么问题？
-  来源：`docs/interview/redis.md:35`
-- [正式题] Redis 有哪些功能？
-  来源：`docs/interview/redis.md:41`
-- [常见追问] Redis 事务是否支持回滚？
-  来源：`docs/interview/redis.md:47`
-- [常见追问] Lua 脚本有什么作用？
-  来源：`docs/interview/redis.md:48`
-- [常见追问] Redis Stream 适合什么场景？
-  来源：`docs/interview/redis.md:49`
-- [正式题] Redis 和 Memcached 有什么区别？
+- [正式题] Redis 为什么快？
+  来源：`docs/interview/redis.md:45`
+- [常见追问] Redis 单线程为什么还能高并发？
   来源：`docs/interview/redis.md:51`
-- [常见追问] Memcached 还有什么优势？
-  来源：`docs/interview/redis.md:57`
-- [常见追问] Redis value 最大可以多大？
-  来源：`docs/interview/redis.md:58`
-- [常见追问] 复杂数据结构会带来什么风险？
+- [常见追问] IO 多路复用是什么？
   来源：`docs/interview/redis.md:59`
+- [常见追问] Redis 6 多线程解决什么问题？
+  来源：`docs/interview/redis.md:64`
+- [正式题] Redis 有哪些功能？
+  来源：`docs/interview/redis.md:75`
+- [常见追问] Redis 事务是否支持回滚？
+  来源：`docs/interview/redis.md:81`
+- [常见追问] Lua 脚本有什么作用？
+  来源：`docs/interview/redis.md:87`
+- [常见追问] Redis Stream 适合什么场景？
+  来源：`docs/interview/redis.md:92`
+- [正式题] Redis 和 Memcached 有什么区别？
+  来源：`docs/interview/redis.md:99`
+- [常见追问] Memcached 还有什么优势？
+  来源：`docs/interview/redis.md:106`
+- [常见追问] Redis value 最大可以多大？
+  来源：`docs/interview/redis.md:112`
+- [常见追问] 复杂数据结构会带来什么风险？
+  来源：`docs/interview/redis.md:116`
 
 #### 数据结构与客户端
 
 - [正式题] Redis 常见数据类型有哪些？
-  来源：`docs/interview/redis.md:63`
+  来源：`docs/interview/redis.md:122`
 - [常见追问] 点赞数用什么类型？
-  来源：`docs/interview/redis.md:69`
+  来源：`docs/interview/redis.md:129`
 - [常见追问] 排行榜用什么类型？
-  来源：`docs/interview/redis.md:70`
+  来源：`docs/interview/redis.md:132`
 - [常见追问] 用户对象适合用 string 还是 hash？
-  来源：`docs/interview/redis.md:71`
+  来源：`docs/interview/redis.md:135`
 - [正式题] Redis Java 客户端有哪些？
-  来源：`docs/interview/redis.md:73`
+  来源：`docs/interview/redis.md:140`
 - [常见追问] Spring Boot 默认常用哪个客户端？
-  来源：`docs/interview/redis.md:79`
+  来源：`docs/interview/redis.md:147`
 - [常见追问] Redisson 分布式锁有什么优势？
-  来源：`docs/interview/redis.md:80`
+  来源：`docs/interview/redis.md:151`
 - [常见追问] Jedis 连接池为什么重要？
-  来源：`docs/interview/redis.md:81`
+  来源：`docs/interview/redis.md:156`
 - [正式题] Jedis 和 Redisson 有什么区别？
-  来源：`docs/interview/redis.md:83`
+  来源：`docs/interview/redis.md:162`
 - [常见追问] Redisson 锁如何续期？
-  来源：`docs/interview/redis.md:89`
+  来源：`docs/interview/redis.md:168`
 - [常见追问] Lettuce 和 Jedis 有什么区别？
-  来源：`docs/interview/redis.md:90`
+  来源：`docs/interview/redis.md:173`
 - [常见追问] 为什么不要自己随便实现 Redis 锁？
-  来源：`docs/interview/redis.md:91`
+  来源：`docs/interview/redis.md:179`
 
 #### 缓存问题
 
 - [正式题] 缓存穿透、击穿、雪崩是什么？
-  来源：`docs/interview/redis.md:95`
+  来源：`docs/interview/redis.md:188`
 - [正式题] 缓存和数据库一致性怎么保证？
-  来源：`docs/interview/redis.md:109`
+  来源：`docs/interview/redis.md:210`
 - [常见追问] 为什么通常是删除缓存而不是更新缓存？
-  来源：`docs/interview/redis.md:115`
+  来源：`docs/interview/redis.md:216`
 - [常见追问] 延迟双删解决什么问题？
-  来源：`docs/interview/redis.md:116`
+  来源：`docs/interview/redis.md:222`
 - [常见追问] Canal + MQ 如何做缓存一致性？
-  来源：`docs/interview/redis.md:117`
+  来源：`docs/interview/redis.md:227`
 
 #### 分布式锁
 
 - [正式题] Redis 分布式锁怎么实现？
-  来源：`docs/interview/redis.md:126`
+  来源：`docs/interview/redis.md:242`
 - [常见追问] 为什么要设置唯一 value？
-  来源：`docs/interview/redis.md:132`
+  来源：`docs/interview/redis.md:248`
 - [常见追问] 为什么释放锁要用 Lua？
-  来源：`docs/interview/redis.md:133`
+  来源：`docs/interview/redis.md:254`
 - [常见追问] Redisson watchdog 是什么？
-  来源：`docs/interview/redis.md:134`
+  来源：`docs/interview/redis.md:259`
 - [正式题] Redis 分布式锁有什么缺陷？
-  来源：`docs/interview/redis.md:141`
+  来源：`docs/interview/redis.md:271`
 - [常见追问] RedLock 是否一定可靠？
-  来源：`docs/interview/redis.md:147`
+  来源：`docs/interview/redis.md:277`
 - [常见追问] 分布式锁超时怎么设置？
-  来源：`docs/interview/redis.md:148`
+  来源：`docs/interview/redis.md:282`
 - [常见追问] 数据库锁和 Redis 锁怎么选？
-  来源：`docs/interview/redis.md:149`
+  来源：`docs/interview/redis.md:289`
 
 #### 持久化、内存与淘汰
 
 - [正式题] RDB 和 AOF 有什么区别？
-  来源：`docs/interview/redis.md:153`
+  来源：`docs/interview/redis.md:299`
 - [常见追问] RDB 什么时候触发？
-  来源：`docs/interview/redis.md:159`
+  来源：`docs/interview/redis.md:307`
 - [常见追问] AOF rewrite 是什么？
-  来源：`docs/interview/redis.md:160`
+  来源：`docs/interview/redis.md:314`
 - [常见追问] 两者同时开启时 Redis 如何恢复？
-  来源：`docs/interview/redis.md:161`
+  来源：`docs/interview/redis.md:321`
 - [正式题] Redis 内存如何优化？
-  来源：`docs/interview/redis.md:167`
+  来源：`docs/interview/redis.md:332`
 - [常见追问] 什么是 big key？
-  来源：`docs/interview/redis.md:173`
+  来源：`docs/interview/redis.md:338`
 - [常见追问] 如何扫描大 key？
-  来源：`docs/interview/redis.md:174`
+  来源：`docs/interview/redis.md:345`
 - [常见追问] hash 一定比 string 省内存吗？
-  来源：`docs/interview/redis.md:175`
+  来源：`docs/interview/redis.md:352`
 - [正式题] Redis 淘汰策略有哪些？
-  来源：`docs/interview/redis.md:177`
+  来源：`docs/interview/redis.md:359`
 - [常见追问] LRU 和 LFU 有什么区别？
-  来源：`docs/interview/redis.md:183`
+  来源：`docs/interview/redis.md:365`
 - [常见追问] noeviction 会发生什么？
-  来源：`docs/interview/redis.md:184`
+  来源：`docs/interview/redis.md:371`
 - [常见追问] 缓存场景通常选哪种策略？
-  来源：`docs/interview/redis.md:185`
+  来源：`docs/interview/redis.md:377`
 - [正式题] Redis 常见性能问题有哪些？
-  来源：`docs/interview/redis.md:187`
+  来源：`docs/interview/redis.md:384`
 - [常见追问] RDB 快照为什么可能影响性能？
-  来源：`docs/interview/redis.md:193`
+  来源：`docs/interview/redis.md:390`
 - [常见追问] 主从复制延迟怎么排查？
-  来源：`docs/interview/redis.md:194`
+  来源：`docs/interview/redis.md:396`
 - [常见追问] Redis 慢查询怎么查看？
-  来源：`docs/interview/redis.md:195`
+  来源：`docs/interview/redis.md:406`
 
 ### docs/interview/scenario.md
 
@@ -2017,74 +2017,74 @@
 - [常见追问] znode 有哪些类型？
   来源：`docs/interview/zookeeper.md:19`
 - [常见追问] ZooKeeper 适合存大数据吗？
-  来源：`docs/interview/zookeeper.md:20`
+  来源：`docs/interview/zookeeper.md:27`
 - [常见追问] ZooKeeper 和 Redis 分布式锁有什么区别？
-  来源：`docs/interview/zookeeper.md:21`
+  来源：`docs/interview/zookeeper.md:33`
 - [正式题] ZooKeeper 有哪些功能？
-  来源：`docs/interview/zookeeper.md:23`
+  来源：`docs/interview/zookeeper.md:43`
 - [常见追问] 临时节点有什么特点？
-  来源：`docs/interview/zookeeper.md:29`
+  来源：`docs/interview/zookeeper.md:49`
 - [常见追问] 顺序节点适合做什么？
-  来源：`docs/interview/zookeeper.md:30`
+  来源：`docs/interview/zookeeper.md:56`
 - [常见追问] Watcher 是一次性的吗？
-  来源：`docs/interview/zookeeper.md:31`
+  来源：`docs/interview/zookeeper.md:64`
 
 #### 部署与集群
 
 - [正式题] ZooKeeper 有哪些部署模式？
-  来源：`docs/interview/zookeeper.md:35`
+  来源：`docs/interview/zookeeper.md:73`
 - [常见追问] 为什么 ZooKeeper 集群建议奇数台？
-  来源：`docs/interview/zookeeper.md:41`
+  来源：`docs/interview/zookeeper.md:80`
 - [常见追问] 3 台和 4 台容错能力有什么区别？
-  来源：`docs/interview/zookeeper.md:42`
+  来源：`docs/interview/zookeeper.md:86`
 - [常见追问] ZooKeeper 节点越多越好吗？
-  来源：`docs/interview/zookeeper.md:43`
+  来源：`docs/interview/zookeeper.md:92`
 - [正式题] 集群为什么要有主节点？
-  来源：`docs/interview/zookeeper.md:45`
+  来源：`docs/interview/zookeeper.md:98`
 - [常见追问] Leader 宕机后怎么办？
-  来源：`docs/interview/zookeeper.md:51`
+  来源：`docs/interview/zookeeper.md:104`
 - [常见追问] 读请求一定走 Leader 吗？
-  来源：`docs/interview/zookeeper.md:52`
+  来源：`docs/interview/zookeeper.md:111`
 - [常见追问] ZooKeeper 如何保证顺序一致性？
-  来源：`docs/interview/zookeeper.md:53`
+  来源：`docs/interview/zookeeper.md:117`
 - [正式题] 3 台 ZooKeeper 宕机 1 台还能用吗？
-  来源：`docs/interview/zookeeper.md:55`
+  来源：`docs/interview/zookeeper.md:124`
 - [常见追问] 5 台最多能宕机几台？
-  来源：`docs/interview/zookeeper.md:61`
+  来源：`docs/interview/zookeeper.md:130`
 - [常见追问] 为什么不是只要剩一台就能工作？
-  来源：`docs/interview/zookeeper.md:62`
+  来源：`docs/interview/zookeeper.md:135`
 - [常见追问] 网络分区时如何避免脑裂？
-  来源：`docs/interview/zookeeper.md:63`
+  来源：`docs/interview/zookeeper.md:141`
 
 #### ZAB 与 Watcher
 
 - [正式题] ZooKeeper 如何保证主从同步？
-  来源：`docs/interview/zookeeper.md:67`
+  来源：`docs/interview/zookeeper.md:151`
 - [常见追问] ZAB 和 Paxos 有什么关系？
-  来源：`docs/interview/zookeeper.md:73`
+  来源：`docs/interview/zookeeper.md:157`
 - [常见追问] 什么是 zxid？
-  来源：`docs/interview/zookeeper.md:74`
+  来源：`docs/interview/zookeeper.md:163`
 - [常见追问] Leader 选举时如何比较数据新旧？
-  来源：`docs/interview/zookeeper.md:75`
+  来源：`docs/interview/zookeeper.md:169`
 - [正式题] Watcher 通知机制是什么？
-  来源：`docs/interview/zookeeper.md:77`
+  来源：`docs/interview/zookeeper.md:177`
 - [常见追问] Watcher 是服务端主动推送吗？
-  来源：`docs/interview/zookeeper.md:83`
+  来源：`docs/interview/zookeeper.md:183`
 - [常见追问] Watcher 会不会丢事件？
-  来源：`docs/interview/zookeeper.md:84`
+  来源：`docs/interview/zookeeper.md:190`
 - [常见追问] Curator 如何封装 Watcher？
-  来源：`docs/interview/zookeeper.md:85`
+  来源：`docs/interview/zookeeper.md:198`
 
 #### 生态关系
 
 - [正式题] Kafka 是否可以脱离 ZooKeeper？
-  来源：`docs/interview/zookeeper.md:89`
+  来源：`docs/interview/zookeeper.md:208`
 - [常见追问] KRaft 模式解决了什么问题？
-  来源：`docs/interview/zookeeper.md:95`
+  来源：`docs/interview/zookeeper.md:214`
 - [常见追问] Kafka 为什么要去 ZooKeeper？
-  来源：`docs/interview/zookeeper.md:96`
+  来源：`docs/interview/zookeeper.md:222`
 - [常见追问] 老 Kafka 中 ZooKeeper 存哪些信息？
-  来源：`docs/interview/zookeeper.md:97`
+  来源：`docs/interview/zookeeper.md:230`
 
 ## 当前重复项索引
 
@@ -2122,5 +2122,5 @@
 
 ### Kafka 为什么要去 ZooKeeper？
 
-- [常见追问] `docs/interview/mq.md:231` Kafka 为什么要去 ZooKeeper？
-- [常见追问] `docs/interview/zookeeper.md:96` Kafka 为什么要去 ZooKeeper？
+- [常见追问] `docs/interview/mq.md:520` Kafka 为什么要去 ZooKeeper？
+- [常见追问] `docs/interview/zookeeper.md:222` Kafka 为什么要去 ZooKeeper？
