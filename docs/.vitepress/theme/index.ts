@@ -78,6 +78,7 @@ export default {
       let imageSyncId = 0
       let zoomTask: Promise<void> = Promise.resolve()
       let outlineScrollRaf = 0
+      let sidebarScrollRaf = 0
       let disposed = false
       const showBackToTop = ref(false)
       const imageAttributes = new Map<HTMLImageElement, ImageAttributes>()
@@ -249,6 +250,31 @@ export default {
         })
       }
 
+      function syncActiveSidebarScroll() {
+        if (sidebarScrollRaf) return
+
+        sidebarScrollRaf = window.requestAnimationFrame(() => {
+          sidebarScrollRaf = 0
+
+          const sidebar = document.querySelector<HTMLElement>('.VPSidebar')
+          const activeItem = sidebar?.querySelector<HTMLElement>(
+            '.VPSidebarItem.is-active > .item'
+          )
+
+          if (!sidebar || !activeItem) return
+
+          const sidebarRect = sidebar.getBoundingClientRect()
+          const activeRect = activeItem.getBoundingClientRect()
+          const padding = 16
+          const isAbove = activeRect.top < sidebarRect.top + padding
+          const isBelow = activeRect.bottom > sidebarRect.bottom - padding
+
+          if (isAbove || isBelow) {
+            activeItem.scrollIntoView({ block: 'nearest' })
+          }
+        })
+      }
+
       function syncBackToTopVisibility() {
         showBackToTop.value = window.scrollY > 320
       }
@@ -270,6 +296,7 @@ export default {
         applyNavSections()
         syncBackToTopVisibility()
         syncActiveOutlineScroll()
+        syncActiveSidebarScroll()
       }
 
       applySection(route.path)
@@ -294,6 +321,8 @@ export default {
         window.removeEventListener('scroll', handleWindowScroll)
         if (outlineScrollRaf) window.cancelAnimationFrame(outlineScrollRaf)
         outlineScrollRaf = 0
+        if (sidebarScrollRaf) window.cancelAnimationFrame(sidebarScrollRaf)
+        sidebarScrollRaf = 0
 
         enqueueZoomTask(async () => {
           await detachImages()
