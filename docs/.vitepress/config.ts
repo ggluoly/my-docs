@@ -284,6 +284,7 @@ const interviewSidebar: NavigationGroup[] = [
     items: [
       { text: '消息队列', link: '/interview/mq' },
       { text: 'ZooKeeper', link: '/interview/zookeeper' },
+      { text: 'Dubbo 面试题', link: '/interview/dubbo' },
       { text: '安全认证', link: '/interview/security' }
     ]
   },

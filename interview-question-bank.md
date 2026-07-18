@@ -6,10 +6,10 @@
 
 ## 统计
 
-- 正式题：262
-- 常见追问：661
-- 总问题数：923
-- 标准化唯一问题数：916
+- 正式题：282
+- 常见追问：670
+- 总问题数：952
+- 标准化唯一问题数：945
 - 当前重复问题组：7
 
 ## 使用规则
@@ -226,6 +226,66 @@
   来源：`docs/interview/devops.md:24`
 - [正式题] 线上问题如何定位？
   来源：`docs/interview/devops.md:32`
+
+### docs/interview/dubbo.md
+
+#### Dubbo 与 RPC
+
+- [正式题] Dubbo是什么？RPC又是什么？
+  来源：`docs/interview/dubbo.md:13`
+- [正式题] Dubbo能做什么？
+  来源：`docs/interview/dubbo.md:23`
+
+#### 调用流程与协议
+
+- [正式题] 能说下Dubbo的总体的调用过程吗？
+  来源：`docs/interview/dubbo.md:35`
+- [正式题] 说说Dubbo 支持哪些协议，每种协议的应用场景和优缺点？
+  来源：`docs/interview/dubbo.md:49`
+
+#### 扩展与设计
+
+- [正式题] Dubbo中都用到哪些设计模式？
+  来源：`docs/interview/dubbo.md:63`
+- [正式题] 如果Dubbo中provider提供的服务由多个版本怎么办？
+  来源：`docs/interview/dubbo.md:83`
+
+#### 服务暴露与引用
+
+- [正式题] 服务暴露的流程是怎么样的？
+  来源：`docs/interview/dubbo.md:96`
+- [正式题] 服务引用的流程是怎么样的？
+  来源：`docs/interview/dubbo.md:110`
+
+#### 注册发现与 SPI
+
+- [正式题] Dubbo的注册中心有哪些？
+  来源：`docs/interview/dubbo.md:123`
+- [正式题] 聊聊Dubbo SPI机制？
+  来源：`docs/interview/dubbo.md:131`
+- [正式题] Dubbo的SPI和JAVA的SPI有什么区别？
+  来源：`docs/interview/dubbo.md:150`
+
+#### 负载均衡与容错
+
+- [正式题] 有哪些负载均衡策略？
+  来源：`docs/interview/dubbo.md:165`
+- [正式题] 集群容错方式有哪些？
+  来源：`docs/interview/dubbo.md:187`
+
+#### 分层与服务治理
+
+- [正式题] 说说Dubbo的分层？
+  来源：`docs/interview/dubbo.md:200`
+- [正式题] 服务提供者能实现失效踢出是什么原理？
+  来源：`docs/interview/dubbo.md:214`
+- [正式题] 为什么要通过代理对象通信？
+  来源：`docs/interview/dubbo.md:220`
+
+#### RPC 框架设计
+
+- [正式题] 怎么设计一个RPC框架？
+  来源：`docs/interview/dubbo.md:228`
 
 ### docs/interview/hibernate.md
 
@@ -507,327 +567,351 @@
   来源：`docs/interview/java.md:91`
 - [常见追问] 为什么代码规范不推荐随意使用缩写？
   来源：`docs/interview/java.md:95`
-- [正式题] Java 8 有哪些主要新特性？
+- [正式题] main 方法是什么？
   来源：`docs/interview/java.md:102`
-- [常见追问] Stream 和普通循环有什么区别？
-  来源：`docs/interview/java.md:108`
-- [常见追问] `Optional` 能完全避免空指针吗？
-  来源：`docs/interview/java.md:111`
-- [常见追问] 接口默认方法解决了什么问题？
-  来源：`docs/interview/java.md:113`
-- [正式题] Java 为什么不支持运算符重载？
-  来源：`docs/interview/java.md:120`
-- [常见追问] `String` 的 `+` 是不是运算符重载？
+- [常见追问] main 方法里面的 `String[] args` 参数是干什么的？
+  来源：`docs/interview/java.md:121`
+- [正式题] Java 8 有哪些主要新特性？
   来源：`docs/interview/java.md:126`
-- [常见追问] Java 为什么保留方法重载？
-  来源：`docs/interview/java.md:129`
-- [常见追问] 运算符重载有什么风险？
+- [常见追问] Stream 和普通循环有什么区别？
   来源：`docs/interview/java.md:132`
-- [正式题] Java 中类为什么不支持多重继承？
+- [常见追问] `Optional` 能完全避免空指针吗？
   来源：`docs/interview/java.md:135`
+- [常见追问] 接口默认方法解决了什么问题？
+  来源：`docs/interview/java.md:137`
+- [正式题] Java 为什么不支持运算符重载？
+  来源：`docs/interview/java.md:144`
+- [常见追问] `String` 的 `+` 是不是运算符重载？
+  来源：`docs/interview/java.md:150`
+- [常见追问] Java 为什么保留方法重载？
+  来源：`docs/interview/java.md:153`
+- [常见追问] 运算符重载有什么风险？
+  来源：`docs/interview/java.md:156`
+- [正式题] Java 中类为什么不支持多重继承？
+  来源：`docs/interview/java.md:159`
 - [常见追问] 接口多继承会不会产生冲突？
-  来源：`docs/interview/java.md:141`
+  来源：`docs/interview/java.md:165`
 - [常见追问] 默认方法冲突怎么解决？
-  来源：`docs/interview/java.md:147`
+  来源：`docs/interview/java.md:171`
 - [常见追问] 组合为什么通常比继承更灵活？
-  来源：`docs/interview/java.md:149`
-- [正式题] Java 中有哪些访问修饰符？
-  来源：`docs/interview/java.md:152`
-- [常见追问] 默认访问和 `protected` 有什么区别？
-  来源：`docs/interview/java.md:158`
-- [常见追问] 顶级类可以用哪些访问修饰符？
-  来源：`docs/interview/java.md:161`
-- [常见追问] 为什么字段通常不直接设置为 public？
-  来源：`docs/interview/java.md:163`
-- [正式题] Java 中常见非访问修饰符有哪些？
-  来源：`docs/interview/java.md:166`
-- [常见追问] `final` 修饰引用类型表示对象不可变吗？
   来源：`docs/interview/java.md:173`
-- [常见追问] `volatile` 和 `synchronized` 有什么区别？
-  来源：`docs/interview/java.md:175`
-- [常见追问] `transient` 常用于什么场景？
-  来源：`docs/interview/java.md:178`
-- [正式题] import 和 static import 有什么区别？
-  来源：`docs/interview/java.md:181`
-- [常见追问] `import java.util.*` 会不会影响运行性能？
+- [正式题] Java 中有哪些访问修饰符？
+  来源：`docs/interview/java.md:176`
+- [常见追问] 默认访问和 `protected` 有什么区别？
+  来源：`docs/interview/java.md:182`
+- [常见追问] 顶级类可以用哪些访问修饰符？
+  来源：`docs/interview/java.md:185`
+- [常见追问] 为什么字段通常不直接设置为 public？
   来源：`docs/interview/java.md:187`
-- [常见追问] 静态导入适合哪些场景？
+- [正式题] Java 中常见非访问修饰符有哪些？
   来源：`docs/interview/java.md:190`
+- [常见追问] `final` 修饰引用类型表示对象不可变吗？
+  来源：`docs/interview/java.md:197`
+- [常见追问] `volatile` 和 `synchronized` 有什么区别？
+  来源：`docs/interview/java.md:199`
+- [常见追问] `transient` 常用于什么场景？
+  来源：`docs/interview/java.md:202`
+- [正式题] import 和 static import 有什么区别？
+  来源：`docs/interview/java.md:205`
+- [常见追问] `import java.util.*` 会不会影响运行性能？
+  来源：`docs/interview/java.md:211`
+- [常见追问] 静态导入适合哪些场景？
+  来源：`docs/interview/java.md:214`
 - [常见追问] 为什么不建议大量使用通配符导入？
-  来源：`docs/interview/java.md:194`
+  来源：`docs/interview/java.md:218`
 
 #### 字符串与对象基础
 
 - [正式题] String 为什么不可变？
-  来源：`docs/interview/java.md:200`
-- [常见追问] `StringBuilder` 和 `StringBuffer` 有什么区别？
-  来源：`docs/interview/java.md:206`
-- [常见追问] 循环中字符串拼接为什么不推荐用 `+`？
-  来源：`docs/interview/java.md:209`
-- [常见追问] 字符串比较为什么要用 `equals()`？
-  来源：`docs/interview/java.md:211`
-- [正式题] equals 和 hashCode 有什么关系？
-  来源：`docs/interview/java.md:218`
-- [常见追问] `==` 和 `equals()` 有什么区别？
   来源：`docs/interview/java.md:224`
+- [常见追问] `StringBuilder` 和 `StringBuffer` 有什么区别？
+  来源：`docs/interview/java.md:230`
+- [常见追问] 循环中字符串拼接为什么不推荐用 `+`？
+  来源：`docs/interview/java.md:233`
+- [常见追问] 字符串比较为什么要用 `equals()`？
+  来源：`docs/interview/java.md:235`
+- [正式题] equals 和 hashCode 有什么关系？
+  来源：`docs/interview/java.md:242`
+- [常见追问] `==` 和 `equals()` 有什么区别？
+  来源：`docs/interview/java.md:248`
 - [常见追问] 为什么哈希冲突不可避免？
-  来源：`docs/interview/java.md:227`
-- [常见追问] 对象作为 Map key 要注意什么？
-  来源：`docs/interview/java.md:229`
-- [正式题] 为什么 char 数组比 String 更适合存储密码？
-  来源：`docs/interview/java.md:240`
-- [常见追问] `char[]` 一定安全吗？
-  来源：`docs/interview/java.md:246`
-- [常见追问] 为什么日志里不能打印密码？
   来源：`docs/interview/java.md:251`
+- [常见追问] 对象作为 Map key 要注意什么？
+  来源：`docs/interview/java.md:253`
+- [正式题] 为什么 char 数组比 String 更适合存储密码？
+  来源：`docs/interview/java.md:264`
+- [常见追问] `char[]` 一定安全吗？
+  来源：`docs/interview/java.md:270`
+- [常见追问] 为什么日志里不能打印密码？
+  来源：`docs/interview/java.md:275`
 - [常见追问] 配置文件中的密码应该怎么保护？
-  来源：`docs/interview/java.md:254`
+  来源：`docs/interview/java.md:278`
 - [正式题] 什么是 NullPointerException？
-  来源：`docs/interview/java.md:263`
+  来源：`docs/interview/java.md:287`
 - [常见追问] 如何减少空指针异常？
-  来源：`docs/interview/java.md:269`
+  来源：`docs/interview/java.md:293`
 - [常见追问] `Optional` 适合用在字段里吗？
-  来源：`docs/interview/java.md:277`
+  来源：`docs/interview/java.md:301`
 - [常见追问] 自动拆箱为什么可能触发空指针？
-  来源：`docs/interview/java.md:279`
-- [正式题] 方法重载和方法重写有什么区别？
-  来源：`docs/interview/java.md:282`
-- [常见追问] 重载能不能只改返回值？
-  来源：`docs/interview/java.md:288`
-- [常见追问] 重写时异常声明有什么限制？
-  来源：`docs/interview/java.md:290`
-- [常见追问] `@Override` 有什么作用？
-  来源：`docs/interview/java.md:294`
-- [正式题] private 或 static 方法可以被重写吗？
-  来源：`docs/interview/java.md:297`
-- [常见追问] static 方法为什么没有多态？
   来源：`docs/interview/java.md:303`
-- [常见追问] final 方法能被重写吗？
+- [正式题] 方法重载和方法重写有什么区别？
   来源：`docs/interview/java.md:306`
-- [常见追问] private 方法能被重载吗？
-  来源：`docs/interview/java.md:309`
-- [正式题] Java 只有值传递是什么意思？
+- [常见追问] 重载能不能只改返回值？
   来源：`docs/interview/java.md:312`
+- [常见追问] 重写时异常声明有什么限制？
+  来源：`docs/interview/java.md:314`
+- [常见追问] `@Override` 有什么作用？
+  来源：`docs/interview/java.md:318`
+- [正式题] private 或 static 方法可以被重写吗？
+  来源：`docs/interview/java.md:321`
+- [常见追问] static 方法为什么没有多态？
+  来源：`docs/interview/java.md:327`
+- [常见追问] final 方法能被重写吗？
+  来源：`docs/interview/java.md:330`
+- [常见追问] private 方法能被重载吗？
+  来源：`docs/interview/java.md:333`
+- [正式题] Java 只有值传递是什么意思？
+  来源：`docs/interview/java.md:336`
 
 #### 异常处理
 
 - [正式题] throw 和 throws 有什么区别？
-  来源：`docs/interview/java.md:322`
+  来源：`docs/interview/java.md:346`
 - [常见追问] 受检异常和非受检异常有什么区别？
-  来源：`docs/interview/java.md:328`
+  来源：`docs/interview/java.md:352`
 - [常见追问] `RuntimeException` 需要 `throws` 声明吗？
-  来源：`docs/interview/java.md:333`
+  来源：`docs/interview/java.md:357`
 - [常见追问] 异常应该捕获还是继续抛出？
-  来源：`docs/interview/java.md:335`
+  来源：`docs/interview/java.md:359`
 - [正式题] try-catch-finally 哪些部分可以省略？
-  来源：`docs/interview/java.md:342`
+  来源：`docs/interview/java.md:366`
 - [常见追问] try-with-resources 解决了什么问题？
-  来源：`docs/interview/java.md:348`
-- [常见追问] 多个 `catch` 的顺序有什么要求？
-  来源：`docs/interview/java.md:353`
-- [正式题] finally 一定会执行吗？
-  来源：`docs/interview/java.md:360`
-- [常见追问] `finally` 中 `return` 会发生什么？
-  来源：`docs/interview/java.md:370`
-- [常见追问] try-with-resources 和 `finally` 有什么关系？
   来源：`docs/interview/java.md:372`
+- [常见追问] 多个 `catch` 的顺序有什么要求？
+  来源：`docs/interview/java.md:377`
+- [正式题] finally 一定会执行吗？
+  来源：`docs/interview/java.md:384`
+- [常见追问] `finally` 中 `return` 会发生什么？
+  来源：`docs/interview/java.md:394`
+- [常见追问] try-with-resources 和 `finally` 有什么关系？
+  来源：`docs/interview/java.md:396`
 - [常见追问] `System.exit()` 后 `finally` 会执行吗？
-  来源：`docs/interview/java.md:374`
+  来源：`docs/interview/java.md:398`
 - [正式题] 常见异常有哪些？
-  来源：`docs/interview/java.md:381`
+  来源：`docs/interview/java.md:405`
 - [常见追问] `Error` 和 `Exception` 有什么区别？
-  来源：`docs/interview/java.md:387`
+  来源：`docs/interview/java.md:411`
 - [常见追问] 空指针异常如何排查和避免？
-  来源：`docs/interview/java.md:391`
+  来源：`docs/interview/java.md:415`
 
 #### 注解、反射与动态代理
 
 - [正式题] 注解的本质是什么？
-  来源：`docs/interview/java.md:400`
+  来源：`docs/interview/java.md:424`
 - [常见追问] `RetentionPolicy` 有哪些类型？
-  来源：`docs/interview/java.md:406`
+  来源：`docs/interview/java.md:430`
 - [常见追问] `@Target` 元注解有什么作用？
-  来源：`docs/interview/java.md:409`
+  来源：`docs/interview/java.md:433`
 - [常见追问] Spring 是如何解析注解的？
-  来源：`docs/interview/java.md:411`
+  来源：`docs/interview/java.md:435`
 - [正式题] 什么是反射？
-  来源：`docs/interview/java.md:419`
+  来源：`docs/interview/java.md:443`
 - [常见追问] 反射为什么会影响性能？
-  来源：`docs/interview/java.md:425`
+  来源：`docs/interview/java.md:449`
 - [常见追问] 反射能访问 private 成员吗？
-  来源：`docs/interview/java.md:431`
+  来源：`docs/interview/java.md:455`
 - [常见追问] Spring IoC 为什么大量使用反射？
-  来源：`docs/interview/java.md:434`
+  来源：`docs/interview/java.md:458`
 - [正式题] 什么是动态代理？
-  来源：`docs/interview/java.md:441`
+  来源：`docs/interview/java.md:465`
 - [常见追问] JDK 动态代理和 CGLIB 有什么区别？
-  来源：`docs/interview/java.md:447`
+  来源：`docs/interview/java.md:471`
 - [常见追问] Spring AOP 默认使用哪种代理？
-  来源：`docs/interview/java.md:452`
+  来源：`docs/interview/java.md:476`
 - [常见追问] final 类能被 CGLIB 代理吗？
-  来源：`docs/interview/java.md:454`
+  来源：`docs/interview/java.md:478`
 
 #### 集合与容器
 
 - [正式题] HashMap 为什么线程不安全？
-  来源：`docs/interview/java.md:464`
+  来源：`docs/interview/java.md:488`
 - [常见追问] JDK 8 的 `HashMap` 为什么引入红黑树？
-  来源：`docs/interview/java.md:474`
-- [常见追问] `ConcurrentHashMap` 如何保证线程安全？
-  来源：`docs/interview/java.md:477`
-- [正式题] HashMap 的实现原理是什么？
-  来源：`docs/interview/java.md:490`
-- [常见追问] `HashMap` 为什么容量通常是 2 的幂？
-  来源：`docs/interview/java.md:496`
-- [常见追问] 链表什么时候树化？
   来源：`docs/interview/java.md:498`
+- [常见追问] `ConcurrentHashMap` 如何保证线程安全？
+  来源：`docs/interview/java.md:501`
+- [正式题] HashMap 的实现原理是什么？
+  来源：`docs/interview/java.md:514`
+- [常见追问] `HashMap` 为什么容量通常是 2 的幂？
+  来源：`docs/interview/java.md:520`
+- [常见追问] 链表什么时候树化？
+  来源：`docs/interview/java.md:522`
 - [常见追问] `HashMap` 扩容为什么可能影响性能？
-  来源：`docs/interview/java.md:500`
+  来源：`docs/interview/java.md:524`
 - [正式题] HashMap 和 Hashtable 有什么区别？
-  来源：`docs/interview/java.md:507`
+  来源：`docs/interview/java.md:531`
 - [常见追问] 为什么 `Hashtable` 不推荐使用？
-  来源：`docs/interview/java.md:515`
-- [正式题] HashMap 和 TreeMap 怎么选？
-  来源：`docs/interview/java.md:523`
-- [常见追问] `TreeMap` 的时间复杂度是多少？
-  来源：`docs/interview/java.md:532`
-- [常见追问] `HashMap` 是否有序？
-  来源：`docs/interview/java.md:535`
-- [常见追问] `LinkedHashMap` 和 `TreeMap` 有什么区别？
   来源：`docs/interview/java.md:539`
+- [正式题] HashMap 和 TreeMap 怎么选？
+  来源：`docs/interview/java.md:547`
+- [常见追问] `TreeMap` 的时间复杂度是多少？
+  来源：`docs/interview/java.md:556`
+- [常见追问] `HashMap` 是否有序？
+  来源：`docs/interview/java.md:559`
+- [常见追问] `LinkedHashMap` 和 `TreeMap` 有什么区别？
+  来源：`docs/interview/java.md:563`
 - [正式题] HashSet 的实现原理是什么？
-  来源：`docs/interview/java.md:548`
+  来源：`docs/interview/java.md:572`
 - [常见追问] `HashSet` 如何判断元素重复？
-  来源：`docs/interview/java.md:554`
+  来源：`docs/interview/java.md:578`
 - [常见追问] `HashSet` 是有序的吗？
-  来源：`docs/interview/java.md:560`
+  来源：`docs/interview/java.md:584`
 - [正式题] List、Set、Map 有什么区别？
-  来源：`docs/interview/java.md:567`
+  来源：`docs/interview/java.md:591`
 - [常见追问] `ArrayList`、`LinkedList`、`HashSet`、`TreeSet` 分别适合什么场景？
-  来源：`docs/interview/java.md:580`
+  来源：`docs/interview/java.md:604`
 - [常见追问] `LinkedHashMap` 有什么特点？
-  来源：`docs/interview/java.md:586`
+  来源：`docs/interview/java.md:610`
 - [正式题] ArrayList 和 LinkedList 怎么选？
-  来源：`docs/interview/java.md:595`
+  来源：`docs/interview/java.md:619`
 - [常见追问] `ArrayList` 扩容机制是什么？
-  来源：`docs/interview/java.md:607`
-- [常见追问] `LinkedList` 为什么随机访问慢？
-  来源：`docs/interview/java.md:612`
-- [常见追问] 多线程场景能不能直接用 `ArrayList`？
-  来源：`docs/interview/java.md:614`
-- [正式题] 数组和 List 如何互相转换？
-  来源：`docs/interview/java.md:624`
-- [常见追问] `Arrays.asList()` 返回的是 `java.util.ArrayList` 吗？
   来源：`docs/interview/java.md:631`
-- [常见追问] 基本类型数组使用 `Arrays.asList()` 有什么坑？
-  来源：`docs/interview/java.md:635`
-- [常见追问] 为什么推荐 `toArray(new T[0])`？
-  来源：`docs/interview/java.md:654`
-- [正式题] ArrayList 和 Vector 有什么区别？
-  来源：`docs/interview/java.md:665`
-- [常见追问] 多线程场景能直接使用 `Vector` 吗？
-  来源：`docs/interview/java.md:675`
-- [常见追问] `Collections.synchronizedList()` 和 `Vector` 有什么区别？
+- [常见追问] `LinkedList` 为什么随机访问慢？
+  来源：`docs/interview/java.md:636`
+- [常见追问] 多线程场景能不能直接用 `ArrayList`？
+  来源：`docs/interview/java.md:638`
+- [正式题] 如何对数组进行排序？
+  来源：`docs/interview/java.md:648`
+- [常见追问] `Arrays.sort()` 和 `Arrays.parallelSort()` 怎么选？
+  来源：`docs/interview/java.md:682`
+- [常见追问] 基本类型数组如何降序排序？
+  来源：`docs/interview/java.md:685`
+- [常见追问] 排序对象数组要注意什么？
   来源：`docs/interview/java.md:687`
-- [正式题] 字节流和字符流有什么区别？
-  来源：`docs/interview/java.md:695`
-- [常见追问] 字符流底层是不是也依赖字节流？
-  来源：`docs/interview/java.md:703`
-- [常见追问] 乱码通常是什么原因？
-  来源：`docs/interview/java.md:708`
-- [常见追问] 缓冲流解决什么问题？
-  来源：`docs/interview/java.md:711`
-- [正式题] BIO、NIO、AIO 有什么区别？
-  来源：`docs/interview/java.md:714`
-- [常见追问] NIO 为什么适合高并发连接？
-  来源：`docs/interview/java.md:723`
-- [常见追问] Selector 的作用是什么？
-  来源：`docs/interview/java.md:725`
-- [常见追问] Netty 和 Java NIO 有什么关系？
-  来源：`docs/interview/java.md:727`
-- [正式题] Queue 的 poll 和 remove 有什么区别？
-  来源：`docs/interview/java.md:734`
-- [常见追问] `peek()` 和 `element()` 有什么区别？
+- [正式题] List 排序有哪些方式？
+  来源：`docs/interview/java.md:690`
+- [常见追问] `List.sort()` 和 `Collections.sort()` 有什么区别？
+  来源：`docs/interview/java.md:731`
+- [常见追问] 如何按对象多个字段排序？
+  来源：`docs/interview/java.md:733`
+- [常见追问] 原集合不想被修改怎么办？
+  来源：`docs/interview/java.md:735`
+- [常见追问] List 中有 `null` 如何排序？
+  来源：`docs/interview/java.md:737`
+- [正式题] 数组和 List 如何互相转换？
   来源：`docs/interview/java.md:740`
+- [常见追问] `Arrays.asList()` 返回的是 `java.util.ArrayList` 吗？
+  来源：`docs/interview/java.md:747`
+- [常见追问] 基本类型数组使用 `Arrays.asList()` 有什么坑？
+  来源：`docs/interview/java.md:751`
+- [常见追问] 为什么推荐 `toArray(new T[0])`？
+  来源：`docs/interview/java.md:770`
+- [正式题] ArrayList 和 Vector 有什么区别？
+  来源：`docs/interview/java.md:781`
+- [常见追问] 多线程场景能直接使用 `Vector` 吗？
+  来源：`docs/interview/java.md:791`
+- [常见追问] `Collections.synchronizedList()` 和 `Vector` 有什么区别？
+  来源：`docs/interview/java.md:803`
+- [正式题] 字节流和字符流有什么区别？
+  来源：`docs/interview/java.md:811`
+- [常见追问] 字符流底层是不是也依赖字节流？
+  来源：`docs/interview/java.md:819`
+- [常见追问] 乱码通常是什么原因？
+  来源：`docs/interview/java.md:824`
+- [常见追问] 缓冲流解决什么问题？
+  来源：`docs/interview/java.md:827`
+- [正式题] BIO、NIO、AIO 有什么区别？
+  来源：`docs/interview/java.md:830`
+- [常见追问] NIO 为什么适合高并发连接？
+  来源：`docs/interview/java.md:839`
+- [常见追问] Selector 的作用是什么？
+  来源：`docs/interview/java.md:841`
+- [常见追问] Netty 和 Java NIO 有什么关系？
+  来源：`docs/interview/java.md:843`
+- [正式题] Queue 的 poll 和 remove 有什么区别？
+  来源：`docs/interview/java.md:850`
+- [常见追问] `peek()` 和 `element()` 有什么区别？
+  来源：`docs/interview/java.md:856`
 - [常见追问] `Queue` 和 `Deque` 有什么区别？
-  来源：`docs/interview/java.md:744`
+  来源：`docs/interview/java.md:860`
 - [常见追问] 阻塞队列有哪些常见实现？
-  来源：`docs/interview/java.md:748`
+  来源：`docs/interview/java.md:864`
 - [正式题] Iterator 是什么？怎么使用？
-  来源：`docs/interview/java.md:761`
+  来源：`docs/interview/java.md:877`
 - [常见追问] fail-fast 和 fail-safe 有什么区别？
-  来源：`docs/interview/java.md:767`
+  来源：`docs/interview/java.md:883`
 - [常见追问] foreach 底层是不是 `Iterator`？
-  来源：`docs/interview/java.md:771`
+  来源：`docs/interview/java.md:887`
 - [常见追问] `Iterator` 和 `ListIterator` 有什么区别？
-  来源：`docs/interview/java.md:773`
+  来源：`docs/interview/java.md:889`
 
 #### 泛型与对象生命周期
 
 - [正式题] 泛型类是什么？
-  来源：`docs/interview/java.md:783`
+  来源：`docs/interview/java.md:899`
 - [常见追问] Java 泛型为什么有类型擦除？
-  来源：`docs/interview/java.md:789`
+  来源：`docs/interview/java.md:905`
 - [常见追问] `List<?>` 和 `List<Object>` 有什么区别？
-  来源：`docs/interview/java.md:792`
+  来源：`docs/interview/java.md:908`
 - [常见追问] 泛型方法和泛型类有什么区别？
-  来源：`docs/interview/java.md:795`
+  来源：`docs/interview/java.md:911`
 - [正式题] Java 中创建对象有哪些方式？
-  来源：`docs/interview/java.md:806`
+  来源：`docs/interview/java.md:922`
 - [常见追问] `Class.newInstance()` 为什么不推荐？
-  来源：`docs/interview/java.md:816`
+  来源：`docs/interview/java.md:932`
 - [常见追问] `clone()` 是深拷贝还是浅拷贝？
-  来源：`docs/interview/java.md:819`
+  来源：`docs/interview/java.md:935`
 - [常见追问] 工厂模式创建对象有什么好处？
-  来源：`docs/interview/java.md:823`
+  来源：`docs/interview/java.md:939`
 - [正式题] Java 对象什么时候会被回收？
-  来源：`docs/interview/java.md:837`
+  来源：`docs/interview/java.md:953`
 - [常见追问] 哪些对象可以作为 GC Roots？
-  来源：`docs/interview/java.md:843`
+  来源：`docs/interview/java.md:959`
 - [常见追问] `finalize()` 为什么不推荐使用？
-  来源：`docs/interview/java.md:853`
+  来源：`docs/interview/java.md:969`
 - [常见追问] 强引用、软引用、弱引用、虚引用有什么区别？
-  来源：`docs/interview/java.md:857`
+  来源：`docs/interview/java.md:973`
 
 #### 序列化与对象拷贝
 
 - [正式题] Serializable 接口有什么作用？
-  来源：`docs/interview/java.md:877`
+  来源：`docs/interview/java.md:993`
 - [常见追问] 为什么建议显式声明 `serialVersionUID`？
-  来源：`docs/interview/java.md:884`
+  来源：`docs/interview/java.md:1000`
 - [常见追问] `transient` 字段会不会被序列化？
-  来源：`docs/interview/java.md:887`
+  来源：`docs/interview/java.md:1003`
 - [常见追问] Java 原生序列化有什么安全风险？
-  来源：`docs/interview/java.md:889`
+  来源：`docs/interview/java.md:1005`
 - [正式题] 怎么把一个对象从一个 JVM 转移到另一个 JVM？
-  来源：`docs/interview/java.md:896`
+  来源：`docs/interview/java.md:1012`
 - [常见追问] RPC 框架为什么需要序列化协议？
-  来源：`docs/interview/java.md:902`
+  来源：`docs/interview/java.md:1018`
 - [常见追问] JSON、Protobuf、Java 原生序列化有什么区别？
-  来源：`docs/interview/java.md:904`
+  来源：`docs/interview/java.md:1020`
 - [常见追问] 分布式系统中传对象和传 ID 有什么取舍？
-  来源：`docs/interview/java.md:909`
+  来源：`docs/interview/java.md:1025`
 - [正式题] 深拷贝和浅拷贝怎么实现？
-  来源：`docs/interview/java.md:919`
+  来源：`docs/interview/java.md:1035`
 - [常见追问] 为什么不推荐滥用 `clone()`？
-  来源：`docs/interview/java.md:927`
+  来源：`docs/interview/java.md:1043`
 
 #### 设计模式
 
 - [正式题] 设计模式有哪些常见原则？
-  来源：`docs/interview/java.md:942`
+  来源：`docs/interview/java.md:1058`
 - [常见追问] 开闭原则怎么落地？
-  来源：`docs/interview/java.md:954`
+  来源：`docs/interview/java.md:1070`
 - [常见追问] 设计原则是不是越多越好？
-  来源：`docs/interview/java.md:959`
+  来源：`docs/interview/java.md:1075`
 - [正式题] 常见设计模式有哪些？
-  来源：`docs/interview/java.md:962`
+  来源：`docs/interview/java.md:1078`
+- [常见追问] 什么是单例模式懒汉式？
+  来源：`docs/interview/java.md:1087`
 - [常见追问] 简单工厂、工厂方法、抽象工厂有什么区别？
-  来源：`docs/interview/java.md:971`
+  来源：`docs/interview/java.md:1105`
 - [常见追问] 静态代理和动态代理有什么区别？
-  来源：`docs/interview/java.md:975`
+  来源：`docs/interview/java.md:1109`
 - [常见追问] 策略模式和模板方法模式有什么区别？
-  来源：`docs/interview/java.md:978`
+  来源：`docs/interview/java.md:1112`
 
 ### docs/interview/jvm.md
 
@@ -2112,12 +2196,12 @@
 
 ### JDK 动态代理和 CGLIB 有什么区别？
 
-- [常见追问] `docs/interview/java.md:447` JDK 动态代理和 CGLIB 有什么区别？
+- [常见追问] `docs/interview/java.md:471` JDK 动态代理和 CGLIB 有什么区别？
 - [常见追问] `docs/interview/spring.md:308` JDK 动态代理和 CGLIB 有什么区别？
 
 ### 哪些对象可以作为 GC Roots？
 
-- [常见追问] `docs/interview/java.md:843` 哪些对象可以作为 GC Roots？
+- [常见追问] `docs/interview/java.md:959` 哪些对象可以作为 GC Roots？
 - [常见追问] `docs/interview/jvm.md:204` 哪些对象可以作为 GC Roots？
 
 ### Kafka 为什么要去 ZooKeeper？

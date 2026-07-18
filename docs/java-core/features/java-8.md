@@ -73,7 +73,9 @@ Comparator<Integer> before = new Comparator<Integer>() {
 };
 
 Comparator<Integer> lambda = (left, right) -> Integer.compare(left, right);
+list.sort(lambda);
 Comparator<Integer> methodReference = Integer::compare;
+list.sort(methodReference);
 ```
 
 Lambda 适合替代只为实现一个函数式接口而创建的匿名内部类。如果匿名类还需要额外字段、多个方法或复杂生命周期，普通类通常更清晰。
